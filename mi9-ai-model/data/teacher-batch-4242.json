@@ -1,0 +1,890 @@
+[
+ {
+  "task_id": "arith_chain~d4~142516a7",
+  "family": "arith_chain",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Compute this expression step by step, respecting standard precedence. Expression: (((((28 - 3) // 5) * 19) - 33) + 32)\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "int",
+   "answer": "94"
+  },
+  "answer": "94",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Compute this expression step by step, respecting standard precedence. Expression: (((((28 - 3) // 5) * 19) - 33) + 32)\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>94</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "arith_chain~d4~109f80db",
+  "family": "arith_chain",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Compute this expression step by step, respecting standard precedence. Expression: (((((18 - 2) + 8) * 21) * 12) + 11)\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "int",
+   "answer": "6059"
+  },
+  "answer": "6059",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Compute this expression step by step, respecting standard precedence. Expression: (((((18 - 2) + 8) * 21) * 12) + 11)\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>6059</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "arith_chain~d4~00c23726",
+  "family": "arith_chain",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Compute this expression step by step, respecting standard precedence. Expression: (((((45 + 8) // 3) - 10) // 5) + 8)\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "int",
+   "answer": "9"
+  },
+  "answer": "9",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Compute this expression step by step, respecting standard precedence. Expression: (((((45 + 8) // 3) - 10) // 5) + 8)\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>9</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "arith_chain~d4~3e25a471",
+  "family": "arith_chain",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Compute this expression step by step, respecting standard precedence. Expression: (((((42 // 6) // 5) - 22) // 2) * 6)\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "int",
+   "answer": "-66"
+  },
+  "answer": "-66",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Compute this expression step by step, respecting standard precedence. Expression: (((((42 // 6) // 5) - 22) // 2) * 6)\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>-66</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "arith_chain~d4~0d88a950",
+  "family": "arith_chain",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Compute this expression step by step, respecting standard precedence. Expression: (((((10 - 5) + 9) - 18) // 3) * 3)\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "int",
+   "answer": "-6"
+  },
+  "answer": "-6",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Compute this expression step by step, respecting standard precedence. Expression: (((((10 - 5) + 9) - 18) // 3) * 3)\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>-6</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "arith_chain~d4~38fb4efc",
+  "family": "arith_chain",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Compute this expression step by step, respecting standard precedence. Expression: (((((30 - 33) + 2) + 10) * 30) + 22)\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "int",
+   "answer": "292"
+  },
+  "answer": "292",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Compute this expression step by step, respecting standard precedence. Expression: (((((30 - 33) + 2) + 10) * 30) + 22)\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>292</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d4~0f58e337",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Compute: ((((((10 * 26) // 4) // 3) // 2) // 3) * 32). Use the run_python tool to do the arithmetic, then report the result as <answer>96</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 96
+  },
+  "answer": "96",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nAfter tool results appear, continue. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((10 * 26) // 4) // 3) // 2) // 3) * 32). Use the run_python tool to do the arithmetic, then report the result as <answer>96</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((10 * 26) // 4) // 3) // 2) // 3) * 32))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n96\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>96</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d4~2906f414",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Compute: ((((((42 * 2) * 8) // 4) // 3) * 11) * 18). Use the run_python tool to do the arithmetic, then report the result as <answer>11088</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 11088
+  },
+  "answer": "11088",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nAfter tool results appear, continue. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((42 * 2) * 8) // 4) // 3) * 11) * 18). Use the run_python tool to do the arithmetic, then report the result as <answer>11088</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((42 * 2) * 8) // 4) // 3) * 11) * 18))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n11088\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>11088</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d4~0cee2a43",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Compute: ((((((45 - 2) - 8) - 33) + 15) + 28) * 6). Use the run_python tool to do the arithmetic, then report the result as <answer>270</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 270
+  },
+  "answer": "270",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nAfter tool results appear, continue. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((45 - 2) - 8) - 33) + 15) + 28) * 6). Use the run_python tool to do the arithmetic, then report the result as <answer>270</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((45 - 2) - 8) - 33) + 15) + 28) * 6))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n270\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>270</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d4~3e25a471",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Compute: ((((((33 - 32) - 30) - 15) * 30) + 19) - 6). Use the run_python tool to do the arithmetic, then report the result as <answer>-1307</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": -1307
+  },
+  "answer": "-1307",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nAfter tool results appear, continue. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((33 - 32) - 30) - 15) * 30) + 19) - 6). Use the run_python tool to do the arithmetic, then report the result as <answer>-1307</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((33 - 32) - 30) - 15) * 30) + 19) - 6))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n-1307\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>-1307</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d4~23ebd289",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Compute: ((((((10 + 6) + 12) - 26) + 20) + 8) + 4). Use the run_python tool to do the arithmetic, then report the result as <answer>34</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 34
+  },
+  "answer": "34",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nAfter tool results appear, continue. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((10 + 6) + 12) - 26) + 20) + 8) + 4). Use the run_python tool to do the arithmetic, then report the result as <answer>34</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((10 + 6) + 12) - 26) + 20) + 8) + 4))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n34\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>34</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d4~3d24b5bb",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Compute: ((((((16 // 6) * 2) * 10) // 5) * 22) // 3). Use the run_python tool to do the arithmetic, then report the result as <answer>58</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 58
+  },
+  "answer": "58",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nAfter tool results appear, continue. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((16 // 6) * 2) * 10) // 5) * 22) // 3). Use the run_python tool to do the arithmetic, then report the result as <answer>58</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((16 // 6) * 2) * 10) // 5) * 22) // 3))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n58\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>58</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "bool_expr~d4~03107843",
+  "family": "bool_expr",
+  "domain": "logic",
+  "difficulty": 4,
+  "prompt": "Given: A = False, B = True, C = True, D = True. Evaluate this boolean expression (NOT binds to the single letter after it, XOR is exclusive-or):\nB\nAnswer True or False.\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "lower",
+   "answer": "True"
+  },
+  "answer": "True",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Given: A = False, B = True, C = True, D = True. Evaluate this boolean expression (NOT binds to the single letter after it, XOR is exclusive-or):\nB\nAnswer True or False.\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>True</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "bool_expr~d4~2e369581",
+  "family": "bool_expr",
+  "domain": "logic",
+  "difficulty": 4,
+  "prompt": "Given: A = True, B = True, C = False, D = True. Evaluate this boolean expression (NOT binds to the single letter after it, XOR is exclusive-or):\nA\nAnswer True or False.\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "lower",
+   "answer": "True"
+  },
+  "answer": "True",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Given: A = True, B = True, C = False, D = True. Evaluate this boolean expression (NOT binds to the single letter after it, XOR is exclusive-or):\nA\nAnswer True or False.\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>True</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "bool_expr~d4~23b3245f",
+  "family": "bool_expr",
+  "domain": "logic",
+  "difficulty": 4,
+  "prompt": "Given: A = False, B = False, C = False, D = False. Evaluate this boolean expression (NOT binds to the single letter after it, XOR is exclusive-or):\n(NOT D XOR ((D OR NOT A) AND (B OR NOT C)))\nAnswer True or False.\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "lower",
+   "answer": "False"
+  },
+  "answer": "False",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Given: A = False, B = False, C = False, D = False. Evaluate this boolean expression (NOT binds to the single letter after it, XOR is exclusive-or):\n(NOT D XOR ((D OR NOT A) AND (B OR NOT C)))\nAnswer True or False.\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>False</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "bool_expr~d4~2739f41d",
+  "family": "bool_expr",
+  "domain": "logic",
+  "difficulty": 4,
+  "prompt": "Given: A = False, B = True, C = False, D = False. Evaluate this boolean expression (NOT binds to the single letter after it, XOR is exclusive-or):\n((NOT D XOR A) OR ((C OR C) OR A))\nAnswer True or False.\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "lower",
+   "answer": "True"
+  },
+  "answer": "True",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Given: A = False, B = True, C = False, D = False. Evaluate this boolean expression (NOT binds to the single letter after it, XOR is exclusive-or):\n((NOT D XOR A) OR ((C OR C) OR A))\nAnswer True or False.\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>True</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "bool_expr~d4~208afb49",
+  "family": "bool_expr",
+  "domain": "logic",
+  "difficulty": 4,
+  "prompt": "Given: A = False, B = False, C = True, D = False. Evaluate this boolean expression (NOT binds to the single letter after it, XOR is exclusive-or):\nNOT A\nAnswer True or False.\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "lower",
+   "answer": "True"
+  },
+  "answer": "True",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Given: A = False, B = False, C = True, D = False. Evaluate this boolean expression (NOT binds to the single letter after it, XOR is exclusive-or):\nNOT A\nAnswer True or False.\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>True</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "bool_expr~d4~31ea60ac",
+  "family": "bool_expr",
+  "domain": "logic",
+  "difficulty": 4,
+  "prompt": "Given: A = True, B = False, C = True, D = False. Evaluate this boolean expression (NOT binds to the single letter after it, XOR is exclusive-or):\n((D AND B) AND NOT B)\nAnswer True or False.\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "lower",
+   "answer": "False"
+  },
+  "answer": "False",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Given: A = True, B = False, C = True, D = False. Evaluate this boolean expression (NOT binds to the single letter after it, XOR is exclusive-or):\n((D AND B) AND NOT B)\nAnswer True or False.\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>False</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "closure~d4~327fe302",
+  "family": "closure",
+  "domain": "logic",
+  "difficulty": 4,
+  "prompt": "Facts: N4 > N2; N6 > N4; N6 > N1; N6 > N7; N7 > N5; N2 > N1. 'Greater-than' is transitive (if A > B and B > C then A > C) and nothing else is true beyond what follows from the facts. Is N6 > N3? Answer yes, no, or unknown (unknown = not determined by the facts).\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "lower",
+   "answer": "unknown"
+  },
+  "answer": "unknown",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Facts: N4 > N2; N6 > N4; N6 > N1; N6 > N7; N7 > N5; N2 > N1. 'Greater-than' is transitive (if A > B and B > C then A > C) and nothing else is true beyond what follows from the facts. Is N6 > N3? Answer yes, no, or unknown (unknown = not determined by the facts).\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>unknown</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "closure~d4~00ac4e83",
+  "family": "closure",
+  "domain": "logic",
+  "difficulty": 4,
+  "prompt": "Facts: N3 > N1; N1 > N4; N3 > N5; N6 > N7; N7 > N4; N5 > N4. 'Greater-than' is transitive (if A > B and B > C then A > C) and nothing else is true beyond what follows from the facts. Is N5 > N6? Answer yes, no, or unknown (unknown = not determined by the facts).\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "lower",
+   "answer": "unknown"
+  },
+  "answer": "unknown",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Facts: N3 > N1; N1 > N4; N3 > N5; N6 > N7; N7 > N4; N5 > N4. 'Greater-than' is transitive (if A > B and B > C then A > C) and nothing else is true beyond what follows from the facts. Is N5 > N6? Answer yes, no, or unknown (unknown = not determined by the facts).\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>unknown</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "closure~d4~09f67d1f",
+  "family": "closure",
+  "domain": "logic",
+  "difficulty": 4,
+  "prompt": "Facts: N7 > N6; N3 > N5; N2 > N3; N1 > N4; N4 > N3; N2 > N6. 'Greater-than' is transitive (if A > B and B > C then A > C) and nothing else is true beyond what follows from the facts. Is N1 > N4? Answer yes, no, or unknown (unknown = not determined by the facts).\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "lower",
+   "answer": "yes"
+  },
+  "answer": "yes",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Facts: N7 > N6; N3 > N5; N2 > N3; N1 > N4; N4 > N3; N2 > N6. 'Greater-than' is transitive (if A > B and B > C then A > C) and nothing else is true beyond what follows from the facts. Is N1 > N4? Answer yes, no, or unknown (unknown = not determined by the facts).\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>yes</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "closure~d4~27bca9f2",
+  "family": "closure",
+  "domain": "logic",
+  "difficulty": 4,
+  "prompt": "Facts: N5 > N4; N4 > N6; N5 > N3; N3 > N7; N3 > N4; N2 > N3. 'Greater-than' is transitive (if A > B and B > C then A > C) and nothing else is true beyond what follows from the facts. Is N5 > N4? Answer yes, no, or unknown (unknown = not determined by the facts).\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "lower",
+   "answer": "yes"
+  },
+  "answer": "yes",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Facts: N5 > N4; N4 > N6; N5 > N3; N3 > N7; N3 > N4; N2 > N3. 'Greater-than' is transitive (if A > B and B > C then A > C) and nothing else is true beyond what follows from the facts. Is N5 > N4? Answer yes, no, or unknown (unknown = not determined by the facts).\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>yes</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "closure~d4~1dfc90f2",
+  "family": "closure",
+  "domain": "logic",
+  "difficulty": 4,
+  "prompt": "Facts: N3 > N4; N3 > N5; N5 > N4; N5 > N6; N3 > N2; N4 > N2. 'Greater-than' is transitive (if A > B and B > C then A > C) and nothing else is true beyond what follows from the facts. Is N1 > N4? Answer yes, no, or unknown (unknown = not determined by the facts).\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "lower",
+   "answer": "unknown"
+  },
+  "answer": "unknown",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Facts: N3 > N4; N3 > N5; N5 > N4; N5 > N6; N3 > N2; N4 > N2. 'Greater-than' is transitive (if A > B and B > C then A > C) and nothing else is true beyond what follows from the facts. Is N1 > N4? Answer yes, no, or unknown (unknown = not determined by the facts).\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>unknown</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "closure~d4~09b0bc7d",
+  "family": "closure",
+  "domain": "logic",
+  "difficulty": 4,
+  "prompt": "Facts: N6 > N4; N7 > N4; N1 > N6; N5 > N7; N1 > N5; N3 > N6. 'Greater-than' is transitive (if A > B and B > C then A > C) and nothing else is true beyond what follows from the facts. Is N6 > N4? Answer yes, no, or unknown (unknown = not determined by the facts).\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "lower",
+   "answer": "yes"
+  },
+  "answer": "yes",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Facts: N6 > N4; N7 > N4; N1 > N6; N5 > N7; N1 > N5; N3 > N6. 'Greater-than' is transitive (if A > B and B > C then A > C) and nothing else is true beyond what follows from the facts. Is N6 > N4? Answer yes, no, or unknown (unknown = not determined by the facts).\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>yes</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "linear_solve~d4~30816eb8",
+  "family": "linear_solve",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Solve for x: 2x + (3) = 23/3. If x is fractional, answer as a reduced fraction p/q. Reduce fully.\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "frac",
+   "answer": "7/3"
+  },
+  "answer": "7/3",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Solve for x: 2x + (3) = 23/3. If x is fractional, answer as a reduced fraction p/q. Reduce fully.\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>7/3</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "linear_solve~d4~010abfed",
+  "family": "linear_solve",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Solve for x: 9x + (7) = 70. Give x as an integer.\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "frac",
+   "answer": "7"
+  },
+  "answer": "7",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Solve for x: 9x + (7) = 70. Give x as an integer.\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>7</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "linear_solve~d4~0d51dc4d",
+  "family": "linear_solve",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Solve for x: 10x + (-9) = 57/7. If x is fractional, answer as a reduced fraction p/q. Reduce fully.\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "frac",
+   "answer": "12/7"
+  },
+  "answer": "12/7",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Solve for x: 10x + (-9) = 57/7. If x is fractional, answer as a reduced fraction p/q. Reduce fully.\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>12/7</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "linear_solve~d4~3dde136b",
+  "family": "linear_solve",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Solve for x: 11x + (7) = 65/3. If x is fractional, answer as a reduced fraction p/q. Reduce fully.\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "frac",
+   "answer": "4/3"
+  },
+  "answer": "4/3",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Solve for x: 11x + (7) = 65/3. If x is fractional, answer as a reduced fraction p/q. Reduce fully.\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>4/3</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "linear_solve~d4~15d4085c",
+  "family": "linear_solve",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Solve for x: 3x + (-6) = -3/2. If x is fractional, answer as a reduced fraction p/q. Reduce fully.\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "frac",
+   "answer": "3/2"
+  },
+  "answer": "3/2",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Solve for x: 3x + (-6) = -3/2. If x is fractional, answer as a reduced fraction p/q. Reduce fully.\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>3/2</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "linear_solve~d4~0cb4a5f0",
+  "family": "linear_solve",
+  "domain": "math",
+  "difficulty": 4,
+  "prompt": "Solve for x: 8x + (19) = 83. Give x as an integer.\n\nEnd with your final answer as <answer>...</answer>.",
+  "spec": {
+   "kind": "text",
+   "how": "frac",
+   "answer": "8"
+  },
+  "answer": "8",
+  "kind": "text",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "Solve for x: 8x + (19) = 83. Give x as an integer.\n\nEnd with your final answer as <answer>...</answer>. /no_think"
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>8</answer>"
+   }
+  ]
+ }
+]

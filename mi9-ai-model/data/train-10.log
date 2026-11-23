@@ -1,0 +1,7 @@
+replay: 47 verified episodes (since line 290)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   9%|▉         | 29/310 [00:00<00:01, 262.73it/s]Loading weights:  24%|██▍       | 75/310 [00:00<00:00, 344.74it/s]Loading weights:  44%|████▍     | 136/310 [00:00<00:00, 457.35it/s]Loading weights:  59%|█████▉    | 183/310 [00:00<00:00, 420.18it/s]Loading weights:  75%|███████▌  | 234/310 [00:00<00:00, 434.41it/s]Loading weights:  90%|████████▉ | 278/310 [00:00<00:00, 435.30it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 443.49it/s]
+trainable params: 6,422,528 || all params: 1,726,997,504 || trainable%: 0.3719
+trainable sequences: 24
+step 5/48 loss 0.000 rss 4360MB (64.6s/step)
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-gnutguun'}
+  warnings.warn(

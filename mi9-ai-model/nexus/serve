@@ -1,0 +1,19 @@
+#!/bin/sh
+# NEXUS-Micro reasoning-core runtime (llama.cpp server, OpenAI-compatible).
+# Usage: nexus/serve [extra llama-server args]
+# Env:  PORT=8080  CTX=8192  THREADS=8  KV_Q8=1  (int8 KV cache, Table 2 of the whitepaper)
+set -e
+cd "$(dirname "$0")/.."
+PORT="${PORT:-8080}"
+CTX="${CTX:-4096}"
+THREADS="${THREADS:-8}"
+
+ARGS=""
+if [ "${KV_Q8:-0}" = "1" ]; then
+  ARGS="--flash-attn --cache-type-k q8_0 --cache-type-v q8_0"
+fi
+
+exec llama-server -m models/nexus-current.gguf \
+  --host 127.0.0.1 --port "$PORT" \
+  --ctx-size "$CTX" --parallel 1 --threads "$THREADS" --threads-batch "$THREADS" \
+  --jinja $ARGS "$@"

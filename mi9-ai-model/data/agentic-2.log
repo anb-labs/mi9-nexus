@@ -1,0 +1,37 @@
+[   1] reverse_string     d5 win   PASS   2.4s | keep-rate 1.00 | W1 H0 F0
+[   2] dataframe          d5 win   PASS   5.7s | keep-rate 0.84 | W2 H0 F0
+[   3] flatten            d5 win   PASS   4.1s | keep-rate 0.86 | W3 H0 F0
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/santosh/Mi9/mi9-ai-model/nexus/agentic.py", line 242, in <module>
+    main()
+    ~~~~^^
+  File "/home/santosh/Mi9/mi9-ai-model/nexus/agentic.py", line 219, in main
+    ep = solve_task_once(t, kind_state)
+  File "/home/santosh/Mi9/mi9-ai-model/nexus/agentic.py", line 154, in solve_task_once
+    msgs, got, verdict = run_agentic(t, temperature=0.8, max_rounds=6,
+                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                     history=seeded)
+                                     ^^^^^^^^^^^^^^^
+  File "/home/santosh/Mi9/mi9-ai-model/nexus/agentic.py", line 70, in run_agentic
+    raw = client.chat(msgs, temperature=temperature, max_tokens=1200)
+  File "/home/santosh/Mi9/mi9-ai-model/nexus/client.py", line 32, in chat
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 493, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.14/urllib/request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.14/urllib/request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.14/urllib/request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 400: Bad Request

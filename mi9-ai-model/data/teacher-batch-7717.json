@@ -1,0 +1,1082 @@
+[
+ {
+  "task_id": "math_exec~d5~00322fa3",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((14 // 2) // 3) * 29) // 2) * 9) * 18). Use the run_python tool to do the arithmetic, then report the result as <answer>4698</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 4698
+  },
+  "answer": "4698",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((14 // 2) // 3) * 29) // 2) * 9) * 18). Use the run_python tool to do the arithmetic, then report the result as <answer>4698</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((14 // 2) // 3) * 29) // 2) * 9) * 18))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n4698\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>4698</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~179810f6",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((8 + 25) - 14) * 32) - 19) + 27) - 19). Use the run_python tool to do the arithmetic, then report the result as <answer>597</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 597
+  },
+  "answer": "597",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((8 + 25) - 14) * 32) - 19) + 27) - 19). Use the run_python tool to do the arithmetic, then report the result as <answer>597</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((8 + 25) - 14) * 32) - 19) + 27) - 19))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n597\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>597</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~2637d3c9",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((53 + 30) + 34) - 27) + 18) - 9) + 29). Use the run_python tool to do the arithmetic, then report the result as <answer>128</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 128
+  },
+  "answer": "128",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((53 + 30) + 34) - 27) + 18) - 9) + 29). Use the run_python tool to do the arithmetic, then report the result as <answer>128</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((53 + 30) + 34) - 27) + 18) - 9) + 29))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n128\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>128</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~0c330774",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((3 - 31) + 7) + 5) + 31) - 33) - 24). Use the run_python tool to do the arithmetic, then report the result as <answer>-42</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": -42
+  },
+  "answer": "-42",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((3 - 31) + 7) + 5) + 31) - 33) - 24). Use the run_python tool to do the arithmetic, then report the result as <answer>-42</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((3 - 31) + 7) + 5) + 31) - 33) - 24))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n-42\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>-42</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~047658dd",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((50 // 6) // 4) // 4) // 5) // 5) * 27). Use the run_python tool to do the arithmetic, then report the result as <answer>0</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 0
+  },
+  "answer": "0",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((50 // 6) // 4) // 4) // 5) // 5) * 27). Use the run_python tool to do the arithmetic, then report the result as <answer>0</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((50 // 6) // 4) // 4) // 5) // 5) * 27))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n0\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>0</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~12d83582",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((44 + 18) - 12) + 4) - 23) - 8) + 10). Use the run_python tool to do the arithmetic, then report the result as <answer>33</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 33
+  },
+  "answer": "33",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((44 + 18) - 12) + 4) - 23) - 8) + 10). Use the run_python tool to do the arithmetic, then report the result as <answer>33</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((44 + 18) - 12) + 4) - 23) - 8) + 10))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n33\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>33</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~3aed100a",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((33 - 6) * 11) + 27) + 5) * 19) * 12). Use the run_python tool to do the arithmetic, then report the result as <answer>75012</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 75012
+  },
+  "answer": "75012",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((33 - 6) * 11) + 27) + 5) * 19) * 12). Use the run_python tool to do the arithmetic, then report the result as <answer>75012</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((33 - 6) * 11) + 27) + 5) * 19) * 12))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n75012\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>75012</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~3afdc0ec",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((19 // 6) * 3) * 18) * 17) // 3) // 4). Use the run_python tool to do the arithmetic, then report the result as <answer>229</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 229
+  },
+  "answer": "229",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((19 // 6) * 3) * 18) * 17) // 3) // 4). Use the run_python tool to do the arithmetic, then report the result as <answer>229</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((19 // 6) * 3) * 18) * 17) // 3) // 4))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n229\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>229</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~297dd2c1",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((20 * 8) * 23) + 12) - 23) + 11) + 21). Use the run_python tool to do the arithmetic, then report the result as <answer>3701</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 3701
+  },
+  "answer": "3701",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((20 * 8) * 23) + 12) - 23) + 11) + 21). Use the run_python tool to do the arithmetic, then report the result as <answer>3701</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((20 * 8) * 23) + 12) - 23) + 11) + 21))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n3701\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>3701</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~04092324",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((28 - 26) + 29) - 19) + 19) + 26) + 29). Use the run_python tool to do the arithmetic, then report the result as <answer>86</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 86
+  },
+  "answer": "86",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((28 - 26) + 29) - 19) + 19) + 26) + 29). Use the run_python tool to do the arithmetic, then report the result as <answer>86</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((28 - 26) + 29) - 19) + 19) + 26) + 29))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n86\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>86</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~363a7f02",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((37 // 2) * 19) * 5) * 23) // 3) * 6). Use the run_python tool to do the arithmetic, then report the result as <answer>78660</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 78660
+  },
+  "answer": "78660",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((37 // 2) * 19) * 5) * 23) // 3) * 6). Use the run_python tool to do the arithmetic, then report the result as <answer>78660</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((37 // 2) * 19) * 5) * 23) // 3) * 6))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n78660\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>78660</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~0df1189b",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((31 + 4) - 18) + 32) + 32) + 11) - 29). Use the run_python tool to do the arithmetic, then report the result as <answer>63</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 63
+  },
+  "answer": "63",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((31 + 4) - 18) + 32) + 32) + 11) - 29). Use the run_python tool to do the arithmetic, then report the result as <answer>63</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((31 + 4) - 18) + 32) + 32) + 11) - 29))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n63\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>63</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~320d7a35",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((47 + 2) - 2) - 23) + 10) + 7) + 36). Use the run_python tool to do the arithmetic, then report the result as <answer>77</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 77
+  },
+  "answer": "77",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((47 + 2) - 2) - 23) + 10) + 7) + 36). Use the run_python tool to do the arithmetic, then report the result as <answer>77</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((47 + 2) - 2) - 23) + 10) + 7) + 36))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n77\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>77</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~19594f08",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((4 // 5) // 2) * 21) // 3) * 30) * 10). Use the run_python tool to do the arithmetic, then report the result as <answer>0</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 0
+  },
+  "answer": "0",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((4 // 5) // 2) * 21) // 3) * 30) * 10). Use the run_python tool to do the arithmetic, then report the result as <answer>0</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((4 // 5) // 2) * 21) // 3) * 30) * 10))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n0\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>0</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~23220690",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((13 + 22) + 14) * 32) - 34) - 7) + 17). Use the run_python tool to do the arithmetic, then report the result as <answer>1544</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 1544
+  },
+  "answer": "1544",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((13 + 22) + 14) * 32) - 34) - 7) + 17). Use the run_python tool to do the arithmetic, then report the result as <answer>1544</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((13 + 22) + 14) * 32) - 34) - 7) + 17))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n1544\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>1544</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~3f4ebbb6",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((29 + 10) + 2) + 25) + 14) - 27) - 29). Use the run_python tool to do the arithmetic, then report the result as <answer>24</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 24
+  },
+  "answer": "24",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((29 + 10) + 2) + 25) + 14) - 27) - 29). Use the run_python tool to do the arithmetic, then report the result as <answer>24</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((29 + 10) + 2) + 25) + 14) - 27) - 29))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n24\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>24</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~16ec9b24",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((17 * 3) // 2) // 5) * 31) * 13) // 4). Use the run_python tool to do the arithmetic, then report the result as <answer>503</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 503
+  },
+  "answer": "503",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((17 * 3) // 2) // 5) * 31) * 13) // 4). Use the run_python tool to do the arithmetic, then report the result as <answer>503</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((17 * 3) // 2) // 5) * 31) * 13) // 4))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n503\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>503</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~2091d7b6",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((33 - 34) - 25) * 14) - 22) * 13) * 5). Use the run_python tool to do the arithmetic, then report the result as <answer>-25090</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": -25090
+  },
+  "answer": "-25090",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((33 - 34) - 25) * 14) - 22) * 13) * 5). Use the run_python tool to do the arithmetic, then report the result as <answer>-25090</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((33 - 34) - 25) * 14) - 22) * 13) * 5))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n-25090\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>-25090</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~11ba3f7c",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((33 + 9) - 27) + 28) * 24) * 9) - 13). Use the run_python tool to do the arithmetic, then report the result as <answer>9275</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 9275
+  },
+  "answer": "9275",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((33 + 9) - 27) + 28) * 24) * 9) - 13). Use the run_python tool to do the arithmetic, then report the result as <answer>9275</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((33 + 9) - 27) + 28) * 24) * 9) - 13))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n9275\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>9275</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~25b7e2d3",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((52 + 28) - 10) - 33) + 8) - 8) + 12). Use the run_python tool to do the arithmetic, then report the result as <answer>49</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 49
+  },
+  "answer": "49",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((52 + 28) - 10) - 33) + 8) - 8) + 12). Use the run_python tool to do the arithmetic, then report the result as <answer>49</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((52 + 28) - 10) - 33) + 8) - 8) + 12))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n49\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>49</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~0ef83af2",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((46 // 4) * 5) * 6) // 5) // 6) * 20). Use the run_python tool to do the arithmetic, then report the result as <answer>220</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 220
+  },
+  "answer": "220",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((46 // 4) * 5) * 6) // 5) // 6) * 20). Use the run_python tool to do the arithmetic, then report the result as <answer>220</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((46 // 4) * 5) * 6) // 5) // 6) * 20))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n220\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>220</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~2aacd57e",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((48 * 39) * 5) * 18) * 2) * 31) * 5). Use the run_python tool to do the arithmetic, then report the result as <answer>52228800</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 52228800
+  },
+  "answer": "52228800",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((48 * 39) * 5) * 18) * 2) * 31) * 5). Use the run_python tool to do the arithmetic, then report the result as <answer>52228800</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((48 * 39) * 5) * 18) * 2) * 31) * 5))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n52228800\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>52228800</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~2be83742",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((22 * 34) * 11) // 2) * 37) // 3) * 22). Use the run_python tool to do the arithmetic, then report the result as <answer>1116258</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 1116258
+  },
+  "answer": "1116258",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((22 * 34) * 11) // 2) * 37) // 3) * 22). Use the run_python tool to do the arithmetic, then report the result as <answer>1116258</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((22 * 34) * 11) // 2) * 37) // 3) * 22))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n1116258\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>1116258</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~0f92418e",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((24 // 5) // 4) * 18) * 22) // 6) * 32). Use the run_python tool to do the arithmetic, then report the result as <answer>2112</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 2112
+  },
+  "answer": "2112",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((24 // 5) // 4) * 18) * 22) // 6) * 32). Use the run_python tool to do the arithmetic, then report the result as <answer>2112</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((24 // 5) // 4) * 18) * 22) // 6) * 32))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n2112\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>2112</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~145d605c",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((47 + 25) + 19) * 30) - 23) * 39) - 31). Use the run_python tool to do the arithmetic, then report the result as <answer>105542</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 105542
+  },
+  "answer": "105542",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((47 + 25) + 19) * 30) - 23) * 39) - 31). Use the run_python tool to do the arithmetic, then report the result as <answer>105542</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((47 + 25) + 19) * 30) - 23) * 39) - 31))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n105542\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>105542</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~22a1620d",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((5 + 6) - 38) - 4) + 23) + 17) + 8). Use the run_python tool to do the arithmetic, then report the result as <answer>17</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 17
+  },
+  "answer": "17",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((5 + 6) - 38) - 4) + 23) + 17) + 8). Use the run_python tool to do the arithmetic, then report the result as <answer>17</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((5 + 6) - 38) - 4) + 23) + 17) + 8))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n17\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>17</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~249b8113",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((32 - 7) + 27) - 34) + 38) - 14) + 33). Use the run_python tool to do the arithmetic, then report the result as <answer>75</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 75
+  },
+  "answer": "75",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((32 - 7) + 27) - 34) + 38) - 14) + 33). Use the run_python tool to do the arithmetic, then report the result as <answer>75</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((32 - 7) + 27) - 34) + 38) - 14) + 33))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n75\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>75</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~1dc52d9c",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((4 // 6) * 26) // 3) * 36) * 11) * 14). Use the run_python tool to do the arithmetic, then report the result as <answer>0</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 0
+  },
+  "answer": "0",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((4 // 6) * 26) // 3) * 36) * 11) * 14). Use the run_python tool to do the arithmetic, then report the result as <answer>0</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((4 // 6) * 26) // 3) * 36) * 11) * 14))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n0\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>0</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~3752cad1",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((35 // 2) // 2) // 2) * 3) * 18) // 4). Use the run_python tool to do the arithmetic, then report the result as <answer>54</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 54
+  },
+  "answer": "54",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((35 // 2) // 2) // 2) * 3) * 18) // 4). Use the run_python tool to do the arithmetic, then report the result as <answer>54</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((35 // 2) // 2) // 2) * 3) * 18) // 4))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n54\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>54</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "math_exec~d5~1b55cd2d",
+  "family": "math_exec",
+  "domain": "math",
+  "difficulty": 5,
+  "prompt": "Compute: ((((((14 // 6) // 5) * 11) * 35) * 28) // 3). Use the run_python tool to do the arithmetic, then report the result as <answer>0</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>.",
+  "spec": {
+   "kind": "expr",
+   "expr": "result",
+   "expected": 0
+  },
+  "answer": "0",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant with access to tools. When you need to compute, emit a tool call as the last thing in your reply:\n<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(2+2)\"}}</tool>\nWhen you need to search the local corpus, emit:\n<tool>{\"name\": \"retrieve\", \"args\": {\"query\": \"...\"}}</tool>\nAfter tool results appear, continue reasoning. When you have the final answer, emit <answer>...</answer>. Use tools for ALL arithmetic \u2014 never calculate in your head."
+   },
+   {
+    "role": "user",
+    "content": "Compute: ((((((14 // 6) // 5) * 11) * 35) * 28) // 3). Use the run_python tool to do the arithmetic, then report the result as <answer>0</answer>.\n\nUse the run_python tool to do the computation: emit exactly one tool call as <tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(...)\"}}</tool>. After the tool result appears, end with <answer>VALUE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "<tool>{\"name\": \"run_python\", \"args\": {\"code\": \"print(((((((14 // 6) // 5) * 11) * 35) * 28) // 3))\"}}</tool>"
+   },
+   {
+    "role": "user",
+    "content": "TOOL RESULT (run_python):\nstdout:\n0\n\nerror: None\nContinue."
+   },
+   {
+    "role": "assistant",
+    "content": "<answer>0</answer>"
+   }
+  ]
+ }
+]

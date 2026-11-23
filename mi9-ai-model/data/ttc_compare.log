@@ -1,0 +1,14 @@
+[1/12] reverse_string   pass@1=1 best@5=1 (tried 1) 3s
+[2/12] reverse_string   pass@1=1 best@5=1 (tried 1) 6s
+[3/12] sum_ints         pass@1=1 best@5=1 (tried 1) 10s
+[4/12] sum_ints         pass@1=1 best@5=1 (tried 1) 13s
+[5/12] gcd_lcm          pass@1=1 best@5=1 (tried 1) 19s
+[6/12] gcd_lcm          pass@1=1 best@5=1 (tried 1) 25s
+[7/12] arith_chain      pass@1=0 best@5=0 (tried 5) 36s
+[8/12] arith_chain      pass@1=0 best@5=0 (tried 5) 46s
+[9/12] bool_expr        pass@1=0 best@5=1 (tried 1) 50s
+[10/12] bool_expr        pass@1=0 best@5=1 (tried 1) 59s
+[11/12] closure          pass@1=0 best@5=1 (tried 1) 74s
+[12/12] closure          pass@1=1 best@5=1 (tried 1) 92s
+
+== pass@1 7/12 = 58%  |  best@5 10/12 = 83%

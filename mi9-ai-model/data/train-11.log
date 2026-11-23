@@ -1,0 +1,21 @@
+replay: 70 verified episodes (since line 290)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  15%|█▌        | 48/310 [00:00<00:00, 413.88it/s]Loading weights:  29%|██▉       | 90/310 [00:00<00:00, 361.88it/s]Loading weights:  41%|████      | 127/310 [00:00<00:00, 334.73it/s]Loading weights:  59%|█████▉    | 183/310 [00:00<00:00, 401.44it/s]Loading weights:  84%|████████▍ | 261/310 [00:00<00:00, 521.67it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 481.98it/s]
+trainable params: 6,422,528 || all params: 1,726,997,504 || trainable%: 0.3719
+trainable sequences: 39
+step 5/78 loss 0.071 rss 4357MB (61.5s/step)
+step 10/78 loss 0.048 rss 4457MB (56.2s/step)
+step 15/78 loss 0.032 rss 4554MB (54.3s/step)
+step 20/78 loss 0.053 rss 4636MB (51.3s/step)
+step 25/78 loss 0.059 rss 4521MB (50.4s/step)
+step 30/78 loss 0.053 rss 4550MB (50.1s/step)
+step 35/78 loss 0.051 rss 4628MB (50.6s/step)
+step 40/78 loss 0.047 rss 4519MB (50.8s/step)
+step 45/78 loss 0.043 rss 4426MB (51.1s/step)
+step 50/78 loss 0.039 rss 4484MB (51.5s/step)
+step 55/78 loss 0.037 rss 4443MB (50.8s/step)
+step 60/78 loss 0.035 rss 4201MB (49.5s/step)
+step 65/78 loss 0.035 rss 4193MB (48.4s/step)
+step 70/78 loss 0.025 rss 4371MB (47.3s/step)
+step 75/78 loss 0.019 rss 4255MB (46.3s/step)
+saved peft adapter -> /home/santosh/Mi9/mi9-ai-model/adapters/peft-20261114-133425
+final loss 0.020

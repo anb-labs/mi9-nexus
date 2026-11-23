@@ -1,0 +1,946 @@
+RE SE A RC H WH I TE PA PE R
+
+
+
+
+Beyond the
+Whole Internet
+
+Engineering frontier-grade intelligence on a consumer
+GPU. A data-efficient research roadmap: reasoning
+trained by reinforcement on verified tasks, knowledge
+kept on disk, precision outsourced to an executor, and
+growth compounded nightly on the user’s own
+experience.
+Agent R&D Division
+Mi9-Nexus Reference Architecture Program
+
+
+
+
+N O V E M B E R 2 0 2 6 · RE V A · F O R I N TE RN A L RE SE A RC H C I RC U L ATI O N
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ Table of Contents
+
+ 1. The Question and the Answer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+
+
+ 2. Why the Internet Is Not the Bottleneck . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+
+ 3. The Landscape: Ten Levers Beyond Web-Scale Data . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+
+ 4. The Synthesis: Mi9-Nexus, a Reference Architecture for Local Frontier Intelligence . . . . . . . . 11
+
+
+ 5. The Quantitative Program: Scaling Math, FLOPs, Budgets . . . . . . . . . . . . . . . . . . . . . . 14
+
+
+ 6. Failure Modes and Honest Limits . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+
+
+ 7. The Build Plan: 24 Months, Four Phases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+
+ 8. Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+
+
+ References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+
+            Figures and tables are numbered continuously; citations refer to the numbered reference list at the end of the document.
+
+
+
+
+Agent R&D Division                                                                                                                     i
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ 1. The Question and the Answer
+ We were handed a deceptively simple mandate: find out whether an AI system can be made substantially
+ smarter without absorbing the entire internet, and whether the result can run locally on a consumer
+ computer. The industry default answer is no on both counts. Frontier capability is widely believed to
+ require frontier-scale pretraining over trillions of scraped tokens, which in turn requires datacenter-class
+ hardware. This whitepaper reviews the published evidence of the last two years, works through the
+ arithmetic, and reaches a different conclusion: the two halves of that belief are separable, and one of
+ them is already false.
+
+ The answer, stated once and then defended for the rest of the document: stop memorizing the internet
+ into the weights, and instead build a small model that reasons, retrieves, verifies, and adapts.
+ Intelligence decomposes. Knowledge is a warehouse problem, and warehouses are cheap on disk.
+ Reasoning is a compute problem, and the 2025 evidence shows reasoning is trainable with reinforcement
+ learning on a few hundred thousand verifiable tasks rather than trillions of web tokens. Verification can
+ be outsourced to a code executor that never forgets how to check an answer. Adaptation can run nightly
+ on the user’s own machine, on the user’s own tasks, with LoRA adapters instead of full retraining. None
+ of these four components needs the whole internet; only the warehouse does, and a warehouse fits on a
+ laptop disk.
+
+
+
+                  55.5%                                    $294K                              1,000
+         AIME 2024 pass@1 of the 7B                  reported RL-stage cost of      curated reasoning samples behind
+          DeepSeek-R1-Distill-Qwen                DeepSeek-R1 (Nature, Sept 2025)   s1-32B, matching o1-preview on
+           reasoner (GPT-4o: 9.3%)                                                                math
+
+
+ This position is not speculative futurism. Every ingredient already exists in the open literature with
+ measured results: DeepSeek-R1 demonstrated that reasoning emerges from pure reinforcement learning
+ with verifiable rewards on roughly 800 thousand samples rather than 14.8 trillion pretraining tokens. The
+ s1 project matched o1-preview on competition mathematics by fine-tuning a 32B model on one thousand
+ curated examples. Distillation moved 70–80% AIME-class reasoning into 7–14B students that fit in 8–16
+ GB of video memory at 4-bit weights. A 4B model now scores 81.3% on AIME 2025 in thinking mode.
+ Apple ships a 3B model quantized to roughly 2 bits (0.75 GB of weights) inside every phone. The
+ engineering task ahead of us is composition, not invention.
+
+
+
+
+Agent R&D Division                                                                                                     1
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ 1.1 Four design principles
+ Principle 1, cognition-first: spend the parameter and compute budget on a strong reasoning core trained
+ with RL on verifiable tasks, not on a maximally knowledgeable base. Reasoning transfers across domains;
+ encyclopedic recall does not. Principle 2, knowledge-retrieved: externalize world knowledge into a
+ curated local corpus plus live retrieval, so facts cost kilobytes on disk instead of gigabytes of weights and
+ never go stale silently. Principle 3, verification-grounded: never let the model do arithmetic, code, or
+ logic unaided when a sandboxed executor can check it; precision is a service, not a learned skill.
+ Principle 4, experience-fed: close the loop on-device, letting the system generate its own verifiable
+ practice tasks each night and distill its validated wins into swappable adapters. Sutton and Silver call this
+ the era of experience: data generated by the agent, rewarded by the environment, unbounded by the fixed
+ stock of human text.
+
+ The document follows a deliberate arc. Chapter 2 frames the problem quantitatively: the data wall, the
+ separation of knowledge from reasoning, and the true arithmetic of a consumer GPU. Chapter 3 surveys
+ the full landscape of techniques that buy intelligence without web-scale data, with published numbers
+ attached to every claim. Chapter 4 synthesizes those levers into a concrete reference architecture,
+ Mi9-Nexus, sized for an entry-class consumer GPU. Chapter 5 works the scaling math and training
+ budgets. Chapter 6 lists the ways this thesis can fail, because a roadmap without failure modes is a
+ brochure. Chapter 7 turns the whole thing into a phased 24-month build plan with measurable gates.
+
+
+
+ 2. Why the Internet Is Not the Bottleneck
+ 2.1 The data wall is real, and it is about knowledge, not intelligence
+ The raw constraint is well documented. Epoch AI estimates the usable stock of high-quality public human
+ text at roughly 300 trillion tokens, and projects that training demand will fully utilize it between 2026 and
+ 2032. DeepSeek-V3 already consumed 14.8 trillion tokens, about 4.9% of that estimated stock; the
+ Qwen3 family trained on 36 trillion tokens, about 12%. The frontier is not knowledge-poor; it is
+ approaching knowledge-redundant, repeating the same corpus many times over. Qwen3’s 8B model saw
+ about 4,390 tokens per parameter, a 220-fold multiple of the Chinchilla-optimal 20 tokens per parameter,
+ and Qwen3’s 0.6B variant saw roughly 3,000-fold. When a family of models this strong trains on 100 to
+ 3,000 times more data per parameter than theory calls for, the interpretation is not that the internet is
+ bottomless; it is that pretraining on web text has stopped being the lever that differentiates models.
+
+ That saturation matters for our purposes in two ways. First, it means the marginal million tokens of
+ Common Crawl add near-zero capability even at the frontier, so a local model refusing that data gives up
+ almost nothing. Second, it means the capability gap between a knowledge-heavy 671B model and a
+ knowledge-light local one is concentrated in recall, not in reasoning. We can measure that split directly.
+ On AIME 2024, DeepSeek-V3 (671B total parameters, 37B active) scores 39.2% while GPT-4o scores
+ 9.3%; on SimpleQA, a pure factual-recall probe, GPT-4o scores 38.2% while the reasoning king
+
+
+
+
+Agent R&D Division                                                                                               2
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ DeepSeek-R1 scores 30.1%, well behind o1’s 47.0%. Reasoning power and recall strength are
+ demonstrably different axes. The plan in this paper spends nothing on the recall axis and everything on
+ the reasoning axis.
+
+
+ 2.2 Knowledge is not intelligence
+ It helps to be precise about the decomposition. Knowledge is stored, retrievable proposition-level fact:
+ what year, which API, whose theorem. It is a storage problem with an economic optimum, and Chinchilla
+ arithmetic says storing it in weights costs about 20 tokens of training per parameter, which at 14B
+ parameters is a 280-billion-token diet just to be compute-optimal, with quality still capped by whatever
+ the web actually contains. Reasoning is multi-step search over a solution space: decomposition,
+ backtracking, self-checking. It is a policy problem, trainable by reinforcement wherever an answer can be
+ checked. Verification is the act of checking itself, which for code, mathematics, and formal logic is
+ available deterministically and for free. Adaptation is the growth loop: the system updating itself from
+ its own experience. A traditional frontier model blends all four into one giant gradient descent over the
+ internet. Nothing forces that blending; the components have different optimal substrates, and only the
+ first one wants a datacenter.
+
+ The brain analogy is apt enough to be useful. Cortical slow learning encodes general structure;
+ hippocampal fast learning stores episodes and consolidates them; the prefrontal system controls effort
+ and decides when to think hard. Complementary-learning-systems theory has argued for two decades that
+ intelligence is precisely this factorization. The local AI stack we propose is the engineering translation: a
+ slowly-trained reasoning core, a fast episodic memory, an explicit controller that decides when to spend
+ thinking tokens, and consolidation jobs that run while the user sleeps.
+
+
+ 2.3 What a consumer computer actually is
+ The hardware bar for this program is an entry-class discrete GPU: 8 to 16 GB of VRAM, RTX
+ 4060/5060-class silicon, alongside Apple silicon with unified memory. The arithmetic is unforgiving in
+ one specific way. At decode time a transformer is memory-bandwidth-bound: every generated token
+ requires streaming the whole active weight set, so throughput in tokens per second is approximately
+ effective bandwidth divided by weight bytes. A 14B model at 4-bit quantization occupies about 7.8 GB,
+ so an RTX 4060 Ti 16GB (288 GB/s) sustains roughly 24 tokens per second, an RTX 5060 Ti 16GB (448
+ GB/s) about 37, and an RTX 4090 (1008 GB/s) about 84, assuming 65% kernel efficiency. With
+ EAGLE-3-style speculative decoding, multiply by at least three. Those numbers define a comfortable
+ interactive experience for a model that, per Figure 1, already reasons at frontier-adjacent levels on
+ verifiable tasks.
+
+ What the box cannot hold is the point. Sixteen gigabytes accommodates a 14B reasoning core with room
+ for its context cache and runtime; it cannot accommodate 671B parameters in any representation, and it
+ was never going to. The design conclusion is not “shrink the frontier model” but “stop needing it.” We
+ define the local frontier operationally: match frontier-tier performance on the tasks the user actually
+
+
+
+
+Agent R&D Division                                                                                               3
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ performs daily (math, code, documents, tool use on their own data), accept a recall handicap on the long
+ tail, and neutralize that handicap with retrieval. The payoff for that trade is latency measured in tens of
+ milliseconds, per-token cost of zero, privacy by construction, and capability that improves with use
+ instead of waiting on a vendor’s release cycle.
+
+
+ 2.4 The reframe: memorize less, retrieve more
+ Memorization is the expensive way to know something. A fact stored in weights costs training compute
+ forever, goes stale silently, and occupies the same precious gigabytes that reasoning needs. The same fact
+ on a local disk costs bytes, updates instantly, and never competes with the model. Our working math
+ makes the contrast stark: a 60 GB curated corpus is about 15 billion tokens of high-quality text, roughly
+ 0.4% of what a frontier model consumes in pretraining, yet it covers essentially all of one organization’s
+ or one person’s working knowledge. If the corpus is the only thing that must be current, then the model is
+ free to be permanent. That single reframe, knowledge as retrieval rather than parameters, is what converts
+ “runs locally” from a compromise into a design advantage.
+
+
+
+ 3. The Landscape: Ten Levers Beyond
+ Web-Scale Data
+ We surveyed the 2024–2026 literature and product releases for every mechanism that measurably buys
+ capability without proportional web data. Ten levers survive scrutiny. Each is presented with its published
+ evidence and its cost; together they form the menu from which the Mi9-Nexus architecture in Chapter 4
+ is composed. The through-line of the whole survey is worth stating up front: the field has quietly
+ discovered a second scaling axis. Compute spent after pretraining, on RL with verifiable rewards and at
+ inference time, converts into reasoning capability at a rate per dollar that pretraining no longer
+ approaches.
+
+
+ 3.1 Reasoning from reinforcement, not from records
+ DeepSeek-R1 is the founding evidence. Applied directly to a 671B-parameter base with no supervised
+ fine-tuning stage, large-scale RL with verifiable rewards (answer checking for math and code) produced
+ emergent self-verification, reflection, and long chain-of-thought behavior. R1 reaches 79.8% on AIME
+ 2024, 97.3% on MATH-500, 71.5% on GPQA-Diamond, and a 96.3 percentile on Codeforces, matching
+ OpenAI’s o1-1217 (79.2% on AIME) across math, code, and science. The crucial quantity is the training
+ diet: on the order of 800 thousand RL samples, not trillions of tokens. The Nature version of the paper
+ reported the RL stage at roughly $294,000 of compute on top of the $5.576M base-model pretraining
+ bill, implying the reasoning superpowers cost about 5% of the knowledge base they run on. Figure 1
+ shows the consequence for model scale directly: seven-billion-parameter students of R1 outperform
+ generalist models 25 times their size on reasoning benchmarks.
+
+
+
+
+Agent R&D Division                                                                                             4
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ Figure 1: AIME 2024 pass@1 (percent). Gray bars: generalist chat models trained the classic way. Blue bars: models that acquired
+           reasoning through RL and distillation rather than web-scale knowledge. Data: DeepSeek-R1 model card, 2025.
+
+
+
+
+ 3.2 Self-play curricula and the executor as ground truth
+ If RL with verifiable rewards works, the next question is where the tasks come from, and the answer need
+ not involve humans at all. Absolute Zero removes the external corpus entirely: the model proposes its own
+ reasoning tasks across deduction, abduction, and induction, solves them, and lets a code executor be both
+ the examiner and the referee. The executor validates that a proposed task is well-posed and that a
+ proposed solution actually runs to the claimed result, yielding reward signal with zero human data. The
+ system improved a 7B model to results competitive with substantially larger reasoning models trained on
+ curated corpora. This is the AlphaZero pattern returning to language: superhuman play was learned from
+ self-play with a perfect referee, not from human game records, and Sutton and Silver’s era-of-experience
+ argument generalizes exactly this move. For a local system the implication is strong: the curriculum
+ generator and the verifier share one substrate, a sandboxed runtime, and both scale with compute spent
+ locally rather than with data gathered globally.
+
+
+
+
+Agent R&D Division                                                                                                                  5
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ 3.3 Test-time compute: buying intelligence at the moment of use
+ The second scaling axis is compute spent generating the answer. The s1 project is the cleanest possible
+ demonstration: fine-tuning Qwen2.5-32B-Instruct on 1,000 curated, difficult, diverse reasoning traces
+ produced s1-32B, which exceeds o1-preview by up to 27% on competition math (MATH and AIME
+ 2024); a training run costing on the order of tens of dollars of GPU time. Budget forcing, appending
+ “Wait” to prolong deliberation, then lifted the same model from 50% to 57% on AIME 2024 with no
+ further training. The same lever operates at the frontier’s edge: OpenAI’s o3 scored 75.7% on ARC-AGI’s
+ semi-private evaluation at standard compute and 87.5% at a 172-times compute multiplier, a benchmark
+ on which models trained however you like had been stuck below 40% for years. Snell and colleagues
+ formalized the trade: compute-optimal test-time strategies let a 14B model defeat naive inference from
+ models several times its size, and Wu and colleagues’ inference scaling laws show the compute-optimal
+ model size shrinks as the inference budget grows. Figure 2 collects three verified pairs; the pattern is
+ monotone and cheap.
+
+
+
+
+       Figure 2: Score gains purely from extended test-time compute, three verified systems. Sources: s1 (arXiv:2501.19393),
+                     Qwen3-4B-Instruct/Thinking-2508 model cards, ARC Prize o3 announcement (Dec 2024).
+
+
+
+
+Agent R&D Division                                                                                                             6
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ 3.4 Distillation: compressed behavior, not compressed knowledge
+ Reasoning traces transfer. DeepSeek-R1’s own 800 thousand curated samples, generated by the 671B
+ teacher, fine-tuned six dense students between 1.5B and 70B. The students landed at remarkable levels
+ for their size: 55.5% on AIME 2024 at 7B, 69.7% at 14B, 72.6% at 32B, against o1-mini’s 63.6%; at 1.5B
+ the student already scores 28.9%, tripling GPT-4o’s 9.3%. A 7B student at 4-bit occupies about 4.6 GB
+ and runs on an 8 GB laptop GPU at interactive speeds, yet outperforms generalist models with tens of
+ times its parameters on verifiable reasoning. Distillation has known ceilings, which Chapter 6 treats
+ honestly: the students inherit the teacher’s style more than its depth, and they trail it on ambiguous or
+ knowledge-heavy probes (GPQA-Diamond 49.1% for the 7B versus 71.5% for R1 itself). But as a
+ delivery mechanism for the reasoning half of intelligence into consumer hardware, nothing else is
+ remotely as efficient.
+
+
+ 3.5 Data quality as an economy, not a torrent
+ Where pretraining data is still used, its curation matters more than its volume. Phi-4, a 14B model, was
+ trained in a 9.8-trillion-token mixture whose flagship ingredient is roughly 400 billion tokens of
+ synthetic, textbook-quality data generated through more than 50 customized pipelines, with deliberate
+ self-revision and falsification exercises built in. The result competes with models trained on several times
+ more web text, and the report’s central lesson is that small models thrive on dense signal rather than
+ diluted scale. Qwen3 pushed the same insight differently: rather than chasing unique tokens, it trained
+ every size down to 0.6B on the full 36-trillion-token diet across 119 languages, accepting massive
+ repetition to make reasoning data ubiquitous at every scale. Both programs agree on the conclusion that
+ matters to us: a curated corpus in the hundreds of billions of tokens, mostly synthetic and verifiable, is
+ now a sufficient knowledge substrate for a strong local model, and is purchasable or generable by a
+ mid-sized lab without touching the open web at scale.
+
+
+ 3.6 Specialization: depth beats breadth at fixed size
+ Frontier generality is a luxury product; most real work is deep rather than broad. A domain-focused
+ 4–14B model regularly matches models several times its size inside its domain, because capacity
+ concentrates on one distribution instead of diluting across the open web. Gemma 3 27B, a single-GPU
+ class model, posts a LMArena Elo of 1338, above DeepSeek-V3’s 1318 and o3-mini’s 1304, with 67.5%
+ on MMLU-Pro and about 89% on MATH-500; GLM-4.5-Air, a 106B-total / 12B-active MoE, hits 89.4%
+ on AIME 2024 and 57.6% on SWE-bench Verified, within a few points of its own 355B parent and of
+ o3, at one-third the active compute. For a local assistant the conclusion is liberating: we do not need one
+ model to know everything. We need one strong reasoning core, plus the discipline to point it at the user’s
+ actual domains, where its effective rank is high and its benchmarks are frontier-adjacent.
+
+
+
+
+Agent R&D Division                                                                                              7
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ 3.7 Architectural efficiency: MoE, hybrids, and latent attention
+ The parameter budget itself is negotiable through architecture. Mixture-of-experts decouples storage
+ from computation: DeepSeek-V3 holds 671B parameters yet activates only 37B per token;
+ Qwen3-30B-A3B stores 30.5B and activates 3.3B (128 experts, 8 active), delivering strong reasoning on a
+ desktop while weighing 17.1 GB at 4-bit; the same 30B-A3B pattern now appears across vendors,
+ including our own GLM-4.5 family’s compact tier. Hybrid sequence models change the second cost, the
+ context: NVIDIA’s Nemotron-Nano-9B-v2 keeps only 4 full attention layers out of 56 (the rest Mamba-2
+ and MLP), collapsing the KV cache by roughly an order of magnitude, exactly the property a
+ long-document local assistant needs, and ships an FP4 variant sized for a single GPU. DeepSeek’s
+ multi-head latent attention makes the same trade inside a pure transformer, compressing the KV cache to
+ a small latent per token. Our own arithmetic in Chapter 5 shows a 32K-token context costing 6.4 GB
+ under naive GQA versus about 0.5 GB under a 4-attention-layer hybrid. Architecture, not data, is what
+ makes context affordable.
+
+
+ 3.8 Sub-4-bit weights and speculative decoding
+ Two inference technologies move the feasibility line dramatically. Quantization: 4-bit weight-only
+ schemes are effectively lossless for interactive use, putting 14B at 7.8 GB and 8B at 4.6 GB; Apple’s
+ on-device foundation model runs a 3B network at a dominant 2 bits with mixed 2/4-bit LoRA adapters on
+ top, about 0.75 GB of weights, and still outperforms Phi-3-mini, Mistral-7B, Gemma-7B, and
+ Llama-3-8B on its evaluation suite. At the research frontier, Microsoft’s native 1.58-bit ternary BitNet
+ line promises weights that were never floating point at all; bitnet.cpp runs a 100B-class BitNet on a single
+ CPU at human reading speed (5–7 tokens per second), and the open 2B4T release (4 trillion training
+ tokens, about 0.4 GB) shows the format survives real training. Speculative decoding is the other half:
+ EAGLE-3 delivers 3.0–6.5 times speedup over vanilla autoregressive generation by attaching a
+ lightweight drafting head trained on the target’s own hidden layers, and it is already supported in vLLM.
+ Combined, sub-4-bit weights plus draft-model verification push a 14B-class reasoning core comfortably
+ past 60 tokens per second on a mid-range consumer GPU.
+
+
+
+ Model                 Size and architecture          Published signal                       Local footprint
+
+ Qwen3-4B-Thin         4B dense, hybrid thinking      81.3% AIME 2025 (thinking) vs          about 2.3 GB at 4-bit
+ king                  modes                          65.6% non-thinking
+
+ Qwen3-8B              8.2B dense (6.95B              66.2% AIME 2025, MMLU-Pro 72.1,        about 4.6 GB at 4-bit
+                       non-embedding), 36 layers      131K context
+
+ Qwen3-30B-A3          30.5B MoE, 3.3B active, 128    near-flagship reasoning; 3.3B active   17.1 GB at 4-bit; 24 GB
+ B                     experts (8 active)             per token                              card
+
+ DeepSeek-R1-D         14B dense, distilled on 800K   69.7% AIME 2024, 93.9%                 7.8 GB at 4-bit; 16 GB card
+ istill-14B            R1 samples                     MATH-500, CF 1481
+
+ Phi-4                 14B dense, 9.8T-token          about 400B premium synthetic tokens;   7.8 GB at 4-bit
+                       mixture                        MIT license
+
+
+
+
+Agent R&D Division                                                                                                         8
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ Model                 Size and architecture            Published signal                         Local footprint
+
+ Gemma 3 27B           27B dense, multimodal, 128K      LMArena Elo 1338; MMLU-Pro 67.5;         15.1 GB at 4-bit; 24 GB
+                       context                          MATH-500 about 89                        card
+
+ Nemotron-Nano         9B hybrid Mamba-2 + 4            reasoning throughput; KV cache about     about 5 GB FP4
+ -9B-v2                attention layers of 56           12x smaller; NVFP4 build
+
+ GLM-4.5-Air           106B MoE, 12B active,            89.4% AIME 2024, SWE-bench               about 59 GB at 4-bit;
+                       hybrid modes                     Verified 57.6, MIT                       prosumer tier
+
+ Apple on-device       about 3B, 2-bit + mixed          beats Phi-3-mini / Mistral-7B /          0.75 GB of weights
+ FM                    LoRA adapters                    Gemma-7B class on its suite
+
+ BitNet                2B native ternary, 4T training   3B-class ternary matches Llama-2-7B      about 0.4 GB; CPU-viable
+ b1.58-2B4T            tokens                           perplexity class
+
+                 Table 1: Open models already at home on consumer hardware (verified public figures, 2024–2025)
+
+
+
+
+ 3.9 Knowledge as retrieval and agentic memory
+ Once knowledge is externalized, the engineering question becomes memory architecture, and the
+ precedents are mature. Retrieval-augmented generation demonstrably substitutes for parametric
+ knowledge on the tasks people actually ask, at the cost of a disk index rather than a pretraining run.
+ MemGPT formalized the stronger version, treating the context window as main memory and the local
+ corpus as paged storage, with the model itself managing what is brought in and what is consolidated out;
+ the design descends directly from operating-system virtual memory and has become the reference pattern
+ for agent memory. Our quantity of interest is the warehouse size, and it is small: a 10 GB curated corpus
+ is roughly 2.5 billion tokens, and 60 GB is about 15 billion, which at typical retrieval depths covers a
+ professional domain exhaustively. The capability consequence is that the assistant’s answers are grounded
+ in documents the user controls, cite them, and update the moment the documents do, three properties no
+ parametric memory offers at any price.
+
+
+ 3.10 Verification as cognition, adaptation as growth
+ The final pair of levers closes the loop. Verification: a sandboxed Python process turns assertions into
+ executables, so the local system’s arithmetic, geometry, parsing, and logic can be machine-checked rather
+ than pattern-matched; this is the same substrate that makes RLVR and self-play possible, which is why
+ the verifier stack earns its place in the runtime even on days when no training happens. Adaptation:
+ Apple’s adapter architecture proves the deployment pattern, a frozen 2-bit base with swappable LoRA
+ adapters specialized per task, so capability updates ship as megabytes and roll back as easily. Combine
+ that with the self-play curriculum of Section 3.2 and a nightly consolidation job, and the local system
+ owns a growth loop that no cloud service can replicate: it trains on your tasks, verified by your executor,
+ with your data staying on your disk. That is the era of experience, and it happens to be the one scaling law
+ a laptop can afford.
+
+
+
+
+Agent R&D Division                                                                                                          9
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ 4. The Synthesis: Mi9-Nexus, a Reference
+ Architecture for Local Frontier Intelligence
+ The ten levers compose. This chapter specifies the composition we commit to: a system we call
+ Mi9-Nexus, a reference design for frontier-grade, agentic intelligence on an entry-class consumer GPU
+ (16 GB VRAM nominal, 8 GB degraded mode). The design philosophy is the four principles of Chapter
+ 1 made physical: a reasoning core that was never meant to be an encyclopedia, a memory layer that is
+ one, a verifier that polices both, a scheduler that decides when thinking is worth tokens, and a growth
+ loop that runs while the user sleeps. Figure 3 shows the topology; Table 2 gives the component-level
+ commitments that Phase 1–3 of Chapter 7 will implement and measure.
+
+
+
+
+  Figure 3: Mi9-Nexus reference architecture. Top band: resident runtime on the consumer GPU. Bottom band: the nightly offline
+   growth loop. Solid arrows are online request flow; the dashed arrow is the nightly LoRA swap that upgrades the reasoning core
+                                                         without replacing it.
+
+
+
+
+Agent R&D Division                                                                                                                 10
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ 4.1 The reasoning core
+ The core is a 14B-class model in a hybrid architecture: dense or small-MoE, with the majority of layers in
+ linear-time state-space form and a handful of full attention layers in the Nemotron-Nano-9B-v2 pattern,
+ so that a 32K-token working context costs about half a gigabyte of KV state instead of 6.4 GB under
+ naive GQA. Weights ship 4-bit (7.8 GB). The training recipe is the lever stack, not an invention: initialize
+ from the strongest open 14B base; distill 30 to 60 million tokens of verified reasoning traces from
+ frontier-class open teachers (the R1-distribution playbook at 800K-sample scale); then run RLVR over
+ about 120 thousand self-generated, executor-checked tasks across mathematics, code, logic, and
+ document processing, with budget forcing trained in so the model learns to use longer deliberation when
+ instructed. Dual-mode operation (thinking / non-thinking, as in Qwen3 and GLM-4.5) is mandatory,
+ because the fast path is what makes interactive latency feel native.
+
+
+ 4.2 Grounded memory, the verifier stack, and the tool belt
+ Memory is two stores and one policy. The semantic store is the curated corpus, 20 to 60 GB of documents
+ the user or organization actually relies on, indexed with hybrid lexical and vector retrieval so recall does
+ not collapse on exact identifiers the way pure embeddings do. The episodic store is a MemGPT-style
+ paged journal of interactions, tool results, and assistant notes, with a consolidation job that distills durable
+ facts into the semantic store on a schedule. The policy is the model itself deciding, page by page, what
+ enters the context window, which is the only scalable answer to a context that must survive months of use.
+ The verifier stack is the conscience: a sandboxed code executor with unit-test synthesis, a symbolic
+ mathematics checker, and static-analysis gates, invoked online to verify claims the model makes and
+ offline as referee for the growth loop. The tool belt (shell, files, browser, application APIs) turns verified
+ plans into actions; the model contributes judgment and decomposition, never raw precision.
+
+
+ 4.3 The budget scheduler and the growth loop
+ The scheduler is the economics minister of the runtime. Every query is routed by difficulty: the fast path
+ answers directly in non-thinking mode at 24 to 37 tokens per second on entry hardware; the deep path
+ enables thinking, allocates a token budget, admits retrieved context, and may invoke the verifier on
+ intermediate claims. Budget forcing, the s1 mechanism, lets the scheduler extend deliberation (“Wait”)
+ on problems where pass-rate curves are still rising, converting idle GPU hours into accuracy on demand.
+ The growth loop closes the system: each night the task engine proposes verifiable work pitched at the
+ edge of the core’s ability (Absolute Zero curriculum plus replayed user-approved tasks), the executor
+ validates every trace, and the adapter distiller folds verified wins into a LoRA adapter that swaps in with
+ rollback protection. Apple’s adapter architecture proves the deployment pattern at consumer scale; our
+ contribution is pointing it at self-generated, verified experience rather than vendor-curated tasks.
+
+
+
+
+Agent R&D Division                                                                                              11
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ Component            Design choice                          Budget               Why this choice
+
+ Reasoning core       14B hybrid SSM/attention, 4-bit,       7.8 GB weights       Distilled traces + RLVR; near-14B-distill
+                      dual-mode                                                   reasoning at entry-GPU cost
+
+ Context state        int8 KV, 16K default / 32K deep        1.6-3.2 GB           Hybrid-attention layers cut KV about 12x vs
+                      path                                                        naive GQA
+
+ Grounded             20-60 GB corpus + episodic store,      disk, 60 GB max      Knowledge stays current and citable; weights
+ memory               hybrid retrieval                                            stay permanent
+
+ Verifier stack       sandboxed executor, unit tests,        CPU, 0.4 ms-10       Precision outsourced; also the referee for
+                      symbolic checks, linters               s per check          self-play rewards
+
+ Budget               difficulty router + budget forcing +   runtime,             Buys accuracy exactly when the user needs it,
+ scheduler            KV manager                             negligible           at known token cost
+
+ Growth loop          nightly self-play + LoRA distiller +   off-peak GPU         Experience compounds; Apple-style adapters
+                      rollback gate                          2-6 h/night          keep updates cheap
+
+                                            Table 2: Mi9-Nexus component commitments
+
+
+
+
+ 4.4 The memory budget and the capability envelope
+
+
+
+
+   Figure 4: VRAM ledger on entry-class cards. Left: 8 GB card running the 8B fallback core. Right: 16 GB card running the full
+     Mi9-Nexus core with 16K-token context at int8 KV state; 4.3 GB remains as headroom for the deep path (32K context) or
+                                                        batched tool calls.
+
+
+
+ The ledger closes with room to spare: 7.8 GB of weights, 1.6 GB of KV state for a 16-thousand-token
+ context at int8, 1.2 GB of activation workspace, and 1.0 GB of runtime and driver overhead total 11.65
+ GB against a 16 GB card, leaving 4.3 GB of headroom that the scheduler can spend on a 32K deep-path
+ context, speculative-decoding buffers, or concurrency. On an 8 GB card the same system degrades to the
+ 8B core at 4.6 GB with 8K context, and remains genuinely useful rather than decorative. The honest
+ capability envelope, set by the lever measurements of Chapter 3, is: AIME-class mathematics at 65 to
+ 72%, MATH-500 above 93%, competitive programming in the 50-to-55% LiveCodeBench band before
+ verifier assistance and effectively higher on tasks where code must actually run, GPQA-class science at
+ roughly 60% with retrieval, and open-ended recall bounded by the corpus rather than the planet. That is
+
+
+
+Agent R&D Division                                                                                                                12
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ frontier-grade on the user’s own work, at zero marginal cost per token, in a machine that does not leave
+ the building.
+
+
+
+ 5. The Quantitative Program: Scaling Math,
+ FLOPs, Budgets
+ 5.1 Two costs, five orders of magnitude apart
+ The economics that make this program coherent are worth stating precisely, because they justify every
+ allocation decision that follows. Take the pretraining compute of a 14B model under the Chinchilla law C
+ = 6ND. At the compute-optimal 20 tokens per parameter, that is 2.35 × 1022 FLOPs for 280 billion
+ tokens; at the data-diet actually used by modern families (Qwen3’s 36 trillion tokens), it is 3.0 × 1024
+ FLOPs. Calibrating effective throughput against DeepSeek’s own published figures (V3 pretraining:
+ 2.664 million H800 GPU-hours for 6ND ≈ 3.3 × 1024 FLOPs, about 343 TFLOPS realized per GPU),
+ the 36-trillion-token pretraining of our 14B core would cost roughly 2.45 million GPU-hours, about $4.9
+ million at $2 per GPU-hour. Now price the reasoning half: an RLVR program of 120 thousand tasks, 16
+ rollouts per task of about 6K generated tokens, three policy epochs, and a 4-times overhead factor for
+ verifier runs and failed rollouts, totals about 7.3 × 1021 FLOPs, roughly 5,900 H800-equivalent
+ GPU-hours, about $12 thousand. The reasoning capability of a 14B model costs a quarter of one
+ percent of its pretraining. That single ratio is the entire business case for Mi9-Nexus, and it is why an
+ agentic AI company can rationally own a local frontier while renting cloud pretraining for the base
+ exactly once.
+
+
+
+                  $12K                                     $4.9M                                $31
+       Fermi cost of the RLVR reasoning           cost of the 36T-token pretraining   s1-style SFT on 1,000 curated
+         program for a 14B core (5,900             diet for the same model (2.45M      traces (about 16 GPU-hours)
+            H800-equiv GPU-hours)                             GPU-hours)
+
+
+
+
+ 5.2 Program budget scenarios
+
+
+
+
+Agent R&D Division                                                                                                    13
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ Program                                   Assumptions                                 Compute                   Cost
+
+ s1-style SFT                              1K traces x 10K tokens, 32B model, 10x      1.9 × 1018 FLOPs; 16      about $31
+                                           overhead                                    h
+
+ RLVR for 14B core                         120K tasks, 16 rollouts x 6K tok, 3         7.3 × 1021 FLOPs;         about $12K
+                                           epochs, 4x overhead                         5,900 h
+
+ Chinchilla pretrain 14B                   280B tokens, compute-optimal diet           2.4 × 1022 FLOPs;         about $38K
+                                                                                       19,000 h
+
+ Web-scale pretrain 14B                    36T tokens, Qwen3-class diet                3.0 × 1024 FLOPs;         about $4.9M
+                                                                                       2.45M h
+
+ Reference: DeepSeek-V3 base               14.8T tokens, 671B/37B MoE,                 2.664M H800 h             $5.576M
+                                           published                                   (pretrain)                published
+
+ Reference: R1 RL stage                    671B model, 800K-scale samples,             not itemized by           $294K published
+                                           published                                   authors
+
+                Table 3: Training budget scenarios, Fermi estimates on rented H800-class capacity at $2 per GPU-hour
+
+
+
+
+ 5.3 Inference arithmetic on consumer silicon
+ Decode is memory-bandwidth-bound: each token streams the active weights once, so sustained
+ generation speed is approximately 0.65 (kernel efficiency) times memory bandwidth divided by weight
+ bytes. Table 4 works this for a 4.6 GB 8B core and the 7.8 GB 14B core across the entry-to-prosumer
+ range, with the EAGLE-3 lower bound of 3× applied as a multiplier. Two context numbers complete the
+ picture: naive GQA at 48 layers and 8 KV heads of 128 dimensions costs 192 KiB per token, so 32K
+ tokens is 6.4 GB at fp16 and 3.2 GB at int8, while a 4-attention-layer hybrid pays about 16 KiB per
+ token, roughly half a gigabyte at the same context, which is precisely why Section 4.1 committed to the
+ hybrid form. Prefill, the other latency term, is compute-bound at 2 FLOPs per parameter per token:
+ ingesting a 100K-token document into the 14B core is about 2.8 × 1015 FLOPs, roughly 8 seconds on a
+ single H800-class GPU or a quarter-minute on consumer silicon, an occasional cost the scheduler can
+ amortize by indexing instead of re-reading.
+
+
+
+ Hardware (memory bandwidth)                           8B core                   14B core                  14B + EAGLE-3
+
+ RTX 4060 Ti 16GB (288 GB/s)                           41                        24                        72+
+
+ RTX 5060 Ti 16GB (448 GB/s)                           63                        37                        111+
+
+ RTX 4070 12GB (504 GB/s)                              71                        42*                       125+
+
+ RTX 4080 16GB (717 GB/s)                              101                       59                        178+
+
+ RTX 4090 24GB (1008 GB/s)                             143                       84                        251+
+
+ Apple M3 Max (400 GB/s)                               57                        33                        99+
+
+ Apple M4 Max (546 GB/s)                               77                        45                        136+
+
+
+
+
+Agent R&D Division                                                                                                             14
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+     Table 4: Expected decode throughput (tokens/sec) at 65% bandwidth efficiency, weights at 4-bit (8B: 4.6 GB, 14B: 7.8 GB)
+
+         * 14B weights (7.8 GB) exceed 12 GB VRAM together with context; the 4070-class row is for the 8B fallback core in practice.
+
+
+
+
+ 5.4 The knowledge budget
+ The retrieval side has its own small arithmetic. A 10 GB curated corpus holds roughly 2.5 billion tokens
+ of text; 60 GB holds about 15 billion, which is 0.4% of Qwen3’s 36 trillion-token pretraining diet.
+ Against the tasks a professional actually performs, coverage from a corpus of that size is close to total,
+ and the residual gap is precisely the long tail of world trivia where no local system, and increasingly no
+ cloud system either, will be authoritative without live retrieval. The design consequence is a rule we call
+ the 0.4% doctrine: one tenth of one percent of the internet, curated, current, and cited, covers
+ essentially all of the work; the remainder is a lookup, not a personality.
+
+
+
+ 6. Failure Modes and Honest Limits
+ A credible research program names the ways it can be wrong. We track six failure modes, each with its
+ mitigation, and we treat them as live monitoring targets rather than as caveats.
+
+
+ 6.1 The reasoning collapse
+ Apple’s Illusion of Thinking study documented complete accuracy collapse in frontier reasoning models
+ on controllable puzzle families (Tower of Hanoi, river crossings) beyond a complexity threshold, with
+ 8-disk Hanoi already at zero. The follow-up debate matters: re-analysis attributed much of the collapse to
+ output-token limits rather than intrinsic reasoning failure, since performance recovered when trace
+ budgets fit the context. For us the operational lesson stands either way: local reasoning cores with 16 to
+ 32K budgets will hit such cliffs earlier than frontier systems, so the scheduler must detect diminishing
+ coherence (repetition, non-termination, unverified claims) and escalate to decomposition or external tools
+ rather than grinding through token budgets. Verification-gated output is the mitigation: a claim that
+ cannot be checked is flagged, not presented.
+
+
+ 6.2 The distillation ceiling
+ Distilled students inherit traces, not depth. The 7B distill of R1 shows the pattern: frontier-adjacent on
+ AIME (55.5%) yet 49.1% on GPQA-Diamond against R1’s 71.5%, and distills trail their teacher most on
+ ambiguous, multi-constraint problems. We should expect our 14B core to inherit style ahead of
+ substance, and the honest counter is not more distillation but self-play RL on tasks the teacher never
+ solved, plus explicit curriculum stages pitched at failure clusters. The build plan gates Phase 1 on held-out
+ ambiguity sets precisely to detect the ceiling instead of benchmarking past it.
+
+
+
+
+Agent R&D Division                                                                                                                     15
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ 6.3 Verifiable-domain bias
+ RLVR works where answers check themselves: mathematics, code, formal logic, simulations.
+ Judgment-heavy work (taste, strategy, negotiation, open-ended research direction) has no executor, and
+ rewarding proxies there degrades into reward hacking. Mi9-Nexus’s growth loop must therefore stay
+ inside the verifiable perimeter, with human feedback as the only signal outside it, and the runtime must
+ label outputs by evidence class: executor-verified, retrieval-grounded, or model judgment. A local system
+ that silently pretends its opinions are verified is worse than one that declares the difference.
+
+
+ 6.4 The long tail, contamination, and evaluation
+ The 0.4% doctrine covers work, not trivia; SimpleQA-style probes will expose the corpus boundary, and
+ the correct response is a labeled web-retrieval fallback, not embarrassment. Contamination is the
+ evaluation-side disease: AIME-class benchmarks are saturated and partially leaked into every large
+ corpus, which is why our gates in Chapter 7 use held-out, regenerated, and self-generated task families
+ with variance reporting (R1 itself reports pass@1 estimated over 64 samples for this reason). Any
+ Phase-gate that cannot survive a contamination audit does not count as passed.
+
+
+ 6.5 On-device adaptation risk
+ Nightly self-modification is powerful and dangerous in equal measure. Reward hacking inside the loop
+ produces confident nonsense; adapter drift degrades yesterday’s competence; a compromised corpus
+ poisons consolidation. The mitigations are structural: every adapter ships with a regression gate against a
+ frozen 500-task suite and automatic rollback; adapters are signed and sandboxed in the Apple pattern; the
+ executor that referees training is audited by an adversarial test suite of its own; and the growth loop runs
+ strictly user-initiated for the first two releases. Continual learning that cannot roll back is not a feature; it
+ is a liability.
+
+
+ 6.6 Physics: power, heat, and memory
+ Consumer GPUs sustain 200 to 300 W, and nightly self-play at full duty will heat a room and a bill; the
+ scheduler’s off-peak window and power cap are part of the product, not an afterthought. Memory
+ bandwidth, not FLOPs, remains the binding constraint on interactive speed, which is why the
+ architecture’s hybrid KV design and 4-bit weights are load-bearing decisions rather than conveniences.
+ None of these limits threatens the thesis; all of them shape the engineering discipline around it.
+
+
+
+
+Agent R&D Division                                                                                               16
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ 7. The Build Plan: 24 Months, Four Phases
+ The program converts directly into a phased plan with measurable go/no-go gates. Cost envelope for
+ Phases 0 through 2, at the Chapter 5 rates, is roughly $150K of rented compute plus a small evaluation
+ cluster, an amount chosen so that a failed bet is affordable and a successful one is repeatable. The gates
+ below are contamination-audited, variance-reported, and frozen at phase start; regenerating benchmarks
+ after the fact is not permitted.
+
+
+
+ Phase         Window         Deliverables                                                Go/no-go gate
+
+ 0             months         Evaluation harness: 20+ locked task families across         Harness reproducible; base selected with
+               0-3            math, code, logic, documents, tool use; contamination       measured variance; throughput within
+                              audit; base-model bake-off (2-3 open 14B bases);            15% of Table 4
+                              VRAM and throughput audits on 8/16/24 GB cards
+
+ 1             months         Reasoning core: distill 30-60M verified trace tokens;       AIME-class 65%+ at 14B;
+               3-9            RLVR over 120K self-generated tasks; budget-forcing         LiveCodeBench-class 50%+; ambiguity
+                              training; int8-KV inference build                           held-out set within 5 pts of teacher
+                                                                                          traces
+
+ 2             months         Agentic runtime: memory layer, verifier stack, tool         90%+ tool-use task success on the
+               9-18           belt, budget scheduler; citation-first answers; degraded    locked suite; verified-output flagging on
+                              8B mode                                                     95%+ of executable claims; p50
+                                                                                          first-token under 350 ms locally
+
+ 3             months         Growth loop: nightly self-play, adapter distiller,          Measurable weekly capability delta on
+               18-24          rollback gate, adapter signing; safety review and           user-panel tasks; zero unexplained
+                              adversarial executor audit                                  regressions; adapter rollback under 60 s
+
+                                           Table 5: Phases, deliverables, and go/no-go gates
+
+
+ Three risks dominate the register. First, reward hacking: an executor that can be gamed turns the growth
+ loop into a paperclip machine in miniature, so the adversarial executor audit in Phase 3 is a gate, not a
+ checkbox. Second, distillation ceiling: if the ambiguity held-out set stalls, we pivot budget from
+ distillation to self-play RL and to tool-mediated reasoning rather than re-buying traces. Third, evaluation
+ drift: benchmark scores that cannot survive a contamination audit are treated as void, and the locked suite
+ is extended by self-generated families whose answers only the executor knows. The plan’s posture
+ throughout is the one this whitepaper opened with: buy reasoning with compute, rent knowledge exactly
+ once, and let experience do the compounding.
+
+
+
+
+Agent R&D Division                                                                                                                   17
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ 8. Conclusion
+ The mandate was to find how AI can be made smarter without ingesting the whole internet, and to bring
+ the answer to a consumer computer. The research record of 2024 through 2026 supports a decisive
+ answer: the internet was only ever the substrate for one component of intelligence, its warehouse of facts,
+ and that component is the one that need not live in weights. Reasoning is now demonstrably purchasable
+ with reinforcement learning on a few hundred thousand verified tasks at a quarter of a percent of
+ pretraining cost; knowledge retrieves from a corpus that fits on the same disk as the operating system;
+ precision is a service exposed by a sandboxed executor; and growth compounds nightly on the user’s own
+ experience. None of this is a prediction; each element is measured somewhere in the papers cited below,
+ and Mi9-Nexus is simply their composition on a 16 GB card.
+
+ The strategic meaning for an agentic AI company is equally direct. Local-first is not a retreat from the
+ frontier; it is the only place where the frontier’s next axis, test-time and experiential compute, can run at
+ zero marginal cost with perfect privacy. Every hour a user’s GPU spends verified-thinking is an hour our
+ cloud does not have to serve, and every verified trace it generates is proprietary training signal our
+ competitors cannot scrape. We recommend committing to Phase 0 immediately: the harness is cheap, the
+ bet is measurable within a quarter, and the downside if the gates fail is a first-class evaluation
+ infrastructure we need anyway. Intelligence without the whole internet is no longer a slogan; with the
+ evidence assembled here, it is an engineering schedule.
+
+
+
+ References
+ [1] DeepSeek-AI. DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.
+       arXiv:2501.12948, January 2025.
+ [2] Guo, D., et al. DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning. Nature 646, 2025;
+       supplementary material reporting the $294,000 RL-stage cost.
+ [3] Muennighoff, N., et al. s1: Simple test-time scaling. arXiv:2501.19393, January 2025; and simplescaling.github.io.
+ [4] Zhao, A., et al. Absolute Zero: Reinforced Self-play Reasoning with Zero Data. arXiv:2505.03335, May 2025.
+ [5] Snell, C., et al. Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters.
+        arXiv:2408.03314, August 2024.
+ [6] Wu, Y., et al. Inference Scaling Laws: An Empirical Analysis of Compute-Optimal Inference. arXiv:2408.00724, 2024.
+ [7] DeepSeek-AI. DeepSeek-V3 Technical Report. arXiv:2412.19437, December 2024. 671B/37B MoE, 14.8T tokens,
+       2.664M H800 pretraining GPU-hours, $5.576M.
+ [8] Qwen Team. Qwen3 Technical Report. arXiv:2505.09388, May 2025. 36T-token pretraining across 119 languages.
+ [9] Abdin, M., et al. (Microsoft). Phi-4 Technical Report. arXiv:2412.08905, December 2024.
+ [10] Gemma Team (Google DeepMind). Gemma 3 Technical Report. arXiv:2503.19786, March 2025; blog.google
+       Gemma 3 announcement (single-H100 27B, LMArena Elo 1338).
+ [11] Z.ai. GLM-4.5: Reasoning, Coding, and Agentic Abilities. z.ai/blog/glm-4.5 and zai-org/GLM-4.5 on Hugging Face,
+        August 2025. GLM-4.5-Air: 106B/12B active.
+
+
+
+
+Agent R&D Division                                                                                                        18
+Beyond the Whole Internet | Research Whitepaper
+
+
+
+
+ [12] NVIDIA. Nemotron-Nano-9B-v2 (hybrid Mamba-2/MLP/4-attention architecture, NVFP4). Hugging Face model
+       card, August 2025.
+ [13] Ma, H., et al. (Microsoft). The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits. arXiv:2402.17764,
+       2024; and microsoft/BitNet b1.58-2B-4T release (April 2025).
+ [14] Li, Y., et al. EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Free Draft
+        Models. arXiv:2503.01840, March 2025.
+ [15] Packer, C., et al. MemGPT: Towards LLMs as Operating Systems. arXiv:2310.08560, October 2023.
+ [16] Apple. Introducing Apple’s On-Device and Server Foundation Models. machinelearning.apple.com, June 2024; and
+       Apple Intelligence Foundation Language Models Tech Report 2025 (arXiv:2507.13575).
+ [17] Shojaee, P., et al. (Apple). The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning
+       Models via the Lens of Problem Complexity. arXiv:2506.06941, June 2025.
+ [18] Villalobos, P., et al. Will we run out of data? Limits of LLM scaling based on human-generated data. Epoch AI /
+       arXiv:2211.04325v2, 2024. Usable stock of high-quality public text estimated near 300T tokens.
+ [19] Silver, D., and Sutton, R. Welcome to the Era of Experience. Google DeepMind, 2025. Agents learning predominantly
+        from self-generated, environmentally rewarded experience.
+ [20] ARC Prize Foundation. OpenAI o3 Breakthrough High Score on ARC-AGI-Pub.
+       arcprize.org/blog/oai-o3-pub-breakthrough, December 2024. 75.7% standard / 87.5% at 172x compute.
+ [21] Hoffmann, J., et al. Training Compute-Optimal Large Language Models (Chinchilla). arXiv:2203.15556, 2022.
+ [22] deepseek-ai/DeepSeek-R1 Hugging Face model card. Benchmark tables for R1 and R1-Distill families; 800K distilled
+        samples; evaluation protocol (temperature 0.6, 64 samples). 2025.
+ [23] Qwen Team. Qwen3-4B-Thinking-2508 and Qwen3-4B-Instruct-2508 model cards, Hugging Face, August 2025
+       (AIME25 81.3% vs 65.6%).
+ [24] Hu, A., and Dao, T. Mamba: Linear-Time Sequence Modeling with Selective State Spaces. arXiv:2312.00752, 2023.
+ [25] ggerganov / ggml. llama.cpp quantization formats (Q4_K_M and int8 KV-cache practice).
+        github.com/ggml-org/llama.cpp, 2024-2025.
+ [26] Scientific American. Secrets of Chinese AI Model DeepSeek Revealed in Landmark Paper. September 2025
+       (RL-stage cost reporting).
+
+
+
+
+Agent R&D Division                                                                                                       19
+

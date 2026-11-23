@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi9-Nexus</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23ff2d55'/><stop offset='1' stop-color='%23ff5e62'/></linearGradient></defs><text y='.9em' font-size='90' fill='url(%23g)'>◆</text></svg>">
+<link rel="stylesheet" href="vendor/fonts.css">
+<link rel="stylesheet" href="vendor/github-dark.min.css">
+<style>
+:root {
+  --bg: #08080b; --bg-2: #0c0c11;
+  --panel: #121218; --panel-2: #1a1a22; --panel-3: #22222c;
+  --border: #26262f; --border-2: #34343f;
+  --text: #f2f2f5; --muted: #8a8a99; --muted-2: #5c5c6b;
+  --accent: #ff2d55; --accent-2: #ff5e62;
+  --accent-soft: rgba(255,45,85,0.12); --accent-line: rgba(255,45,85,0.35);
+  --green: #34d399; --yellow: #fbbf24;
+  --radius: 14px; --shadow: 0 8px 30px rgba(0,0,0,0.5);
+  --sb: 264px;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(255,45,85,0.10), transparent 60%),
+    radial-gradient(900px 500px at 10% 110%, rgba(255,45,85,0.06), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  font: 15px/1.65 "Inter", -apple-system, "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: flex; height: 100vh; overflow: hidden;
+}
+
+/* ---------- sidebar ---------- */
+#sidebar {
+  width: var(--sb); flex: 0 0 var(--sb); background: var(--bg-2);
+  border-right: 1px solid var(--border); display: flex; flex-direction: column;
+  transition: margin-left .2s ease;
+}
+#sidebar .sb-top { padding: 14px; border-bottom: 1px solid var(--border); }
+#sidebar .brand { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+#sidebar .brand .logo { width: 30px; height: 30px; border-radius: 9px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 15px; box-shadow: 0 0 18px rgba(255,45,85,0.45); }
+#sidebar .brand h1 { font-size: 15px; margin: 0; font-weight: 700; letter-spacing: .2px; }
+#sidebar .brand h1 .nx { background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+#newChat {
+  width: 100%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff;
+  border: none; border-radius: 10px; padding: 10px; font: inherit; font-size: 13px; font-weight: 600;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(255,45,85,0.3); transition: transform .12s, box-shadow .15s;
+}
+#newChat:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,45,85,0.45); }
+#chatList { flex: 1; overflow-y: auto; padding: 8px; }
+.chat-item {
+  display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 10px;
+  cursor: pointer; color: var(--muted); font-size: 13px; margin-bottom: 2px; border: 1px solid transparent;
+}
+.chat-item:hover { background: var(--panel); color: var(--text); }
+.chat-item.active { background: var(--accent-soft); border-color: var(--accent-line); color: var(--text); }
+.chat-item .nm { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chat-item .del { opacity: 0; color: var(--muted-2); background: none; border: none; cursor: pointer; font-size: 15px; padding: 0 2px; }
+.chat-item:hover .del { opacity: 1; }
+.chat-item .del:hover { color: var(--accent); }
+.chat-item .pv { font-size: 11px; color: var(--muted-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---------- main ---------- */
+#main { flex: 1; display: flex; flex-direction: column; min-width: 0; position: relative; }
+header {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 12px 20px; background: rgba(12,12,17,0.72);
+  backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: 1px solid var(--border); z-index: 10;
+}
+header .status { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 7px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; background: var(--panel); }
+header .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+header .status.ok::before { background: var(--green); box-shadow: 0 0 8px var(--green); }
+header .spacer { flex: 1; }
+header .controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+header .ctl { display: flex; align-items: center; gap: 8px; background: var(--panel); border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; font-size: 12px; color: var(--muted); cursor: pointer; transition: border-color .15s, background .15s; }
+header .ctl:hover { border-color: var(--accent-line); background: var(--panel-2); }
+header .ctl .val { color: var(--text); font-variant-numeric: tabular-nums; min-width: 20px; text-align: right; }
+header .ctl input[type=range] { width: 68px; }
+header select, header input[type=range] { accent-color: var(--accent); }
+header select { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); border-radius: 7px; padding: 4px 8px; font-size: 12px; font-family: inherit; cursor: pointer; }
+header select:focus { outline: none; border-color: var(--accent-line); }
+header .icon-btn { background: var(--panel); color: var(--muted); border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px; font-size: 12px; font-family: inherit; cursor: pointer; transition: border-color .15s, background .15s, color .15s; }
+header .icon-btn:hover { border-color: var(--accent-line); background: var(--panel-2); color: var(--text); }
+header .icon-btn.help { width: 30px; height: 30px; padding: 0; border-radius: 50%; font-weight: 700; font-size: 14px; }
+header .brand { display: flex; align-items: center; gap: 10px; }
+header .brand .logo { width: 30px; height: 30px; border-radius: 9px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 15px; box-shadow: 0 0 18px rgba(255,45,85,0.45); flex: 0 0 auto; }
+header .brand-text h1 { font-size: 15px; margin: 0; font-weight: 700; letter-spacing: .2px; line-height: 1.15; }
+header .brand-text h1 .nx { background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+header .model-name { font-size: 11px; color: var(--muted-2); font-weight: 500; letter-spacing: .2px; white-space: nowrap; }
+header .icon-btn.menu { display: none; }
+
+/* settings popover */
+.popover {
+  position: fixed; top: 62px; right: 16px; z-index: 30;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+  width: 288px; padding: 14px; box-shadow: var(--shadow); display: none;
+}
+.popover.open { display: block; animation: rise .15s ease; }
+.popover .pop-title { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .7px; margin-bottom: 8px; }
+.popover .pop-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text); cursor: pointer; }
+.popover .pop-row:last-of-type { border-bottom: none; }
+.popover .pop-row .val { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 22px; text-align: right; }
+.popover .pop-row input[type=range] { width: 90px; accent-color: var(--accent); }
+.popover .pop-row select { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); border-radius: 7px; padding: 4px 8px; font-size: 12px; font-family: inherit; }
+.popover .pop-actions { display: flex; gap: 8px; margin-top: 12px; }
+.popover .pop-actions button { flex: 1; background: var(--panel-2); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 8px; font-size: 13px; font-family: inherit; cursor: pointer; }
+.popover .pop-actions button:hover { border-color: var(--accent-line); }
+
+/* ---------- chat ---------- */
+#chat { flex: 1; overflow-y: auto; padding: 28px 20px 140px; max-width: 900px; width: 100%; margin: 0 auto; scroll-behavior: smooth; }
+.msg { margin: 22px 0; display: flex; flex-direction: column; gap: 6px; animation: rise .25s ease; }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.msg .role { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .8px; display: flex; align-items: center; gap: 6px; }
+.msg .role::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--muted-2); }
+.msg.user .role::before { background: var(--accent); }
+.msg .bubble { padding: 14px 18px; border-radius: var(--radius); overflow-x: auto; border: 1px solid transparent; }
+.msg.user .bubble { background: var(--accent-soft); border-color: var(--accent-line); }
+.msg.assistant .bubble { background: var(--panel); border-color: var(--border); }
+.msg .bubble p { margin: 0 0 10px; }
+.msg .bubble p:last-child { margin-bottom: 0; }
+.msg .bubble pre { background: #050508; border: 1px solid var(--border); border-radius: 10px; padding: 14px; overflow-x: auto; font-size: 13px; margin: 12px 0; }
+.msg .bubble code { font-family: "JetBrains Mono", ui-monospace, Consolas, monospace; font-size: 13px; }
+.msg .bubble :not(pre) > code { background: #ffffff10; padding: 1px 6px; border-radius: 5px; color: var(--accent-2); }
+.msg .bubble table { border-collapse: collapse; margin: 10px 0; width: 100%; }
+.msg .bubble th, .msg .bubble td { border: 1px solid var(--border); padding: 7px 11px; text-align: left; }
+.msg .bubble th { background: var(--panel-2); }
+.msg .bubble a { color: var(--accent-2); }
+.msg .meta { font-size: 11px; color: var(--muted-2); display: flex; gap: 14px; flex-wrap: wrap; padding-left: 2px; }
+.msg .think { color: var(--muted); font-style: italic; border-left: 2px solid var(--accent-line); padding-left: 12px; margin-bottom: 10px; white-space: pre-wrap; }
+.tool { border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); overflow: hidden; }
+.tool .th { display: flex; align-items: center; gap: 8px; padding: 9px 14px; background: var(--panel-2); border-bottom: 1px solid var(--border); font-size: 12px; }
+.tool .th .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+.tool .th .dot.err { background: #ff4757; box-shadow: 0 0 8px #ff4757; }
+.tool .th .name { font-family: "JetBrains Mono", monospace; font-weight: 600; color: var(--accent-2); }
+.tool .th .tag { margin-left: auto; color: var(--muted); font-size: 11px; }
+.tool .tbody { padding: 12px 14px; }
+.tool .tbody pre { margin: 0; background: #050508; border: 1px solid var(--border); border-radius: 8px; padding: 10px; overflow-x: auto; font-size: 12.5px; font-family: "JetBrains Mono", monospace; max-height: 260px; }
+.tool .tbody .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: .8px; color: var(--muted-2); margin: 0 0 5px; }
+.tool .tbody .res { margin-top: 10px; }
+
+/* ---------- composer ---------- */
+#composer { background: linear-gradient(transparent, var(--bg) 34%); padding: 18px 20px 22px; display: flex; justify-content: center; }
+#composer .inner { max-width: 900px; width: 100%; display: flex; gap: 10px; align-items: flex-end; }
+#input { flex: 1; background: var(--panel); color: var(--text); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 18px; font: inherit; resize: none; min-height: 50px; max-height: 220px; transition: border-color .15s, box-shadow .15s; }
+#input::placeholder { color: var(--muted-2); }
+#input:focus { outline: none; border-color: var(--accent-line); box-shadow: 0 0 0 3px var(--accent-soft); }
+#send { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; border: none; border-radius: var(--radius); padding: 0 24px; height: 50px; font-weight: 700; font-size: 15px; font-family: inherit; cursor: pointer; box-shadow: 0 6px 20px rgba(255,45,85,0.35); transition: transform .12s, box-shadow .15s, opacity .15s; }
+#send:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(255,45,85,0.5); }
+#send:disabled { opacity: .4; cursor: default; box-shadow: none; transform: none; }
+#send.stop { background: var(--panel-3); color: var(--text); box-shadow: none; }
+
+.empty { color: var(--muted); text-align: center; margin-top: 14vh; }
+.empty .mark { width: 64px; height: 64px; margin: 0 auto 18px; border-radius: 18px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: grid; place-items: center; color: #fff; font-size: 30px; font-weight: 800; box-shadow: 0 0 40px rgba(255,45,85,0.4); }
+.empty h2 { font-weight: 600; font-size: 22px; margin-bottom: 8px; color: var(--text); }
+.empty p { margin: 0; }
+.examples { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 22px; }
+.ex { background: var(--panel); border: 1px solid var(--border); color: var(--text); border-radius: 10px; padding: 10px 16px; font: inherit; font-size: 13px; cursor: pointer; transition: border-color .15s, background .15s, transform .12s; }
+.ex:hover { border-color: var(--accent-line); background: var(--panel-2); transform: translateY(-1px); }
+kbd { background: var(--panel-2); border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 5px; padding: 1px 7px; font-size: 12px; font-family: inherit; }
+
+#chat::-webkit-scrollbar, #chatList::-webkit-scrollbar { width: 10px; }
+#chat::-webkit-scrollbar-thumb, #chatList::-webkit-scrollbar-thumb { background: var(--panel-3); border-radius: 10px; border: 3px solid var(--bg); }
+
+/* modal */
+.modal-bg { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; padding: 20px; }
+.modal-bg.open { display: flex; }
+.modal { background: var(--panel); border: 1px solid var(--border); border-radius: 18px; max-width: 560px; width: 100%; max-height: 82vh; overflow-y: auto; box-shadow: var(--shadow); }
+.modal .mh { display: flex; align-items: center; gap: 10px; padding: 18px 22px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--panel); z-index: 1; }
+.modal .mh h3 { margin: 0; font-size: 16px; }
+.modal .mh .x { margin-left: auto; background: none; border: none; color: var(--muted); font-size: 22px; cursor: pointer; line-height: 1; }
+.modal .mh .x:hover { color: var(--text); }
+.modal .mb { padding: 18px 22px 24px; font-size: 13.5px; color: var(--muted); }
+.modal .mb h4 { color: var(--text); font-size: 13px; margin: 18px 0 8px; text-transform: uppercase; letter-spacing: .6px; }
+.modal .mb h4:first-child { margin-top: 0; }
+.modal .mb .tool-row { display: flex; gap: 10px; margin: 8px 0; }
+.modal .mb .tool-row .k { font-family: "JetBrains Mono", monospace; color: var(--accent-2); font-weight: 600; min-width: 92px; font-size: 12px; }
+
+@media (max-width: 760px) {
+  #sidebar { position: fixed; top: 0; left: 0; bottom: 0; z-index: 40; margin-left: calc(-1 * var(--sb)); box-shadow: var(--shadow); }
+  #sidebar.open { margin-left: 0; }
+  header { padding: 10px 12px; gap: 9px; }
+  header .icon-btn.menu { display: inline-flex; }
+  #chat { padding: 18px 12px 120px; }
+}
+</style>
+</head>
+<body>
+<aside id="sidebar">
+  <div class="sb-top">
+    <button id="newChat">+ New chat</button>
+  </div>
+  <div id="chatList"></div>
+</aside>
+
+<div id="main">
+  <header>
+    <button id="menuBtn" class="icon-btn menu" title="Show chats" aria-label="Show chats">☰</button>
+    <div class="brand">
+      <div class="logo">◆</div>
+      <div class="brand-text">
+        <h1>Mi9<span class="nx">·Nexus</span></h1>
+        <div class="model-name" id="modelName">mi9-nexus-v3 · Q8_0</div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="status" id="status">checking server…</div>
+    <button id="settingsBtn" class="icon-btn" title="Settings" aria-label="Settings">⚙</button>
+    <button id="help" class="icon-btn help" title="Help &amp; about Mi9-Nexus" aria-label="Help">?</button>
+  </header>
+
+  <div class="popover" id="settingsPopover">
+    <div class="pop-title">Settings</div>
+    <label class="pop-row" title="The model reasons step-by-step before answering. Slower, but better on hard problems.">
+      <span>Deep thinking</span>
+      <input type="checkbox" id="think">
+    </label>
+    <label class="pop-row" title="Temperature — higher is more varied, lower is more focused/repeatable.">
+      <span>Creativity</span>
+      <input type="range" id="temp" min="0" max="1.5" step="0.1" value="0.7">
+      <span class="val" id="tempv">0.7</span>
+    </label>
+    <label class="pop-row" title="Maximum tokens per reply. Higher = longer answers, but slower.">
+      <span>Length</span>
+      <select id="maxTokens">
+        <option value="512">Short · 512</option>
+        <option value="1024" selected>Medium · 1024</option>
+        <option value="2048">Long · 2048</option>
+      </select>
+    </label>
+    <div class="pop-actions">
+      <button id="clear" title="Clear this conversation">Clear chat</button>
+      <button id="export" title="Download this chat as JSON">Export</button>
+    </div>
+  </div>
+
+  <div id="chat">
+    <div class="empty" id="empty">
+      <div class="mark">◆</div>
+      <h2>Ask Mi9-Nexus anything.</h2>
+      <p>Runs locally on this laptop · <kbd>Enter</kbd> send · <kbd>Shift+Enter</kbd> newline</p>
+      <div class="examples">
+        <button class="ex" data-q="What is 127 times 43? Use the run_python tool for the arithmetic.">Compute 127 × 43</button>
+        <button class="ex" data-q="Write a Python function that returns the nth Fibonacci number, then test it with run_python.">Write &amp; test code</button>
+        <button class="ex" data-q="Search the web for the latest stable version of Python and summarize the key changes.">Search the web</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="composer">
+    <div class="inner">
+      <textarea id="input" rows="1" placeholder="Message Mi9-Nexus…"></textarea>
+      <button id="send">send</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="helpModal">
+  <div class="modal">
+    <div class="mh"><h3>About Mi9-Nexus</h3><button class="x" id="helpClose" title="Close">×</button></div>
+    <div class="mb">
+      <p>Mi9-Nexus is a local 1.7B reasoning assistant. It can use tools to compute, search your corpus, and search the web — the model decides when to call them. Each chat is auto-named and has its own sandbox.</p>
+      <h4>Tools it can use</h4>
+      <div class="tool-row"><span class="k">run_python</span><span class="v">Runs Python in a sandbox for arithmetic, logic, and data wrangling.</span></div>
+      <div class="tool-row"><span class="k">retrieve</span><span class="v">Searches the local corpus (docs, code, playbooks).</span></div>
+      <div class="tool-row"><span class="k">web_search</span><span class="v">Searches the live web.</span></div>
+      <div class="tool-row"><span class="k">web_fetch</span><span class="v">Reads a web page's text.</span></div>
+      <h4>Controls</h4>
+      <div class="tool-row"><span class="k">Deep thinking</span><span class="v">Model reasons step-by-step before answering (slower, better on hard problems).</span></div>
+      <div class="tool-row"><span class="k">Creativity</span><span class="v">Temperature — higher = more varied, lower = more focused/repeatable.</span></div>
+      <div class="tool-row"><span class="k">Length</span><span class="v">Max tokens per reply — longer answers take more time.</span></div>
+      <h4>Tips</h4>
+      <p>Ask it to <b>use a tool</b> for anything precise (arithmetic, code, facts). It shows each tool call and result inline. <kbd>Enter</kbd> sends, <kbd>Shift+Enter</kbd> adds a newline.</p>
+    </div>
+  </div>
+</div>
+
+<script src="vendor/marked.min.js"></script>
+<script src="vendor/highlight.min.js"></script>
+<script>
+const $ = (s) => document.querySelector(s);
+const chat = $("#chat"), input = $("#input"), sendBtn = $("#send");
+const statusEl = $("#status");
+const TOOL_RE = /<tool>\s*(\{[\s\S]*?\})\s*<\/tool>/;
+const MAX_ROUNDS = 6;
+const LS_KEY = "mi9-chats-v1";
+let chats = [];
+let currentId = null;
+let busy = false;
+let controller = null;
+
+marked.setOptions({ breaks: true, gfm: true });
+
+/* ---------- chat state ---------- */
+function loadChats() {
+  try { chats = JSON.parse(localStorage.getItem(LS_KEY)) || []; } catch { chats = []; }
+  if (!chats.length) { newChat(); } else { currentId = chats[0].id; }
+}
+function saveChats() { try { localStorage.setItem(LS_KEY, JSON.stringify(chats)); } catch {} }
+function currentChat() { return chats.find((c) => c.id === currentId); }
+function newChat() {
+  const id = "c" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+  chats.unshift({ id, name: "New chat", messages: [], created: Date.now(), updated: Date.now() });
+  currentId = id; saveChats(); renderChatList(); renderChat();
+}
+function switchChat(id) { currentId = id; saveChats(); renderChatList(); renderChat(); $("#sidebar").classList.remove("open"); }
+function deleteChat(id) {
+  chats = chats.filter((c) => c.id !== id);
+  if (!chats.length) { newChat(); return; }
+  if (currentId === id) currentId = chats[0].id;
+  saveChats(); renderChatList(); renderChat();
+}
+function addMessage(role, content) {
+  const c = currentChat();
+  if (!c) return;
+  c.messages.push({ role, content });
+  c.updated = Date.now();
+  saveChats();
+}
+function renderChatList() {
+  const list = $("#chatList");
+  list.innerHTML = "";
+  for (const c of chats) {
+    const div = document.createElement("div");
+    div.className = "chat-item" + (c.id === currentId ? " active" : "");
+    const last = c.messages.length ? c.messages[c.messages.length - 1].content.slice(0, 40) : "empty";
+    div.innerHTML = `<span class="nm">${esc(c.name)}</span><button class="del" title="Delete">×</button>`;
+    div.querySelector(".nm").addEventListener("click", () => switchChat(c.id));
+    div.querySelector(".del").addEventListener("click", (e) => { e.stopPropagation(); deleteChat(c.id); });
+    list.appendChild(div);
+  }
+}
+function renderChat() {
+  const c = currentChat();
+  chat.innerHTML = "";
+  if (!c || !c.messages.length) {
+    chat.innerHTML = `<div class="empty" id="empty"><div class="mark">◆</div><h2>Ask Mi9-Nexus anything.</h2>
+      <p>Runs locally on this laptop · <kbd>Enter</kbd> send · <kbd>Shift+Enter</kbd> newline</p>
+      <div class="examples">
+        <button class="ex" data-q="What is 127 times 43? Use the run_python tool for the arithmetic.">Compute 127 × 43</button>
+        <button class="ex" data-q="Write a Python function that returns the nth Fibonacci number, then test it with run_python.">Write &amp; test code</button>
+        <button class="ex" data-q="Search the web for the latest stable version of Python and summarize the key changes.">Search the web</button>
+      </div></div>`;
+    wireExamples();
+    return;
+  }
+  for (const m of c.messages) {
+    if (m.role === "tool") {
+      const div = document.createElement("div");
+      div.className = "msg tool";
+      const { name, args, result, isErr } = m;
+      const tag = isErr ? "error" : "ok";
+      div.innerHTML = `<div class="role">tool</div><div class="tool">
+        <div class="th"><span class="dot${isErr ? " err" : ""}"></span><span class="name">${esc(name)}</span><span class="tag">${tag}</span></div>
+        <div class="tbody"><div class="lbl">arguments</div><pre>${esc(JSON.stringify(args || {}, null, 2))}</pre>
+        <div class="res"><div class="lbl">result</div><pre>${esc(typeof result === "string" ? result : JSON.stringify(result, null, 2)).slice(0, 3000)}</pre></div></div>
+        </div>`;
+      chat.appendChild(div);
+    } else {
+      const div = document.createElement("div");
+      div.className = `msg ${m.role}`;
+      div.innerHTML = `<div class="role">${m.role === "user" ? "you" : "mi9-nexus"}</div><div class="bubble">${m.role === "user" ? esc(m.content) : renderMarkdown(m.content)}</div><div class="meta"></div>`;
+      chat.appendChild(div);
+    }
+  }
+  scrollDown();
+}
+
+/* ---------- helpers ---------- */
+function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+function renderMarkdown(text) {
+  let think = "";
+  const m = text.match(/<think>([\s\S]*?)<\/think>/);
+  if (m) { think = m[1].trim(); text = text.replace(/<think>[\s\S]*?<\/think>/, "").trim(); }
+  let html = marked.parse(text);
+  if (think) html = `<div class="think">${esc(think)}</div>` + html;
+  return html;
+}
+function scrollDown() { chat.scrollTop = chat.scrollHeight; }
+function wireExamples() { document.querySelectorAll(".ex").forEach((b) => b.addEventListener("click", () => { input.value = b.dataset.q; send(); })); }
+
+async function checkHealth() {
+  try {
+    const r = await fetch("/v1/health", { signal: AbortSignal.timeout(15000) });
+    const j = await r.json();
+    setStatus(true, `server ok · ${j.status || "up"}`);
+  } catch (e) { console.error("checkHealth failed:", e && (e.message || e)); setStatus(false, "server down — run nexus/serve"); }
+}
+function setStatus(ok, text) { statusEl.classList.toggle("ok", ok); statusEl.textContent = text; }
+
+/* ---------- model turn ---------- */
+async function streamTurn(messages, think) {
+  const body = {
+    model: "nexus/micro", messages,
+    temperature: parseFloat($("#temp").value),
+    max_tokens: parseInt($("#maxTokens").value, 10),
+    stream: true, chat_template_kwargs: { enable_thinking: think },
+  };
+  const r = await fetch("/v1/chat/completions", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body), signal: controller.signal });
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  const reader = r.body.getReader(), dec = new TextDecoder();
+  let buf = "", full = "", tokens = 0;
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buf += dec.decode(value, { stream: true });
+    const lines = buf.split("\n"); buf = lines.pop();
+    for (const line of lines) {
+      if (!line.startsWith("data: ")) continue;
+      const payload = line.slice(6).trim();
+      if (payload === "[DONE]") continue;
+      try {
+        const j = JSON.parse(payload), d = j.choices?.[0]?.delta || {};
+        if (d.content) full += d.content;
+        else if (d.reasoning_content) full += d.reasoning_content;
+        if (j.usage?.completion_tokens) tokens = j.usage.completion_tokens;
+      } catch {}
+    }
+  }
+  return { text: full.trim() || "(empty response)", tokens };
+}
+
+async function execTool(call) {
+  try {
+    const r = await fetch(`/tools/${call.name}`, {
+      method: "POST", headers: { "content-type": "application/json" },
+      body: JSON.stringify({ ...call.args, chat_id: currentId }),
+      signal: AbortSignal.timeout(120000),
+    });
+    return await r.json();
+  } catch (e) { return { error: `${e.name}: ${e.message}` }; }
+}
+
+async function maybeNameChat(firstUser) {
+  const c = currentChat();
+  if (!c || c.name !== "New chat") return;
+  try {
+    const r = await fetch("/v1/chat/completions", {
+      method: "POST", headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        model: "nexus/micro",
+        messages: [
+          { role: "system", content: "Generate a 3-5 word title for this conversation. Output only the title, no quotes, no punctuation." },
+          { role: "user", content: firstUser },
+        ],
+        max_tokens: 24, temperature: 0.3,
+        chat_template_kwargs: { enable_thinking: false },
+      }),
+      signal: AbortSignal.timeout(30000),
+    });
+    const j = await r.json();
+    const name = (j.choices?.[0]?.message?.content || "").replace(/["'\n]/g, "").trim().slice(0, 40);
+    if (name) { c.name = name; saveChats(); renderChatList(); }
+  } catch {}
+}
+
+/* ---------- agent loop ---------- */
+async function agentSend(userText) {
+    const think = $("#think").checked;
+    const sys = { role: "system", content: "You are Mi9-Nexus, a local reasoning assistant. You have tools: run_python (sandboxed Python for arithmetic/logic), retrieve (search the local corpus), web_search (search the web), web_fetch (read a page). When you need a tool, emit ONE <tool>{\"name\":..., \"args\":{...}}</tool> as the last thing in your reply. After the tool result, continue. When done, give the final answer." };
+    const messages = [sys, ...currentChat().messages.map((m) => ({ role: m.role === "tool" ? "user" : m.role, content: m.content }))];
+
+    for (let round = 0; round < MAX_ROUNDS; round++) {
+      const div = addMsgEl("assistant");
+      const { text, tokens } = await streamTurn(messages, think);
+      div.querySelector(".bubble").innerHTML = renderMarkdown(text);
+      div.querySelector(".meta").innerHTML = `<span>${tokens} tok</span>`;
+      scrollDown();
+
+      const m = text.match(TOOL_RE);
+      if (m && round < MAX_ROUNDS - 1) {
+        let call; try { call = JSON.parse(m[1]); } catch { break; }
+        if (!call || !call.name) break;
+        const result = await execTool(call);
+        const isErr = !!(result && typeof result === "object" && (result.error || result.stderr));
+        // persist assistant turn + tool result
+        currentChat().messages.push({ role: "assistant", content: text });
+        currentChat().messages.push({ role: "tool", name: call.name, args: call.args, result, isErr });
+        saveChats();
+        // show the tool card under the (trimmed) assistant bubble
+        div.querySelector(".bubble").innerHTML = renderMarkdown(text.replace(TOOL_RE, "").trim() || "…");
+        addToolEl(call, result, isErr);
+        // feed the result back to the model
+        messages.push({ role: "assistant", content: text });
+        messages.push({ role: "user", content: `TOOL RESULT (${call.name}):\n${JSON.stringify(result).slice(0, 2000)}\nContinue.` });
+      } else {
+        currentChat().messages.push({ role: "assistant", content: text });
+        saveChats();
+        break;
+      }
+    }
+    maybeNameChat(userText);
+  }
+
+function addMsgEl(role) {
+  $("#empty")?.remove();
+  const div = document.createElement("div");
+  div.className = `msg ${role}`;
+  div.innerHTML = `<div class="role">${role === "user" ? "you" : "mi9-nexus"}</div><div class="bubble"></div><div class="meta"></div>`;
+  chat.appendChild(div);
+  return div;
+}
+function addToolEl(call, result, isErr) {
+  const div = document.createElement("div");
+  div.className = "msg tool";
+  const tag = isErr ? "error" : "ok";
+  const argsStr = JSON.stringify(call.args || {}, null, 2);
+  const resStr = typeof result === "string" ? result : JSON.stringify(result, null, 2);
+  div.innerHTML = `<div class="role">tool</div><div class="tool">
+    <div class="th"><span class="dot${isErr ? " err" : ""}"></span><span class="name">${esc(call.name)}</span><span class="tag">${tag}</span></div>
+    <div class="tbody"><div class="lbl">arguments</div><pre>${esc(argsStr)}</pre>
+    <div class="res"><div class="lbl">result</div><pre>${esc(resStr).slice(0, 3000)}</pre></div></div>
+    </div>`;
+  chat.appendChild(div);
+  scrollDown();
+}
+
+/* ---------- send ---------- */
+async function send() {
+  const text = input.value.trim();
+  if (!text) return;
+  if (busy) { controller?.abort(); return; }
+
+  addMsgEl("user").querySelector(".bubble").textContent = text;
+  addMessage("user", text);
+  input.value = ""; input.style.height = "auto";
+
+  busy = true; sendBtn.textContent = "stop"; sendBtn.classList.add("stop");
+  controller = new AbortController();
+  try { await agentSend(text); }
+  catch (e) { addMsgEl("assistant").querySelector(".bubble").textContent = `error: ${e.message}`; }
+  finally { busy = false; controller = null; sendBtn.textContent = "send"; sendBtn.classList.remove("stop"); scrollDown(); checkHealth(); renderChatList(); }
+}
+
+/* ---------- events ---------- */
+sendBtn.addEventListener("click", send);
+input.addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); } });
+input.addEventListener("input", () => { input.style.height = "auto"; input.style.height = Math.min(220, input.scrollHeight) + "px"; });
+$("#temp").addEventListener("input", (e) => $("#tempv").textContent = e.target.value);
+$("#newChat").addEventListener("click", newChat);
+// mobile chat drawer + settings popover
+$("#menuBtn").addEventListener("click", (e) => { e.stopPropagation(); $("#sidebar").classList.toggle("open"); });
+$("#chatList").addEventListener("click", () => $("#sidebar").classList.remove("open"));
+$("#settingsBtn").addEventListener("click", (e) => { e.stopPropagation(); $("#settingsPopover").classList.toggle("open"); });
+document.addEventListener("click", (e) => {
+  if (!e.target.closest("#settingsPopover") && !e.target.closest("#settingsBtn")) {
+    $("#settingsPopover").classList.remove("open");
+  }
+  if (window.innerWidth <= 760 && !e.target.closest("#sidebar") && !e.target.closest("#menuBtn")) {
+    $("#sidebar").classList.remove("open");
+  }
+});
+$("#clear").addEventListener("click", () => { const c = currentChat(); if (c) { c.messages = []; c.name = "New chat"; saveChats(); renderChat(); renderChatList(); } });
+$("#help").addEventListener("click", () => $("#helpModal").classList.add("open"));
+$("#helpClose").addEventListener("click", () => $("#helpModal").classList.remove("open"));
+$("#helpModal").addEventListener("click", (e) => { if (e.target.id === "helpModal") $("#helpModal").classList.remove("open"); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") $("#helpModal").classList.remove("open"); });
+$("#export").addEventListener("click", () => {
+  const blob = new Blob([JSON.stringify(currentChat(), null, 2)], { type: "application/json" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+  a.download = `mi9-nexus-${(currentChat()?.name || "chat").replace(/\W+/g, "-")}.json`; a.click(); URL.revokeObjectURL(a.href);
+});
+$("#chatList").addEventListener("click", (e) => { if (e.target.id === "chatList") return; });
+
+/* ---------- init ---------- */
+loadChats();
+renderChatList();
+renderChat();
+wireExamples();
+checkHealth();
+setInterval(checkHealth, 30000);
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+CPT corpus: 500 sequences x 512 tokens (256k tokens)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  25%|██▌       | 79/310 [00:00<00:00, 766.56it/s]Loading weights:  50%|█████     | 156/310 [00:00<00:00, 487.53it/s]Loading weights:  68%|██████▊   | 211/310 [00:00<00:00, 436.02it/s]Loading weights:  83%|████████▎ | 258/310 [00:00<00:00, 342.08it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 448.15it/s]
+trainable params: 6,422,528 || all params: 1,726,997,504 || trainable%: 0.3719
+step 10/500 loss 1.961 rss 4310MB (42.2s/step)
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-l32r7o9i'}
+  warnings.warn(

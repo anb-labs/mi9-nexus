@@ -1,0 +1,8 @@
+replay: 22 verified episodes (since line 290)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 6979.21it/s]
+trainable params: 6,422,528 || all params: 1,726,997,504 || trainable%: 0.3719
+trainable sequences: 11
+step 5/11 loss 0.073 rss 4467MB (51.5s/step)
+step 10/11 loss 0.058 rss 4450MB (51.7s/step)
+saved peft adapter -> /home/santosh/Mi9/mi9-ai-model/adapters/peft-20261114-003658
+final loss 0.053

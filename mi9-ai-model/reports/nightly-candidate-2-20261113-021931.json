@@ -1,0 +1,1040 @@
+{
+ "label": "nightly-candidate-2",
+ "suite": "/home/santosh/Mi9/mi9-ai-model/suites/regression.json",
+ "when": "2026-11-13T02:19:31.978306",
+ "overall_pass1": 0.71,
+ "domains": {
+  "code": 0.9,
+  "math": 0.393,
+  "logic": 0.5
+ },
+ "by_family": {
+  "arith_chain": 0.0,
+  "balanced": 0.75,
+  "base_convert": 0.0,
+  "bool_expr": 0.75,
+  "caesar": 0.75,
+  "closure": 0.5,
+  "count_occurrences": 1.0,
+  "dedupe": 1.0,
+  "flatten": 1.0,
+  "fraction_ops": 1.0,
+  "gcd_lcm": 0.75,
+  "is_palindrome": 1.0,
+  "linear_solve": 1.0,
+  "matmul2": 1.0,
+  "max_subarray": 1.0,
+  "modular_pow": 0.5,
+  "perm_order": 0.25,
+  "popcount": 1.0,
+  "reverse_string": 1.0,
+  "rle": 0.75,
+  "second_largest": 0.5,
+  "seq_nth": 0.25,
+  "sum_ints": 1.0,
+  "truth_table": 0.0,
+  "word_count": 1.0
+ },
+ "results": [
+  {
+   "id": "reverse_string~d2~03b8aead",
+   "family": "reverse_string",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 3.6,
+   "samples": 1
+  },
+  {
+   "id": "reverse_string~d2~1b0357b8",
+   "family": "reverse_string",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 1.8,
+   "samples": 1
+  },
+  {
+   "id": "reverse_string~d2~27630a6d",
+   "family": "reverse_string",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 1.8,
+   "samples": 1
+  },
+  {
+   "id": "reverse_string~d2~06e5ddb0",
+   "family": "reverse_string",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 1.8,
+   "samples": 1
+  },
+  {
+   "id": "is_palindrome~d2~38424ec0",
+   "family": "is_palindrome",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 3.1,
+   "samples": 1
+  },
+  {
+   "id": "is_palindrome~d2~27ffb914",
+   "family": "is_palindrome",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 2.0,
+   "samples": 1
+  },
+  {
+   "id": "is_palindrome~d2~12dc7475",
+   "family": "is_palindrome",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 2.0,
+   "samples": 1
+  },
+  {
+   "id": "is_palindrome~d2~1d3502a3",
+   "family": "is_palindrome",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 2.0,
+   "samples": 1
+  },
+  {
+   "id": "sum_ints~d2~2d2d9786",
+   "family": "sum_ints",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 2.9,
+   "samples": 1
+  },
+  {
+   "id": "sum_ints~d2~2f6a10a0",
+   "family": "sum_ints",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 1.8,
+   "samples": 1
+  },
+  {
+   "id": "sum_ints~d2~098e1b94",
+   "family": "sum_ints",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 1.8,
+   "samples": 1
+  },
+  {
+   "id": "sum_ints~d2~1833b643",
+   "family": "sum_ints",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 1.9,
+   "samples": 1
+  },
+  {
+   "id": "count_occurrences~d2~38424ec0",
+   "family": "count_occurrences",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 3.5,
+   "samples": 1
+  },
+  {
+   "id": "count_occurrences~d2~27ffb914",
+   "family": "count_occurrences",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 2.4,
+   "samples": 1
+  },
+  {
+   "id": "count_occurrences~d2~1b926509",
+   "family": "count_occurrences",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 2.3,
+   "samples": 1
+  },
+  {
+   "id": "count_occurrences~d2~301ecd44",
+   "family": "count_occurrences",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 2.4,
+   "samples": 1
+  },
+  {
+   "id": "dedupe~d2~38424ec0",
+   "family": "dedupe",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 5.7,
+   "samples": 1
+  },
+  {
+   "id": "dedupe~d2~29b6a3c2",
+   "family": "dedupe",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 4.1,
+   "samples": 1
+  },
+  {
+   "id": "dedupe~d2~3c5f985a",
+   "family": "dedupe",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 4.1,
+   "samples": 1
+  },
+  {
+   "id": "dedupe~d2~3f9368d9",
+   "family": "dedupe",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 4.0,
+   "samples": 1
+  },
+  {
+   "id": "second_largest~d2~34f62d2e",
+   "family": "second_largest",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 5.5,
+   "samples": 1
+  },
+  {
+   "id": "second_largest~d2~355745c7",
+   "family": "second_largest",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": false,
+   "error": null,
+   "seconds": 3.6,
+   "samples": 1
+  },
+  {
+   "id": "second_largest~d2~2183e932",
+   "family": "second_largest",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": false,
+   "error": null,
+   "seconds": 3.6,
+   "samples": 1
+  },
+  {
+   "id": "second_largest~d2~01b477b2",
+   "family": "second_largest",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 3.6,
+   "samples": 1
+  },
+  {
+   "id": "max_subarray~d2~38424ec0",
+   "family": "max_subarray",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 6.8,
+   "samples": 1
+  },
+  {
+   "id": "max_subarray~d2~1c3d73da",
+   "family": "max_subarray",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 4.9,
+   "samples": 1
+  },
+  {
+   "id": "max_subarray~d2~3c5f985a",
+   "family": "max_subarray",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 4.9,
+   "samples": 1
+  },
+  {
+   "id": "max_subarray~d2~06e5ddb0",
+   "family": "max_subarray",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 4.9,
+   "samples": 1
+  },
+  {
+   "id": "gcd_lcm~d2~28fa3ea7",
+   "family": "gcd_lcm",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 6.1,
+   "samples": 1
+  },
+  {
+   "id": "gcd_lcm~d2~3b72544f",
+   "family": "gcd_lcm",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 3.8,
+   "samples": 1
+  },
+  {
+   "id": "gcd_lcm~d2~164ecf0f",
+   "family": "gcd_lcm",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 3.7,
+   "samples": 1
+  },
+  {
+   "id": "gcd_lcm~d2~1bd07db2",
+   "family": "gcd_lcm",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": false,
+   "error": "no code block",
+   "seconds": 4.6,
+   "samples": 1
+  },
+  {
+   "id": "popcount~d2~1c1cbd83",
+   "family": "popcount",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 5.0,
+   "samples": 1
+  },
+  {
+   "id": "popcount~d2~1c4092d7",
+   "family": "popcount",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 3.5,
+   "samples": 1
+  },
+  {
+   "id": "popcount~d2~3c238f61",
+   "family": "popcount",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 2.2,
+   "samples": 1
+  },
+  {
+   "id": "popcount~d2~2dd23e4a",
+   "family": "popcount",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 2.3,
+   "samples": 1
+  },
+  {
+   "id": "matmul2~d2~05dfc812",
+   "family": "matmul2",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 7.6,
+   "samples": 1
+  },
+  {
+   "id": "matmul2~d2~1b0357b8",
+   "family": "matmul2",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 5.9,
+   "samples": 1
+  },
+  {
+   "id": "matmul2~d2~27630a6d",
+   "family": "matmul2",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 6.0,
+   "samples": 1
+  },
+  {
+   "id": "matmul2~d2~1eac1ac4",
+   "family": "matmul2",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 5.9,
+   "samples": 1
+  },
+  {
+   "id": "balanced~d2~2d05992a",
+   "family": "balanced",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 7.9,
+   "samples": 1
+  },
+  {
+   "id": "balanced~d2~20d9638b",
+   "family": "balanced",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 7.9,
+   "samples": 1
+  },
+  {
+   "id": "balanced~d2~322118d5",
+   "family": "balanced",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 8.0,
+   "samples": 1
+  },
+  {
+   "id": "balanced~d2~1fd3fb2d",
+   "family": "balanced",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": false,
+   "error": null,
+   "seconds": 5.4,
+   "samples": 1
+  },
+  {
+   "id": "rle~d2~03b8aead",
+   "family": "rle",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": false,
+   "error": null,
+   "seconds": 9.4,
+   "samples": 1
+  },
+  {
+   "id": "rle~d2~2589319b",
+   "family": "rle",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 7.8,
+   "samples": 1
+  },
+  {
+   "id": "rle~d2~285fd639",
+   "family": "rle",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 7.8,
+   "samples": 1
+  },
+  {
+   "id": "rle~d2~1fd3fb2d",
+   "family": "rle",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 7.5,
+   "samples": 1
+  },
+  {
+   "id": "caesar~d2~05dfc812",
+   "family": "caesar",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 7.5,
+   "samples": 1
+  },
+  {
+   "id": "caesar~d2~29b6a3c2",
+   "family": "caesar",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 6.2,
+   "samples": 1
+  },
+  {
+   "id": "caesar~d2~098e1b94",
+   "family": "caesar",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 7.0,
+   "samples": 1
+  },
+  {
+   "id": "caesar~d2~3f9368d9",
+   "family": "caesar",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": false,
+   "error": null,
+   "seconds": 7.2,
+   "samples": 1
+  },
+  {
+   "id": "flatten~d2~01d24578",
+   "family": "flatten",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 5.9,
+   "samples": 1
+  },
+  {
+   "id": "flatten~d2~29de797e",
+   "family": "flatten",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 4.0,
+   "samples": 1
+  },
+  {
+   "id": "flatten~d2~307f5795",
+   "family": "flatten",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 4.0,
+   "samples": 1
+  },
+  {
+   "id": "flatten~d2~086fa1bb",
+   "family": "flatten",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 4.3,
+   "samples": 1
+  },
+  {
+   "id": "word_count~d2~0de27bf2",
+   "family": "word_count",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 5.4,
+   "samples": 1
+  },
+  {
+   "id": "word_count~d2~2f6a10a0",
+   "family": "word_count",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 3.7,
+   "samples": 1
+  },
+  {
+   "id": "word_count~d2~3c5f985a",
+   "family": "word_count",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 3.7,
+   "samples": 1
+  },
+  {
+   "id": "word_count~d2~06e5ddb0",
+   "family": "word_count",
+   "domain": "code",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 3.7,
+   "samples": 1
+  },
+  {
+   "id": "arith_chain~d2~03b8aead",
+   "family": "arith_chain",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 3.0,
+   "samples": 1
+  },
+  {
+   "id": "arith_chain~d2~20d9638b",
+   "family": "arith_chain",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 2.8,
+   "samples": 1
+  },
+  {
+   "id": "arith_chain~d2~285fd639",
+   "family": "arith_chain",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 2.8,
+   "samples": 1
+  },
+  {
+   "id": "arith_chain~d2~1d3502a3",
+   "family": "arith_chain",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 2.5,
+   "samples": 1
+  },
+  {
+   "id": "fraction_ops~d2~2cc421f4",
+   "family": "fraction_ops",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 11.1,
+   "samples": 1
+  },
+  {
+   "id": "fraction_ops~d2~38098085",
+   "family": "fraction_ops",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 12.7,
+   "samples": 1
+  },
+  {
+   "id": "fraction_ops~d2~285fd639",
+   "family": "fraction_ops",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 10.8,
+   "samples": 1
+  },
+  {
+   "id": "fraction_ops~d2~242bbcbc",
+   "family": "fraction_ops",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 9.7,
+   "samples": 1
+  },
+  {
+   "id": "modular_pow~d2~34f62d2e",
+   "family": "modular_pow",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 21.8,
+   "samples": 1
+  },
+  {
+   "id": "modular_pow~d2~355745c7",
+   "family": "modular_pow",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 18.0,
+   "samples": 1
+  },
+  {
+   "id": "modular_pow~d2~322118d5",
+   "family": "modular_pow",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 12.3,
+   "samples": 1
+  },
+  {
+   "id": "modular_pow~d2~01b477b2",
+   "family": "modular_pow",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 12.4,
+   "samples": 1
+  },
+  {
+   "id": "linear_solve~d2~2cc421f4",
+   "family": "linear_solve",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 6.3,
+   "samples": 1
+  },
+  {
+   "id": "linear_solve~d2~38098085",
+   "family": "linear_solve",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 12.8,
+   "samples": 1
+  },
+  {
+   "id": "linear_solve~d2~285fd639",
+   "family": "linear_solve",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 11.5,
+   "samples": 1
+  },
+  {
+   "id": "linear_solve~d2~242bbcbc",
+   "family": "linear_solve",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 8.5,
+   "samples": 1
+  },
+  {
+   "id": "base_convert~d2~34f62d2e",
+   "family": "base_convert",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 11.8,
+   "samples": 1
+  },
+  {
+   "id": "base_convert~d2~355745c7",
+   "family": "base_convert",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 11.0,
+   "samples": 1
+  },
+  {
+   "id": "base_convert~d2~2183e932",
+   "family": "base_convert",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 16.7,
+   "samples": 1
+  },
+  {
+   "id": "base_convert~d2~2087d0ea",
+   "family": "base_convert",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 7.3,
+   "samples": 1
+  },
+  {
+   "id": "seq_nth~d2~2cc421f4",
+   "family": "seq_nth",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 14.2,
+   "samples": 1
+  },
+  {
+   "id": "seq_nth~d2~38098085",
+   "family": "seq_nth",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 12.3,
+   "samples": 1
+  },
+  {
+   "id": "seq_nth~d2~322118d5",
+   "family": "seq_nth",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 4.8,
+   "samples": 1
+  },
+  {
+   "id": "seq_nth~d2~242bbcbc",
+   "family": "seq_nth",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 7.3,
+   "samples": 1
+  },
+  {
+   "id": "perm_order~d2~0ebf9dce",
+   "family": "perm_order",
+   "domain": "logic",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 21.5,
+   "samples": 1
+  },
+  {
+   "id": "perm_order~d2~36ab1b4f",
+   "family": "perm_order",
+   "domain": "logic",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 21.0,
+   "samples": 1
+  },
+  {
+   "id": "perm_order~d2~078a0b81",
+   "family": "perm_order",
+   "domain": "logic",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 30.2,
+   "samples": 1
+  },
+  {
+   "id": "perm_order~d2~13319e3f",
+   "family": "perm_order",
+   "domain": "logic",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 10.2,
+   "samples": 1
+  },
+  {
+   "id": "bool_expr~d2~03b8aead",
+   "family": "bool_expr",
+   "domain": "logic",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 2.9,
+   "samples": 1
+  },
+  {
+   "id": "bool_expr~d2~27ffb914",
+   "family": "bool_expr",
+   "domain": "logic",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 3.8,
+   "samples": 1
+  },
+  {
+   "id": "bool_expr~d2~39682966",
+   "family": "bool_expr",
+   "domain": "logic",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 5.6,
+   "samples": 1
+  },
+  {
+   "id": "bool_expr~d2~1d3502a3",
+   "family": "bool_expr",
+   "domain": "logic",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 1.2,
+   "samples": 1
+  },
+  {
+   "id": "truth_table~d2~2d2d9786",
+   "family": "truth_table",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 22.6,
+   "samples": 1
+  },
+  {
+   "id": "truth_table~d2~27ffb914",
+   "family": "truth_table",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 10.9,
+   "samples": 1
+  },
+  {
+   "id": "truth_table~d2~3c5f985a",
+   "family": "truth_table",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 12.1,
+   "samples": 1
+  },
+  {
+   "id": "truth_table~d2~301ecd44",
+   "family": "truth_table",
+   "domain": "math",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 11.2,
+   "samples": 1
+  },
+  {
+   "id": "closure~d2~2b88afdf",
+   "family": "closure",
+   "domain": "logic",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 10.7,
+   "samples": 1
+  },
+  {
+   "id": "closure~d2~1e7dacdb",
+   "family": "closure",
+   "domain": "logic",
+   "difficulty": 2,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 10.2,
+   "samples": 1
+  },
+  {
+   "id": "closure~d2~15535d64",
+   "family": "closure",
+   "domain": "logic",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 6.9,
+   "samples": 1
+  },
+  {
+   "id": "closure~d2~2abc03ce",
+   "family": "closure",
+   "domain": "logic",
+   "difficulty": 2,
+   "correct": true,
+   "error": null,
+   "seconds": 7.9,
+   "samples": 1
+  }
+ ]
+}

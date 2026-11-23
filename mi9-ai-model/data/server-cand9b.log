@@ -1,0 +1,117 @@
+0.00.001.401 I srv  llama_server: initializing ...
+0.00.130.833 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.131.209 W srv  server_setup: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.132.605 I srv    load_model: loading model 'models/nexus-current.gguf'
+0.00.399.057 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.258.055 W llama_adapter_lora_init_impl: lora for 'blk.0.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.081 W llama_adapter_lora_init_impl: lora for 'blk.0.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.082 W llama_adapter_lora_init_impl: lora for 'blk.0.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.085 W llama_adapter_lora_init_impl: lora for 'blk.1.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.086 W llama_adapter_lora_init_impl: lora for 'blk.1.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.087 W llama_adapter_lora_init_impl: lora for 'blk.1.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.090 W llama_adapter_lora_init_impl: lora for 'blk.10.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.092 W llama_adapter_lora_init_impl: lora for 'blk.10.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.093 W llama_adapter_lora_init_impl: lora for 'blk.10.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.094 W llama_adapter_lora_init_impl: lora for 'blk.10.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.095 W llama_adapter_lora_init_impl: lora for 'blk.11.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.097 W llama_adapter_lora_init_impl: lora for 'blk.11.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.099 W llama_adapter_lora_init_impl: lora for 'blk.11.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.101 W llama_adapter_lora_init_impl: lora for 'blk.12.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.102 W llama_adapter_lora_init_impl: lora for 'blk.12.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.103 W llama_adapter_lora_init_impl: lora for 'blk.12.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.105 W llama_adapter_lora_init_impl: lora for 'blk.12.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.106 W llama_adapter_lora_init_impl: lora for 'blk.13.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.107 W llama_adapter_lora_init_impl: lora for 'blk.13.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.109 W llama_adapter_lora_init_impl: lora for 'blk.13.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.110 W llama_adapter_lora_init_impl: lora for 'blk.13.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.111 W llama_adapter_lora_init_impl: lora for 'blk.14.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.113 W llama_adapter_lora_init_impl: lora for 'blk.14.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.114 W llama_adapter_lora_init_impl: lora for 'blk.14.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.116 W llama_adapter_lora_init_impl: lora for 'blk.15.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.118 W llama_adapter_lora_init_impl: lora for 'blk.15.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.121 W llama_adapter_lora_init_impl: lora for 'blk.15.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.126 W llama_adapter_lora_init_impl: lora for 'blk.15.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.129 W llama_adapter_lora_init_impl: lora for 'blk.16.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.131 W llama_adapter_lora_init_impl: lora for 'blk.16.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.133 W llama_adapter_lora_init_impl: lora for 'blk.16.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.134 W llama_adapter_lora_init_impl: lora for 'blk.16.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.136 W llama_adapter_lora_init_impl: lora for 'blk.17.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.138 W llama_adapter_lora_init_impl: lora for 'blk.17.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.141 W llama_adapter_lora_init_impl: lora for 'blk.17.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.147 W llama_adapter_lora_init_impl: lora for 'blk.18.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.149 W llama_adapter_lora_init_impl: lora for 'blk.18.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.152 W llama_adapter_lora_init_impl: lora for 'blk.18.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.158 W llama_adapter_lora_init_impl: lora for 'blk.18.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.164 W llama_adapter_lora_init_impl: lora for 'blk.19.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.170 W llama_adapter_lora_init_impl: lora for 'blk.19.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.176 W llama_adapter_lora_init_impl: lora for 'blk.19.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.182 W llama_adapter_lora_init_impl: lora for 'blk.19.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.187 W llama_adapter_lora_init_impl: lora for 'blk.2.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.190 W llama_adapter_lora_init_impl: lora for 'blk.2.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.194 W llama_adapter_lora_init_impl: lora for 'blk.2.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.200 W llama_adapter_lora_init_impl: lora for 'blk.20.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.205 W llama_adapter_lora_init_impl: lora for 'blk.20.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.210 W llama_adapter_lora_init_impl: lora for 'blk.20.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.217 W llama_adapter_lora_init_impl: lora for 'blk.21.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.222 W llama_adapter_lora_init_impl: lora for 'blk.21.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.227 W llama_adapter_lora_init_impl: lora for 'blk.21.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.232 W llama_adapter_lora_init_impl: lora for 'blk.21.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.238 W llama_adapter_lora_init_impl: lora for 'blk.22.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.243 W llama_adapter_lora_init_impl: lora for 'blk.22.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.249 W llama_adapter_lora_init_impl: lora for 'blk.22.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.254 W llama_adapter_lora_init_impl: lora for 'blk.22.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.259 W llama_adapter_lora_init_impl: lora for 'blk.23.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.264 W llama_adapter_lora_init_impl: lora for 'blk.23.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.269 W llama_adapter_lora_init_impl: lora for 'blk.23.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.277 W llama_adapter_lora_init_impl: lora for 'blk.24.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.282 W llama_adapter_lora_init_impl: lora for 'blk.24.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.292 W llama_adapter_lora_init_impl: lora for 'blk.24.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.295 W llama_adapter_lora_init_impl: lora for 'blk.25.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.296 W llama_adapter_lora_init_impl: lora for 'blk.25.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.298 W llama_adapter_lora_init_impl: lora for 'blk.25.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.300 W llama_adapter_lora_init_impl: lora for 'blk.26.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.302 W llama_adapter_lora_init_impl: lora for 'blk.26.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.303 W llama_adapter_lora_init_impl: lora for 'blk.26.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.306 W llama_adapter_lora_init_impl: lora for 'blk.27.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.307 W llama_adapter_lora_init_impl: lora for 'blk.27.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.314 W llama_adapter_lora_init_impl: lora for 'blk.27.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.321 W llama_adapter_lora_init_impl: lora for 'blk.3.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.326 W llama_adapter_lora_init_impl: lora for 'blk.3.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.331 W llama_adapter_lora_init_impl: lora for 'blk.3.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.334 W llama_adapter_lora_init_impl: lora for 'blk.3.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.336 W llama_adapter_lora_init_impl: lora for 'blk.4.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.337 W llama_adapter_lora_init_impl: lora for 'blk.4.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.338 W llama_adapter_lora_init_impl: lora for 'blk.4.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.339 W llama_adapter_lora_init_impl: lora for 'blk.4.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.341 W llama_adapter_lora_init_impl: lora for 'blk.5.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.342 W llama_adapter_lora_init_impl: lora for 'blk.5.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.343 W llama_adapter_lora_init_impl: lora for 'blk.5.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.345 W llama_adapter_lora_init_impl: lora for 'blk.6.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.346 W llama_adapter_lora_init_impl: lora for 'blk.6.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.347 W llama_adapter_lora_init_impl: lora for 'blk.6.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.348 W llama_adapter_lora_init_impl: lora for 'blk.6.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.349 W llama_adapter_lora_init_impl: lora for 'blk.7.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.351 W llama_adapter_lora_init_impl: lora for 'blk.7.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.352 W llama_adapter_lora_init_impl: lora for 'blk.7.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.353 W llama_adapter_lora_init_impl: lora for 'blk.7.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.354 W llama_adapter_lora_init_impl: lora for 'blk.8.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.355 W llama_adapter_lora_init_impl: lora for 'blk.8.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.358 W llama_adapter_lora_init_impl: lora for 'blk.8.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.360 W llama_adapter_lora_init_impl: lora for 'blk.9.attn_k.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.361 W llama_adapter_lora_init_impl: lora for 'blk.9.attn_output.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.363 W llama_adapter_lora_init_impl: lora for 'blk.9.attn_q.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.258.364 W llama_adapter_lora_init_impl: lora for 'blk.9.attn_v.weight' cannot use buft 'CPU_REPACK', fallback to CPU
+0.01.498.081 I cmn          init: llama threadpool init, n_threads = 8
+0.01.835.178 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 4096, kv_unified = 'false'
+0.01.854.639 I srv  server_run_i: model loaded
+0.01.854.886 I srv  server_on_li: listening on http://127.0.0.1:8080
+0.15.255.092 I slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = -1
+0.15.255.196 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.18.434.533 I slot print_timing: id  0 | task 0 | prompt eval time =    1746.57 ms /   115 tokens (   15.19 ms per token,    65.84 tokens per second)
+0.18.434.542 I slot print_timing: id  0 | task 0 |        eval time =    1432.73 ms /    23 tokens (   65.12 ms per token,    15.36 tokens per second)
+0.18.434.543 I slot print_timing: id  0 | task 0 |       total time =    3179.30 ms /   138 tokens
+0.18.434.544 I slot print_timing: id  0 | task 0 |    graphs reused =         22
+0.18.434.649 I slot print_timing: id  0 | task 0 |   graph reallocs =          0    /     0        (same size) / (changed size)
+0.18.443.177 I slot      release: id  0 | task 0 | stop processing: n_tokens = 137, truncated = 0
+1.23.673.162 I srv    operator(): operator(): cleaning up before exit...
+Received second interrupt, terminating immediately.

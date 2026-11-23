@@ -1,0 +1,1432 @@
+{
+ "label": "capability-baseline-v3",
+ "suite": "/home/santosh/Mi9/mi9-ai-model/suites/capability.json",
+ "when": "2026-11-15T02:49:07.971548",
+ "overall_pass1": 0.6,
+ "domains": {
+  "code": 0.816,
+  "logic": 0.625,
+  "math": 0.175
+ },
+ "by_family": {
+  "arith_chain": 0.0,
+  "balanced": 1.0,
+  "base_convert": 0.0,
+  "bool_expr": 0.75,
+  "caesar": 1.0,
+  "closure": 0.0,
+  "count_occurrences": 1.0,
+  "dataframe": 1.0,
+  "dedupe": 1.0,
+  "file_ops": 0.0,
+  "flatten": 1.0,
+  "fraction_ops": 0.75,
+  "gcd_lcm": 1.0,
+  "is_palindrome": 1.0,
+  "linear_solve": 0.75,
+  "math_exec": 0.0,
+  "matmul2": 1.0,
+  "max_subarray": 1.0,
+  "modular_pow": 0.25,
+  "perm_order": 0.0,
+  "popcount": 1.0,
+  "retrieval_qa": 1.0,
+  "reverse_string": 1.0,
+  "rle": 1.0,
+  "second_largest": 0.5,
+  "seq_nth": 0.0,
+  "sum_ints": 1.0,
+  "truth_table": 0.0,
+  "word_count": 1.0
+ },
+ "results": [
+  {
+   "id": "file_ops~d3~05147678",
+   "family": "file_ops",
+   "domain": "code",
+   "correct": false,
+   "error": "'answer'",
+   "seconds": 4.0,
+   "samples": 1
+  },
+  {
+   "id": "file_ops~d3~3073ea77",
+   "family": "file_ops",
+   "domain": "code",
+   "correct": false,
+   "error": "'answer'",
+   "seconds": 7.7,
+   "samples": 1
+  },
+  {
+   "id": "file_ops~d3~2cdca306",
+   "family": "file_ops",
+   "domain": "code",
+   "correct": false,
+   "error": "'answer'",
+   "seconds": 4.6,
+   "samples": 1
+  },
+  {
+   "id": "file_ops~d3~199a258f",
+   "family": "file_ops",
+   "domain": "code",
+   "correct": false,
+   "error": "'answer'",
+   "seconds": 6.7,
+   "samples": 1
+  },
+  {
+   "id": "file_ops~d3~055b4cdf",
+   "family": "file_ops",
+   "domain": "code",
+   "correct": false,
+   "error": "'answer'",
+   "seconds": 4.2,
+   "samples": 1
+  },
+  {
+   "id": "file_ops~d3~2ddf8dd2",
+   "family": "file_ops",
+   "domain": "code",
+   "correct": false,
+   "error": "'answer'",
+   "seconds": 4.8,
+   "samples": 1
+  },
+  {
+   "id": "file_ops~d3~3a0bf018",
+   "family": "file_ops",
+   "domain": "code",
+   "correct": false,
+   "error": "'answer'",
+   "seconds": 6.8,
+   "samples": 1
+  },
+  {
+   "id": "file_ops~d3~3d807c0d",
+   "family": "file_ops",
+   "domain": "code",
+   "correct": false,
+   "error": "'answer'",
+   "seconds": 9.6,
+   "samples": 1
+  },
+  {
+   "id": "file_ops~d5~18ff2318",
+   "family": "file_ops",
+   "domain": "code",
+   "correct": false,
+   "error": "'answer'",
+   "seconds": 6.3,
+   "samples": 1
+  },
+  {
+   "id": "file_ops~d5~2d945b7a",
+   "family": "file_ops",
+   "domain": "code",
+   "correct": false,
+   "error": "'answer'",
+   "seconds": 5.7,
+   "samples": 1
+  },
+  {
+   "id": "file_ops~d5~28655e10",
+   "family": "file_ops",
+   "domain": "code",
+   "correct": false,
+   "error": "'answer'",
+   "seconds": 6.9,
+   "samples": 1
+  },
+  {
+   "id": "file_ops~d5~168f592d",
+   "family": "file_ops",
+   "domain": "code",
+   "correct": false,
+   "error": "'answer'",
+   "seconds": 5.3,
+   "samples": 1
+  },
+  {
+   "id": "retrieval_qa~d3~138cead0",
+   "family": "retrieval_qa",
+   "domain": "logic",
+   "difficulty": 3,
+   "correct": true,
+   "error": null,
+   "seconds": 89.6,
+   "samples": 1
+  },
+  {
+   "id": "retrieval_qa~d3~2bc6636a",
+   "family": "retrieval_qa",
+   "domain": "logic",
+   "difficulty": 3,
+   "correct": true,
+   "error": null,
+   "seconds": 22.3,
+   "samples": 1
+  },
+  {
+   "id": "retrieval_qa~d3~245250ec",
+   "family": "retrieval_qa",
+   "domain": "logic",
+   "difficulty": 3,
+   "correct": true,
+   "error": null,
+   "seconds": 86.4,
+   "samples": 1
+  },
+  {
+   "id": "retrieval_qa~d3~1a20a5b9",
+   "family": "retrieval_qa",
+   "domain": "logic",
+   "difficulty": 3,
+   "correct": true,
+   "error": null,
+   "seconds": 86.5,
+   "samples": 1
+  },
+  {
+   "id": "retrieval_qa~d3~2ed3bf90",
+   "family": "retrieval_qa",
+   "domain": "logic",
+   "difficulty": 3,
+   "correct": true,
+   "error": null,
+   "seconds": 100.2,
+   "samples": 1
+  },
+  {
+   "id": "retrieval_qa~d3~391a345f",
+   "family": "retrieval_qa",
+   "domain": "logic",
+   "difficulty": 3,
+   "correct": true,
+   "error": null,
+   "seconds": 106.8,
+   "samples": 1
+  },
+  {
+   "id": "retrieval_qa~d3~0e79e140",
+   "family": "retrieval_qa",
+   "domain": "logic",
+   "difficulty": 3,
+   "correct": true,
+   "error": null,
+   "seconds": 12.9,
+   "samples": 1
+  },
+  {
+   "id": "retrieval_qa~d3~2b075c9c",
+   "family": "retrieval_qa",
+   "domain": "logic",
+   "difficulty": 3,
+   "correct": true,
+   "error": null,
+   "seconds": 104.1,
+   "samples": 1
+  },
+  {
+   "id": "retrieval_qa~d5~2e7dbc91",
+   "family": "retrieval_qa",
+   "domain": "logic",
+   "difficulty": 5,
+   "correct": true,
+   "error": null,
+   "seconds": 23.9,
+   "samples": 1
+  },
+  {
+   "id": "retrieval_qa~d5~0b443aac",
+   "family": "retrieval_qa",
+   "domain": "logic",
+   "difficulty": 5,
+   "correct": true,
+   "error": null,
+   "seconds": 100.9,
+   "samples": 1
+  },
+  {
+   "id": "retrieval_qa~d5~24e8c7f9",
+   "family": "retrieval_qa",
+   "domain": "logic",
+   "difficulty": 5,
+   "correct": true,
+   "error": null,
+   "seconds": 100.7,
+   "samples": 1
+  },
+  {
+   "id": "retrieval_qa~d5~06a71676",
+   "family": "retrieval_qa",
+   "domain": "logic",
+   "difficulty": 5,
+   "correct": true,
+   "error": null,
+   "seconds": 104.1,
+   "samples": 1
+  },
+  {
+   "id": "math_exec~d3~1ca9421e",
+   "family": "math_exec",
+   "domain": "math",
+   "difficulty": 3,
+   "correct": false,
+   "error": "eval: Traceback (most recent call last):\n  File \"/tmp/nexus_sbx_4hbkm8bk/harness.py\", line 13, in <module>\n    got = eval(expr, {\"__builtins__\": {}}, ns)\n  File \"<string>\", line 1, in <module>\nNameError: name 'result' is not defined\n",
+   "seconds": 5.3,
+   "samples": 1
+  },
+  {
+   "id": "math_exec~d3~3964739e",
+   "family": "math_exec",
+   "domain": "math",
+   "difficulty": 3,
+   "correct": false,
+   "error": "no code block",
+   "seconds": 3.7,
+   "samples": 1
+  },
+  {
+   "id": "math_exec~d3~2ec1559e",
+   "family": "math_exec",
+   "domain": "math",
+   "difficulty": 3,
+   "correct": false,
+   "error": "no code block",
+   "seconds": 3.7,
+   "samples": 1
+  },
+  {
+   "id": "math_exec~d3~2d5b855a",
+   "family": "math_exec",
+   "domain": "math",
+   "difficulty": 3,
+   "correct": false,
+   "error": "no code block",
+   "seconds": 3.9,
+   "samples": 1
+  },
+  {
+   "id": "math_exec~d3~081695f1",
+   "family": "math_exec",
+   "domain": "math",
+   "difficulty": 3,
+   "correct": false,
+   "error": "import: Traceback (most recent call last):\n  File \"/tmp/nexus_sbx_34f2s7hn/harness.py\", line 5, in <module>\n    exec(compile(open(\"cand.py\").read(), \"cand.py\", \"exec\"), {\"__name__\": \"cand\"})\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"cand.py\", line 1, in <module>\n    run_python\nNameError: name 'run_python' is not defined\n",
+   "seconds": 3.1,
+   "samples": 1
+  },
+  {
+   "id": "math_exec~d3~34e6df29",
+   "family": "math_exec",
+   "domain": "math",
+   "difficulty": 3,
+   "correct": false,
+   "error": "no code block",
+   "seconds": 3.6,
+   "samples": 1
+  },
+  {
+   "id": "math_exec~d3~30f9bdca",
+   "family": "math_exec",
+   "domain": "math",
+   "difficulty": 3,
+   "correct": false,
+   "error": "import: Traceback (most recent call last):\n  File \"/tmp/nexus_sbx_ym5nil1c/harness.py\", line 5, in <module>\n    exec(compile(open(\"cand.py\").read(), \"cand.py\", \"exec\"), {\"__name__\": \"cand\"})\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"cand.py\", line 1, in <module>\n    run_python\nNameError: name 'run_python' is not defined\n",
+   "seconds": 3.3,
+   "samples": 1
+  },
+  {
+   "id": "math_exec~d3~047233c3",
+   "family": "math_exec",
+   "domain": "math",
+   "difficulty": 3,
+   "correct": false,
+   "error": "no code block",
+   "seconds": 3.7,
+   "samples": 1
+  },
+  {
+   "id": "math_exec~d5~1e825de0",
+   "family": "math_exec",
+   "domain": "math",
+   "difficulty": 5,
+   "correct": false,
+   "error": "eval: Traceback (most recent call last):\n  File \"/tmp/nexus_sbx_rifvyhjj/harness.py\", line 13, in <module>\n    got = eval(expr, {\"__builtins__\": {}}, ns)\n  File \"<string>\", line 1, in <module>\nNameError: name 'result' is not defined\n",
+   "seconds": 3.6,
+   "samples": 1
+  },
+  {
+   "id": "math_exec~d5~00594a20",
+   "family": "math_exec",
+   "domain": "math",
+   "difficulty": 5,
+   "correct": false,
+   "error": "import: ceback (most recent call last):\n  File \"/tmp/nexus_sbx_6twudfs6/harness.py\", line 5, in <module>\n    exec(compile(open(\"cand.py\").read(), \"cand.py\", \"exec\"), {\"__name__\": \"cand\"})\n         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"cand.py\", line 1\n    print((((((7 * 17) + 21) + 31) + 28) * 37) * 36))\n                                                    ^\nSyntaxError: unmatched ')'\n",
+   "seconds": 2.9,
+   "samples": 1
+  },
+  {
+   "id": "math_exec~d5~1db4d431",
+   "family": "math_exec",
+   "domain": "math",
+   "difficulty": 5,
+   "correct": false,
+   "error": "no code block",
+   "seconds": 3.8,
+   "samples": 1
+  },
+  {
+   "id": "math_exec~d5~39a5e141",
+   "family": "math_exec",
+   "domain": "math",
+   "difficulty": 5,
+   "correct": false,
+   "error": "eval: Traceback (most recent call last):\n  File \"/tmp/nexus_sbx_kilidhmy/harness.py\", line 13, in <module>\n    got = eval(expr, {\"__builtins__\": {}}, ns)\n  File \"<string>\", line 1, in <module>\nNameError: name 'result' is not defined\n",
+   "seconds": 2.6,
+   "samples": 1
+  },
+  {
+   "id": "reverse_string~d7~2933290b",
+   "family": "reverse_string",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.4,
+   "samples": 1
+  },
+  {
+   "id": "reverse_string~d7~2afcbc12",
+   "family": "reverse_string",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 1.9,
+   "samples": 1
+  },
+  {
+   "id": "reverse_string~d7~0303b682",
+   "family": "reverse_string",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 1.9,
+   "samples": 1
+  },
+  {
+   "id": "reverse_string~d7~0abbe44c",
+   "family": "reverse_string",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 1.9,
+   "samples": 1
+  },
+  {
+   "id": "is_palindrome~d7~1fa3938f",
+   "family": "is_palindrome",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.6,
+   "samples": 1
+  },
+  {
+   "id": "is_palindrome~d7~3fba511b",
+   "family": "is_palindrome",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 2.1,
+   "samples": 1
+  },
+  {
+   "id": "is_palindrome~d7~12b2f8b3",
+   "family": "is_palindrome",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 2.1,
+   "samples": 1
+  },
+  {
+   "id": "is_palindrome~d7~3ac4069c",
+   "family": "is_palindrome",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 2.1,
+   "samples": 1
+  },
+  {
+   "id": "sum_ints~d7~251903a2",
+   "family": "sum_ints",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 2.7,
+   "samples": 1
+  },
+  {
+   "id": "sum_ints~d7~0151b265",
+   "family": "sum_ints",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.3,
+   "samples": 1
+  },
+  {
+   "id": "sum_ints~d7~37b39e6b",
+   "family": "sum_ints",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 1.9,
+   "samples": 1
+  },
+  {
+   "id": "sum_ints~d7~3f9969bc",
+   "family": "sum_ints",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 1.9,
+   "samples": 1
+  },
+  {
+   "id": "count_occurrences~d7~05bcbc60",
+   "family": "count_occurrences",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 2.4,
+   "samples": 1
+  },
+  {
+   "id": "count_occurrences~d7~0bef89c2",
+   "family": "count_occurrences",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 2.2,
+   "samples": 1
+  },
+  {
+   "id": "count_occurrences~d7~12b2f8b3",
+   "family": "count_occurrences",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 2.2,
+   "samples": 1
+  },
+  {
+   "id": "count_occurrences~d7~3ac4069c",
+   "family": "count_occurrences",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 2.4,
+   "samples": 1
+  },
+  {
+   "id": "dedupe~d7~0b874f3d",
+   "family": "dedupe",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.9,
+   "samples": 1
+  },
+  {
+   "id": "dedupe~d7~17297853",
+   "family": "dedupe",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.9,
+   "samples": 1
+  },
+  {
+   "id": "dedupe~d7~14f8c9ef",
+   "family": "dedupe",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.9,
+   "samples": 1
+  },
+  {
+   "id": "dedupe~d7~1296e266",
+   "family": "dedupe",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.9,
+   "samples": 1
+  },
+  {
+   "id": "second_largest~d7~3a4acc10",
+   "family": "second_largest",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.9,
+   "samples": 1
+  },
+  {
+   "id": "second_largest~d7~120c844b",
+   "family": "second_largest",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.6,
+   "samples": 1
+  },
+  {
+   "id": "second_largest~d7~00f7ed5d",
+   "family": "second_largest",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": false,
+   "error": null,
+   "seconds": 3.4,
+   "samples": 1
+  },
+  {
+   "id": "second_largest~d7~3dd09264",
+   "family": "second_largest",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": false,
+   "error": null,
+   "seconds": 3.4,
+   "samples": 1
+  },
+  {
+   "id": "max_subarray~d7~20f59c4d",
+   "family": "max_subarray",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 4.8,
+   "samples": 1
+  },
+  {
+   "id": "max_subarray~d7~32f33f5a",
+   "family": "max_subarray",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 4.7,
+   "samples": 1
+  },
+  {
+   "id": "max_subarray~d7~1f383844",
+   "family": "max_subarray",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 4.6,
+   "samples": 1
+  },
+  {
+   "id": "max_subarray~d7~2f2de310",
+   "family": "max_subarray",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 4.6,
+   "samples": 1
+  },
+  {
+   "id": "gcd_lcm~d7~2a52cf7b",
+   "family": "gcd_lcm",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 4.2,
+   "samples": 1
+  },
+  {
+   "id": "gcd_lcm~d7~3a08bd68",
+   "family": "gcd_lcm",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.9,
+   "samples": 1
+  },
+  {
+   "id": "gcd_lcm~d7~39ed3d21",
+   "family": "gcd_lcm",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.8,
+   "samples": 1
+  },
+  {
+   "id": "gcd_lcm~d7~36328d09",
+   "family": "gcd_lcm",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 4.4,
+   "samples": 1
+  },
+  {
+   "id": "popcount~d7~249c9ba6",
+   "family": "popcount",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 2.4,
+   "samples": 1
+  },
+  {
+   "id": "popcount~d7~17d9d08b",
+   "family": "popcount",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 2.1,
+   "samples": 1
+  },
+  {
+   "id": "popcount~d7~3e18fae6",
+   "family": "popcount",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 2.1,
+   "samples": 1
+  },
+  {
+   "id": "popcount~d7~39061d69",
+   "family": "popcount",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 2.1,
+   "samples": 1
+  },
+  {
+   "id": "matmul2~d7~2c025cf2",
+   "family": "matmul2",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 5.8,
+   "samples": 1
+  },
+  {
+   "id": "matmul2~d7~120c844b",
+   "family": "matmul2",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 5.5,
+   "samples": 1
+  },
+  {
+   "id": "matmul2~d7~00f7ed5d",
+   "family": "matmul2",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 5.5,
+   "samples": 1
+  },
+  {
+   "id": "matmul2~d7~07d2ff3d",
+   "family": "matmul2",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 5.6,
+   "samples": 1
+  },
+  {
+   "id": "balanced~d7~34ae50d3",
+   "family": "balanced",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 7.8,
+   "samples": 1
+  },
+  {
+   "id": "balanced~d7~28066b60",
+   "family": "balanced",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 7.4,
+   "samples": 1
+  },
+  {
+   "id": "balanced~d7~22327e49",
+   "family": "balanced",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 7.4,
+   "samples": 1
+  },
+  {
+   "id": "balanced~d7~07d2ff3d",
+   "family": "balanced",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 7.3,
+   "samples": 1
+  },
+  {
+   "id": "rle~d7~28fda67f",
+   "family": "rle",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 7.3,
+   "samples": 1
+  },
+  {
+   "id": "rle~d7~054f9b02",
+   "family": "rle",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 6.0,
+   "samples": 1
+  },
+  {
+   "id": "rle~d7~384fc9ee",
+   "family": "rle",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 6.0,
+   "samples": 1
+  },
+  {
+   "id": "rle~d7~2159fb32",
+   "family": "rle",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 7.3,
+   "samples": 1
+  },
+  {
+   "id": "caesar~d7~33c7d958",
+   "family": "caesar",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 6.0,
+   "samples": 1
+  },
+  {
+   "id": "caesar~d7~32f33f5a",
+   "family": "caesar",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 5.8,
+   "samples": 1
+  },
+  {
+   "id": "caesar~d7~27b6b40d",
+   "family": "caesar",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 5.7,
+   "samples": 1
+  },
+  {
+   "id": "caesar~d7~0936ce78",
+   "family": "caesar",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 5.8,
+   "samples": 1
+  },
+  {
+   "id": "flatten~d7~0bc8d148",
+   "family": "flatten",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 4.3,
+   "samples": 1
+  },
+  {
+   "id": "flatten~d7~3336ea29",
+   "family": "flatten",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.9,
+   "samples": 1
+  },
+  {
+   "id": "flatten~d7~00156bd5",
+   "family": "flatten",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.8,
+   "samples": 1
+  },
+  {
+   "id": "flatten~d7~2e7c031d",
+   "family": "flatten",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.8,
+   "samples": 1
+  },
+  {
+   "id": "word_count~d7~26596ae7",
+   "family": "word_count",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.7,
+   "samples": 1
+  },
+  {
+   "id": "word_count~d7~0bef89c2",
+   "family": "word_count",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.5,
+   "samples": 1
+  },
+  {
+   "id": "word_count~d7~284d6560",
+   "family": "word_count",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.5,
+   "samples": 1
+  },
+  {
+   "id": "word_count~d7~3b581b73",
+   "family": "word_count",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.4,
+   "samples": 1
+  },
+  {
+   "id": "arith_chain~d7~26698e0d",
+   "family": "arith_chain",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 3.4,
+   "samples": 1
+  },
+  {
+   "id": "arith_chain~d7~16e35cef",
+   "family": "arith_chain",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 5.4,
+   "samples": 1
+  },
+  {
+   "id": "arith_chain~d7~00dd9124",
+   "family": "arith_chain",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 4.3,
+   "samples": 1
+  },
+  {
+   "id": "arith_chain~d7~0abbe44c",
+   "family": "arith_chain",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 5.3,
+   "samples": 1
+  },
+  {
+   "id": "fraction_ops~d7~3fb7ffdc",
+   "family": "fraction_ops",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 14.9,
+   "samples": 1
+  },
+  {
+   "id": "fraction_ops~d7~35e7991e",
+   "family": "fraction_ops",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 5.8,
+   "samples": 1
+  },
+  {
+   "id": "fraction_ops~d7~0c9af80b",
+   "family": "fraction_ops",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 19.0,
+   "samples": 1
+  },
+  {
+   "id": "fraction_ops~d7~3dd09264",
+   "family": "fraction_ops",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 21.2,
+   "samples": 1
+  },
+  {
+   "id": "modular_pow~d7~33611cd7",
+   "family": "modular_pow",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 41.1,
+   "samples": 1
+  },
+  {
+   "id": "modular_pow~d7~2dfc2c8c",
+   "family": "modular_pow",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 13.1,
+   "samples": 1
+  },
+  {
+   "id": "modular_pow~d7~3be88330",
+   "family": "modular_pow",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 32.0,
+   "samples": 1
+  },
+  {
+   "id": "modular_pow~d7~36328d09",
+   "family": "modular_pow",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 15.2,
+   "samples": 1
+  },
+  {
+   "id": "linear_solve~d7~3a4acc10",
+   "family": "linear_solve",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 8.9,
+   "samples": 1
+  },
+  {
+   "id": "linear_solve~d7~35e7991e",
+   "family": "linear_solve",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 8.6,
+   "samples": 1
+  },
+  {
+   "id": "linear_solve~d7~0c9af80b",
+   "family": "linear_solve",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 11.3,
+   "samples": 1
+  },
+  {
+   "id": "linear_solve~d7~3dd09264",
+   "family": "linear_solve",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 9.9,
+   "samples": 1
+  },
+  {
+   "id": "base_convert~d7~3e771883",
+   "family": "base_convert",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 11.6,
+   "samples": 1
+  },
+  {
+   "id": "base_convert~d7~3a08bd68",
+   "family": "base_convert",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 8.8,
+   "samples": 1
+  },
+  {
+   "id": "base_convert~d7~39ed3d21",
+   "family": "base_convert",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 7.2,
+   "samples": 1
+  },
+  {
+   "id": "base_convert~d7~39061d69",
+   "family": "base_convert",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 10.8,
+   "samples": 1
+  },
+  {
+   "id": "seq_nth~d7~3fb7ffdc",
+   "family": "seq_nth",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 8.9,
+   "samples": 1
+  },
+  {
+   "id": "seq_nth~d7~2c267308",
+   "family": "seq_nth",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 14.3,
+   "samples": 1
+  },
+  {
+   "id": "seq_nth~d7~26918153",
+   "family": "seq_nth",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 15.0,
+   "samples": 1
+  },
+  {
+   "id": "seq_nth~d7~241fbf7c",
+   "family": "seq_nth",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 14.3,
+   "samples": 1
+  },
+  {
+   "id": "dataframe~d7~3112dade",
+   "family": "dataframe",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.6,
+   "samples": 1
+  },
+  {
+   "id": "dataframe~d7~097daf92",
+   "family": "dataframe",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.3,
+   "samples": 1
+  },
+  {
+   "id": "dataframe~d7~2eacface",
+   "family": "dataframe",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 4.4,
+   "samples": 1
+  },
+  {
+   "id": "dataframe~d7~22d06959",
+   "family": "dataframe",
+   "domain": "code",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 3.5,
+   "samples": 1
+  },
+  {
+   "id": "perm_order~d7~19c54209",
+   "family": "perm_order",
+   "domain": "logic",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 40.3,
+   "samples": 1
+  },
+  {
+   "id": "perm_order~d7~3c9f398c",
+   "family": "perm_order",
+   "domain": "logic",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 19.2,
+   "samples": 1
+  },
+  {
+   "id": "perm_order~d7~082b4912",
+   "family": "perm_order",
+   "domain": "logic",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 24.7,
+   "samples": 1
+  },
+  {
+   "id": "perm_order~d7~1a16ddf8",
+   "family": "perm_order",
+   "domain": "logic",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 22.7,
+   "samples": 1
+  },
+  {
+   "id": "bool_expr~d7~29535506",
+   "family": "bool_expr",
+   "domain": "logic",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 4.9,
+   "samples": 1
+  },
+  {
+   "id": "bool_expr~d7~1a74d316",
+   "family": "bool_expr",
+   "domain": "logic",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 6.7,
+   "samples": 1
+  },
+  {
+   "id": "bool_expr~d7~14e880dc",
+   "family": "bool_expr",
+   "domain": "logic",
+   "difficulty": 7,
+   "correct": true,
+   "error": null,
+   "seconds": 4.7,
+   "samples": 1
+  },
+  {
+   "id": "bool_expr~d7~0a67c04f",
+   "family": "bool_expr",
+   "domain": "logic",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 5.0,
+   "samples": 1
+  },
+  {
+   "id": "truth_table~d7~2933290b",
+   "family": "truth_table",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 10.3,
+   "samples": 1
+  },
+  {
+   "id": "truth_table~d7~2c267308",
+   "family": "truth_table",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 16.8,
+   "samples": 1
+  },
+  {
+   "id": "truth_table~d7~1f38deb0",
+   "family": "truth_table",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 16.8,
+   "samples": 1
+  },
+  {
+   "id": "truth_table~d7~3dd09264",
+   "family": "truth_table",
+   "domain": "math",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 15.8,
+   "samples": 1
+  },
+  {
+   "id": "closure~d7~244bfe6d",
+   "family": "closure",
+   "domain": "logic",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 15.9,
+   "samples": 1
+  },
+  {
+   "id": "closure~d7~3bbf8da3",
+   "family": "closure",
+   "domain": "logic",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 13.3,
+   "samples": 1
+  },
+  {
+   "id": "closure~d7~3cd66acc",
+   "family": "closure",
+   "domain": "logic",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 15.7,
+   "samples": 1
+  },
+  {
+   "id": "closure~d7~0f7f3bfc",
+   "family": "closure",
+   "domain": "logic",
+   "difficulty": 7,
+   "correct": false,
+   "error": "wrong answer",
+   "seconds": 9.1,
+   "samples": 1
+  }
+ ]
+}

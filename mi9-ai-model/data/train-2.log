@@ -1,0 +1,9 @@
+replay: 120 verified episodes
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  18%|█▊        | 57/311 [00:00<00:00, 541.31it/s]Loading weights:  36%|███▌      | 112/311 [00:00<00:00, 410.27it/s]Loading weights:  50%|████▉     | 155/311 [00:00<00:00, 394.06it/s]Loading weights:  66%|██████▌   | 204/311 [00:00<00:00, 419.33it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 556.22it/s]
+trainable params: 6,422,528 || all params: 1,726,997,504 || trainable%: 0.3719
+trainable sequences: 120
+step 20/120 loss 0.119 rss 4744MB (20.8s/step)
+step 40/120 loss 0.080 rss 4694MB (20.7s/step)
+step 60/120 loss 0.067 rss 4857MB (20.6s/step)
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-nkob3634'}
+  warnings.warn(

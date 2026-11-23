@@ -1,0 +1,2259 @@
+[
+ {
+  "task_id": "reverse_string~d3~17d48a12",
+  "family": "reverse_string",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def reverse_string(s: str) -> str \u2014 return the characters of s in reverse order. Example: reverse_string('abcd') == 'dcba'.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "reverse_string",
+   "tests": [
+    {
+     "args": [
+      "oryooqsgfzqputz"
+     ],
+     "expected": "ztupqzfgsqooyro"
+    },
+    {
+     "args": [
+      "ab"
+     ],
+     "expected": "ba"
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def reverse_string(s: str) -> str \u2014 return the characters of s in reverse order. Example: reverse_string('abcd') == 'dcba'.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef reverse_string(s):\n    return s[::-1]\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "reverse_string~d4~122657ce",
+  "family": "reverse_string",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def reverse_string(s: str) -> str \u2014 return the characters of s in reverse order. Example: reverse_string('abcd') == 'dcba'.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "reverse_string",
+   "tests": [
+    {
+     "args": [
+      "oryooqsgfzqputzfdoj"
+     ],
+     "expected": "jodfztupqzfgsqooyro"
+    },
+    {
+     "args": [
+      "ab"
+     ],
+     "expected": "ba"
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def reverse_string(s: str) -> str \u2014 return the characters of s in reverse order. Example: reverse_string('abcd') == 'dcba'.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef reverse_string(s):\n    return s[::-1]\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "is_palindrome~d3~0b9b1792",
+  "family": "is_palindrome",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def is_palindrome(s: str) -> bool - return True exactly when s reads the same forwards and backwards. Example: is_palindrome('abba') == True.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "is_palindrome",
+   "tests": [
+    {
+     "args": [
+      "oryooqsgfputzfdoje"
+     ],
+     "expected": false
+    },
+    {
+     "args": [
+      "abba"
+     ],
+     "expected": true
+    },
+    {
+     "args": [
+      "abc"
+     ],
+     "expected": false
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def is_palindrome(s: str) -> bool - return True exactly when s reads the same forwards and backwards. Example: is_palindrome('abba') == True.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef is_palindrome(s: str) -> bool:\n    return s == s[::-1]\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "is_palindrome~d4~055c55b3",
+  "family": "is_palindrome",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def is_palindrome(s: str) -> bool - return True exactly when s reads the same forwards and backwards. Example: is_palindrome('abba') == True.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "is_palindrome",
+   "tests": [
+    {
+     "args": [
+      "oryooqsgfzqpzfdojecrzwu"
+     ],
+     "expected": false
+    },
+    {
+     "args": [
+      "abba"
+     ],
+     "expected": true
+    },
+    {
+     "args": [
+      "abc"
+     ],
+     "expected": false
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def is_palindrome(s: str) -> bool - return True exactly when s reads the same forwards and backwards. Example: is_palindrome('abba') == True.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef is_palindrome(s: str) -> bool:\n    return s == s[::-1]\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "sum_ints~d3~055c55b3",
+  "family": "sum_ints",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def sum_ints(xs: list[int]) -> int - return the sum of all integers in the list xs.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "sum_ints",
+   "tests": [
+    {
+     "args": [
+      [
+       65,
+       93,
+       69,
+       65,
+       80,
+       -2,
+       -3,
+       81,
+       71,
+       -3,
+       -26,
+       64,
+       27,
+       -14,
+       -27
+      ]
+     ],
+     "expected": 540
+    },
+    {
+     "args": [
+      [
+       1,
+       2,
+       3
+      ]
+     ],
+     "expected": 6
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def sum_ints(xs: list[int]) -> int - return the sum of all integers in the list xs.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef sum_ints(xs):\n    return sum(xs)\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "sum_ints~d4~1428c433",
+  "family": "sum_ints",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def sum_ints(xs: list[int]) -> int - return the sum of all integers in the list xs.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "sum_ints",
+   "tests": [
+    {
+     "args": [
+      [
+       65,
+       93,
+       69,
+       65,
+       80,
+       -2,
+       -3,
+       81,
+       71,
+       -3,
+       -26,
+       64,
+       27,
+       -14,
+       -27,
+       87,
+       -40,
+       51,
+       65
+      ]
+     ],
+     "expected": 703
+    },
+    {
+     "args": [
+      [
+       1,
+       2,
+       3
+      ]
+     ],
+     "expected": 6
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def sum_ints(xs: list[int]) -> int - return the sum of all integers in the list xs.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef sum_ints(xs):\n    return sum(xs)\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "count_occurrences~d3~0b9b1792",
+  "family": "count_occurrences",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def count_occurrences(s: str, c: str) -> int - return the number of times character c appears in string s.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "count_occurrences",
+   "tests": [
+    {
+     "args": [
+      "oryooqsgfzqputzfdoj",
+      "e"
+     ],
+     "expected": 0
+    },
+    {
+     "args": [
+      "aaa",
+      "a"
+     ],
+     "expected": 3
+    },
+    {
+     "args": [
+      "abc",
+      "z"
+     ],
+     "expected": 0
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def count_occurrences(s: str, c: str) -> int - return the number of times character c appears in string s.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef count_occurrences(s: str, c: str) -> int:\n    return s.count(c)\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "count_occurrences~d4~055c55b3",
+  "family": "count_occurrences",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def count_occurrences(s: str, c: str) -> int - return the number of times character c appears in string s.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "count_occurrences",
+   "tests": [
+    {
+     "args": [
+      "oryooqsgfzqputzfdojecrzw",
+      "u"
+     ],
+     "expected": 1
+    },
+    {
+     "args": [
+      "aaa",
+      "a"
+     ],
+     "expected": 3
+    },
+    {
+     "args": [
+      "abc",
+      "z"
+     ],
+     "expected": 0
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def count_occurrences(s: str, c: str) -> int - return the number of times character c appears in string s.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef count_occurrences(s: str, c: str) -> int:\n    return s.count(c)\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "dedupe~d3~0c0c3cc9",
+  "family": "dedupe",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def dedupe(xs: list) -> list - remove duplicate items, keeping the FIRST occurrence and the original order. Example: dedupe([1,2,1,3]) == [1,2,3].\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "dedupe",
+   "tests": [
+    {
+     "args": [
+      [
+       7,
+       8,
+       12,
+       7,
+       7,
+       8,
+       9,
+       3,
+       2,
+       12,
+       8,
+       7,
+       10,
+       9,
+       12,
+       2
+      ]
+     ],
+     "expected": [
+      7,
+      8,
+      12,
+      9,
+      3,
+      2,
+      10
+     ]
+    },
+    {
+     "args": [
+      [
+       1,
+       1,
+       2
+      ]
+     ],
+     "expected": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def dedupe(xs: list) -> list - remove duplicate items, keeping the FIRST occurrence and the original order. Example: dedupe([1,2,1,3]) == [1,2,3].\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef dedupe(xs):\n    out, seen = [], set()\n    for x in xs:\n        if x not in seen:\n            seen.add(x); out.append(x)\n    return out\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "dedupe~d4~3929f6e3",
+  "family": "dedupe",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def dedupe(xs: list) -> list - remove duplicate items, keeping the FIRST occurrence and the original order. Example: dedupe([1,2,1,3]) == [1,2,3].\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "dedupe",
+   "tests": [
+    {
+     "args": [
+      [
+       7,
+       13,
+       8,
+       13,
+       12,
+       7,
+       7,
+       8,
+       13,
+       9,
+       3,
+       2,
+       12,
+       8,
+       7,
+       10,
+       9,
+       12,
+       2,
+       1
+      ]
+     ],
+     "expected": [
+      7,
+      13,
+      8,
+      12,
+      9,
+      3,
+      2,
+      10,
+      1
+     ]
+    },
+    {
+     "args": [
+      [
+       1,
+       1,
+       2
+      ]
+     ],
+     "expected": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def dedupe(xs: list) -> list - remove duplicate items, keeping the FIRST occurrence and the original order. Example: dedupe([1,2,1,3]) == [1,2,3].\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef dedupe(xs):\n    out, seen = [], set()\n    for x in xs:\n        if x not in seen:\n            seen.add(x); out.append(x)\n    return out\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "second_largest~d3~184eb5bc",
+  "family": "second_largest",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def second_largest(xs: list[int]) -> int | None - return the second largest DISTINCT value, or None if there are fewer than two distinct values. Example: second_largest([1,3,3,2]) == 2.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "second_largest",
+   "tests": [
+    {
+     "args": [
+      [
+       115,
+       143,
+       199,
+       119,
+       130
+      ]
+     ],
+     "expected": 143
+    },
+    {
+     "args": [
+      [
+       5,
+       5
+      ]
+     ],
+     "expected": null
+    },
+    {
+     "args": [
+      [
+       3,
+       9,
+       9,
+       4
+      ]
+     ],
+     "expected": 4
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def second_largest(xs: list[int]) -> int | None - return the second largest DISTINCT value, or None if there are fewer than two distinct values. Example: second_largest([1,3,3,2]) == 2.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef second_largest(xs):\n    u = sorted(set(xs))\n    return u[-2] if len(u) >= 2 else None\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "second_largest~d4~184eb5bc",
+  "family": "second_largest",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def second_largest(xs: list[int]) -> int | None - return the second largest DISTINCT value, or None if there are fewer than two distinct values. Example: second_largest([1,3,3,2]) == 2.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "second_largest",
+   "tests": [
+    {
+     "args": [
+      [
+       115,
+       143,
+       199,
+       119,
+       130,
+       150
+      ]
+     ],
+     "expected": 150
+    },
+    {
+     "args": [
+      [
+       5,
+       5
+      ]
+     ],
+     "expected": null
+    },
+    {
+     "args": [
+      [
+       3,
+       9,
+       9,
+       4
+      ]
+     ],
+     "expected": 4
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def second_largest(xs: list[int]) -> int | None - return the second largest DISTINCT value, or None if there are fewer than two distinct values. Example: second_largest([1,3,3,2]) == 2.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef second_largest(xs):\n    u = sorted(set(xs))\n    return u[-2] if len(u) >= 2 else None\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "max_subarray~d3~3929f6e3",
+  "family": "max_subarray",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def max_subarray(xs: list[int]) -> int - return the maximum possible sum of a contiguous, non-empty subarray (Kadane). At least one element must be used. Example: max_subarray([1,-2,3]) == 3.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "max_subarray",
+   "tests": [
+    {
+     "args": [
+      [
+       5,
+       8,
+       5,
+       5,
+       7,
+       9,
+       -3,
+       -4,
+       7,
+       6,
+       -4,
+       -6
+      ]
+     ],
+     "expected": 45
+    },
+    {
+     "args": [
+      [
+       -1,
+       -2
+      ]
+     ],
+     "expected": -1
+    },
+    {
+     "args": [
+      [
+       1,
+       -1,
+       3
+      ]
+     ],
+     "expected": 3
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def max_subarray(xs: list[int]) -> int - return the maximum possible sum of a contiguous, non-empty subarray (Kadane). At least one element must be used. Example: max_subarray([1,-2,3]) == 3.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef max_subarray(xs):\n    best = cur = xs[0]\n    for x in xs[1:]:\n        cur = max(x, cur + x); best = max(best, cur)\n    return best\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "max_subarray~d4~0b9b1792",
+  "family": "max_subarray",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def max_subarray(xs: list[int]) -> int - return the maximum possible sum of a contiguous, non-empty subarray (Kadane). At least one element must be used. Example: max_subarray([1,-2,3]) == 3.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "max_subarray",
+   "tests": [
+    {
+     "args": [
+      [
+       5,
+       8,
+       5,
+       5,
+       7,
+       9,
+       -3,
+       -4,
+       7,
+       6,
+       -4,
+       -6,
+       5,
+       0,
+       -5
+      ]
+     ],
+     "expected": 45
+    },
+    {
+     "args": [
+      [
+       -1,
+       -2
+      ]
+     ],
+     "expected": -1
+    },
+    {
+     "args": [
+      [
+       1,
+       -1,
+       3
+      ]
+     ],
+     "expected": 3
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def max_subarray(xs: list[int]) -> int - return the maximum possible sum of a contiguous, non-empty subarray (Kadane). At least one element must be used. Example: max_subarray([1,-2,3]) == 3.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef max_subarray(xs):\n    best = cur = xs[0]\n    for x in xs[1:]:\n        cur = max(x, cur + x); best = max(best, cur)\n    return best\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "gcd_lcm~d3~39d5a43b",
+  "family": "gcd_lcm",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def gcd_lcm(a: int, b: int) -> tuple[int, int] - return (greatest common divisor, least common multiple) as a tuple. Example: gcd_lcm(4, 6) == (2, 12).\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "gcd_lcm",
+   "tests": [
+    {
+     "args": [
+      30,
+      31
+     ],
+     "expected": [
+      1,
+      930
+     ]
+    },
+    {
+     "args": [
+      4,
+      6
+     ],
+     "expected": [
+      2,
+      12
+     ]
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def gcd_lcm(a: int, b: int) -> tuple[int, int] - return (greatest common divisor, least common multiple) as a tuple. Example: gcd_lcm(4, 6) == (2, 12).\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef gcd_lcm(a: int, b: int) -> tuple:\n    import math\n    g = math.gcd(a, b)\n    return (g, a * b // g)\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "gcd_lcm~d4~3b9a6be0",
+  "family": "gcd_lcm",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def gcd_lcm(a: int, b: int) -> tuple[int, int] - return (greatest common divisor, least common multiple) as a tuple. Example: gcd_lcm(4, 6) == (2, 12).\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "gcd_lcm",
+   "tests": [
+    {
+     "args": [
+      30,
+      37
+     ],
+     "expected": [
+      1,
+      1110
+     ]
+    },
+    {
+     "args": [
+      4,
+      6
+     ],
+     "expected": [
+      2,
+      12
+     ]
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def gcd_lcm(a: int, b: int) -> tuple[int, int] - return (greatest common divisor, least common multiple) as a tuple. Example: gcd_lcm(4, 6) == (2, 12).\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef gcd_lcm(a: int, b: int) -> tuple:\n    import math\n    g = math.gcd(a, b)\n    return (g, a * b // g)\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "popcount~d3~3b9a6be0",
+  "family": "popcount",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def popcount(n: int) -> int - return the number of 1-bits in the binary representation of n.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "popcount",
+   "tests": [
+    {
+     "args": [
+      29648
+     ],
+     "expected": 8
+    },
+    {
+     "args": [
+      7
+     ],
+     "expected": 3
+    },
+    {
+     "args": [
+      8
+     ],
+     "expected": 1
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def popcount(n: int) -> int - return the number of 1-bits in the binary representation of n.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef popcount(n: int) -> int:\n    return bin(n).count('1')\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "popcount~d4~3b9a6be0",
+  "family": "popcount",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def popcount(n: int) -> int - return the number of 1-bits in the binary representation of n.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "popcount",
+   "tests": [
+    {
+     "args": [
+      474355
+     ],
+     "expected": 13
+    },
+    {
+     "args": [
+      7
+     ],
+     "expected": 3
+    },
+    {
+     "args": [
+      8
+     ],
+     "expected": 1
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def popcount(n: int) -> int - return the number of 1-bits in the binary representation of n.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef popcount(n: int) -> int:\n    return bin(n).count('1')\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "matmul2~d3~3ce5cf43",
+  "family": "matmul2",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def matmul2(A, B) -> list[list[int]] - A and B are 2x2 matrices given as nested lists; return their matrix product in the same format.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "matmul2",
+   "tests": [
+    {
+     "args": [
+      [
+       [
+        5,
+        8
+       ],
+       [
+        5,
+        5
+       ]
+      ],
+      [
+       [
+        7,
+        9
+       ],
+       [
+        -3,
+        -4
+       ]
+      ]
+     ],
+     "expected": [
+      [
+       11,
+       13
+      ],
+      [
+       20,
+       25
+      ]
+     ]
+    },
+    {
+     "args": [
+      [
+       [
+        1,
+        0
+       ],
+       [
+        0,
+        1
+       ]
+      ],
+      [
+       [
+        2,
+        3
+       ],
+       [
+        4,
+        5
+       ]
+      ]
+     ],
+     "expected": [
+      [
+       2,
+       3
+      ],
+      [
+       4,
+       5
+      ]
+     ]
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def matmul2(A, B) -> list[list[int]] - A and B are 2x2 matrices given as nested lists; return their matrix product in the same format.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef matmul2(A, B):\n    return [[sum(A[i][k] * B[k][j] for k in range(2)) for j in range(2)] for i in range(2)]\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "matmul2~d4~3ce5cf43",
+  "family": "matmul2",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def matmul2(A, B) -> list[list[int]] - A and B are 2x2 matrices given as nested lists; return their matrix product in the same format.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "matmul2",
+   "tests": [
+    {
+     "args": [
+      [
+       [
+        5,
+        8
+       ],
+       [
+        5,
+        5
+       ]
+      ],
+      [
+       [
+        7,
+        9
+       ],
+       [
+        -3,
+        -4
+       ]
+      ]
+     ],
+     "expected": [
+      [
+       11,
+       13
+      ],
+      [
+       20,
+       25
+      ]
+     ]
+    },
+    {
+     "args": [
+      [
+       [
+        1,
+        0
+       ],
+       [
+        0,
+        1
+       ]
+      ],
+      [
+       [
+        2,
+        3
+       ],
+       [
+        4,
+        5
+       ]
+      ]
+     ],
+     "expected": [
+      [
+       2,
+       3
+      ],
+      [
+       4,
+       5
+      ]
+     ]
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def matmul2(A, B) -> list[list[int]] - A and B are 2x2 matrices given as nested lists; return their matrix product in the same format.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef matmul2(A, B):\n    return [[sum(A[i][k] * B[k][j] for k in range(2)) for j in range(2)] for i in range(2)]\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "balanced~d3~3ce5cf43",
+  "family": "balanced",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def balanced(s: str) -> bool - s contains only ( ) [ ] { }; return True exactly when every bracket closes correctly and in the right order. Example: balanced('([{}])') == True, balanced('([)]') == False.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "balanced",
+   "tests": [
+    {
+     "args": [
+      "])]]))[["
+     ],
+     "expected": false
+    },
+    {
+     "args": [
+      "()"
+     ],
+     "expected": true
+    },
+    {
+     "args": [
+      "([)]"
+     ],
+     "expected": false
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def balanced(s: str) -> bool - s contains only ( ) [ ] { }; return True exactly when every bracket closes correctly and in the right order. Example: balanced('([{}])') == True, balanced('([)]') == False.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef balanced(s: str) -> bool:\n    pairs = {')': '(', ']': '[', '}': '{'}\n    st = []\n    for ch in s:\n        if ch in '([{': st.append(ch)\n        elif not st or st.pop() != pairs[ch]: return False\n    return not st\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "balanced~d4~17d48a12",
+  "family": "balanced",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def balanced(s: str) -> bool - s contains only ( ) [ ] { }; return True exactly when every bracket closes correctly and in the right order. Example: balanced('([{}])') == True, balanced('([)]') == False.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "balanced",
+   "tests": [
+    {
+     "args": [
+      "])]]))[[)]"
+     ],
+     "expected": false
+    },
+    {
+     "args": [
+      "()"
+     ],
+     "expected": true
+    },
+    {
+     "args": [
+      "([)]"
+     ],
+     "expected": false
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def balanced(s: str) -> bool - s contains only ( ) [ ] { }; return True exactly when every bracket closes correctly and in the right order. Example: balanced('([{}])') == True, balanced('([)]') == False.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef balanced(s: str) -> bool:\n    pairs = {')': '(', ']': '[', '}': '{'}\n    st = []\n    for ch in s:\n        if ch in '([{': st.append(ch)\n        elif not st or st.pop() != pairs[ch]: return False\n    return not st\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "rle~d3~0c0c3cc9",
+  "family": "rle",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def rle(s: str) -> list - run-length encode: return a list of (character, run_length) tuples in order. Example: rle('aabb') == [('a', 2), ('b', 2)].\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "rle",
+   "tests": [
+    {
+     "args": [
+      "ooooppffffvv"
+     ],
+     "expected": [
+      [
+       "o",
+       4
+      ],
+      [
+       "p",
+       2
+      ],
+      [
+       "f",
+       4
+      ],
+      [
+       "v",
+       2
+      ]
+     ]
+    },
+    {
+     "args": [
+      "aabb"
+     ],
+     "expected": [
+      [
+       "a",
+       2
+      ],
+      [
+       "b",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def rle(s: str) -> list - run-length encode: return a list of (character, run_length) tuples in order. Example: rle('aabb') == [('a', 2), ('b', 2)].\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef rle(s: str) -> list:\n    out, i = [], 0\n    while i < len(s):\n        j = i\n        while j < len(s) and s[j] == s[i]: j += 1\n        out.append((s[i], j - i)); i = j\n    return out\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "rle~d4~26d5da40",
+  "family": "rle",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def rle(s: str) -> list - run-length encode: return a list of (character, run_length) tuples in order. Example: rle('aabb') == [('a', 2), ('b', 2)].\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "rle",
+   "tests": [
+    {
+     "args": [
+      "ooooppffffvvdddd"
+     ],
+     "expected": [
+      [
+       "o",
+       4
+      ],
+      [
+       "p",
+       2
+      ],
+      [
+       "f",
+       4
+      ],
+      [
+       "v",
+       2
+      ],
+      [
+       "d",
+       4
+      ]
+     ]
+    },
+    {
+     "args": [
+      "aabb"
+     ],
+     "expected": [
+      [
+       "a",
+       2
+      ],
+      [
+       "b",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def rle(s: str) -> list - run-length encode: return a list of (character, run_length) tuples in order. Example: rle('aabb') == [('a', 2), ('b', 2)].\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef rle(s: str) -> list:\n    out, i = [], 0\n    while i < len(s):\n        j = i\n        while j < len(s) and s[j] == s[i]: j += 1\n        out.append((s[i], j - i)); i = j\n    return out\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "caesar~d3~3929f6e3",
+  "family": "caesar",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def caesar(s: str, k: int) -> str - shift each lowercase letter forward by k positions, wrapping around z->a. Non-letters never appear. Example: caesar('abc', 1) == 'bcd'.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "caesar",
+   "tests": [
+    {
+     "args": [
+      "oryooqsgfzqputzf",
+      4
+     ],
+     "expected": "svcssuwkjdutyxdj"
+    },
+    {
+     "args": [
+      "abc",
+      1
+     ],
+     "expected": "bcd"
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def caesar(s: str, k: int) -> str - shift each lowercase letter forward by k positions, wrapping around z->a. Non-letters never appear. Example: caesar('abc', 1) == 'bcd'.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef caesar(s: str, k: int) -> str:\n    return ''.join(chr((ord(c) - 97 + k) % 26 + 97) for c in s)\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "caesar~d4~055c55b3",
+  "family": "caesar",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def caesar(s: str, k: int) -> str - shift each lowercase letter forward by k positions, wrapping around z->a. Non-letters never appear. Example: caesar('abc', 1) == 'bcd'.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "caesar",
+   "tests": [
+    {
+     "args": [
+      "oryooqsgfzqputzfdoje",
+      3
+     ],
+     "expected": "rubrrtvjictsxwcigrmh"
+    },
+    {
+     "args": [
+      "abc",
+      1
+     ],
+     "expected": "bcd"
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def caesar(s: str, k: int) -> str - shift each lowercase letter forward by k positions, wrapping around z->a. Non-letters never appear. Example: caesar('abc', 1) == 'bcd'.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef caesar(s: str, k: int) -> str:\n    return ''.join(chr((ord(c) - 97 + k) % 26 + 97) for c in s)\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "flatten~d3~079f5ee9",
+  "family": "flatten",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def flatten(xs) -> list - xs is a list possibly containing nested lists at any depth; return a single flat list in left-to-right order. Example: flatten([1,[2,[3]]]) == [1, 2, 3].\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "flatten",
+   "tests": [
+    {
+     "args": [
+      [
+       [
+        99,
+        [
+         75,
+         24,
+         23
+        ],
+        60
+       ],
+       23,
+       [
+        [
+         88,
+         81,
+         5
+        ],
+        50
+       ],
+       83,
+       83,
+       [
+        8
+       ]
+      ]
+     ],
+     "expected": [
+      99,
+      75,
+      24,
+      23,
+      60,
+      23,
+      88,
+      81,
+      5,
+      50,
+      83,
+      83,
+      8
+     ]
+    },
+    {
+     "args": [
+      [
+       1,
+       [
+        2,
+        [
+         3
+        ]
+       ]
+      ]
+     ],
+     "expected": [
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def flatten(xs) -> list - xs is a list possibly containing nested lists at any depth; return a single flat list in left-to-right order. Example: flatten([1,[2,[3]]]) == [1, 2, 3].\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef flatten(xs):\n    out = []\n    def fl(v):\n        for i in v:\n            if isinstance(i, list): fl(i)\n            else: out.append(i)\n    fl(xs)\n    return out\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "flatten~d4~1d65b133",
+  "family": "flatten",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def flatten(xs) -> list - xs is a list possibly containing nested lists at any depth; return a single flat list in left-to-right order. Example: flatten([1,[2,[3]]]) == [1, 2, 3].\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "flatten",
+   "tests": [
+    {
+     "args": [
+      [
+       [
+        99,
+        [
+         24,
+         [
+          60,
+          80,
+          78
+         ],
+         12
+        ],
+        [
+         [
+          81,
+          5,
+          76
+         ]
+        ]
+       ],
+       57,
+       78,
+       79,
+       [
+        [
+         [
+          76
+         ]
+        ],
+        [
+         [
+          25,
+          66,
+          29
+         ],
+         63
+        ],
+        [
+         [
+          52,
+          70
+         ]
+        ]
+       ],
+       10,
+       40
+      ]
+     ],
+     "expected": [
+      99,
+      24,
+      60,
+      80,
+      78,
+      12,
+      81,
+      5,
+      76,
+      57,
+      78,
+      79,
+      76,
+      25,
+      66,
+      29,
+      63,
+      52,
+      70,
+      10,
+      40
+     ]
+    },
+    {
+     "args": [
+      [
+       1,
+       [
+        2,
+        [
+         3
+        ]
+       ]
+      ]
+     ],
+     "expected": [
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def flatten(xs) -> list - xs is a list possibly containing nested lists at any depth; return a single flat list in left-to-right order. Example: flatten([1,[2,[3]]]) == [1, 2, 3].\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef flatten(xs):\n    out = []\n    def fl(v):\n        for i in v:\n            if isinstance(i, list): fl(i)\n            else: out.append(i)\n    fl(xs)\n    return out\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "word_count~d3~055c55b3",
+  "family": "word_count",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def word_count(words: list[str]) -> dict - return a dict mapping each word to how many times it occurs. Example: word_count(['a','a']) == {'a': 2}.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "word_count",
+   "tests": [
+    {
+     "args": [
+      [
+       "key",
+       "key",
+       "key",
+       "run",
+       "sun",
+       "key",
+       "sun",
+       "dog",
+       "key",
+       "red",
+       "sun",
+       "dog"
+      ]
+     ],
+     "expected": {
+      "key": 5,
+      "run": 1,
+      "sun": 3,
+      "dog": 2,
+      "red": 1
+     }
+    },
+    {
+     "args": [
+      [
+       "a",
+       "a"
+      ]
+     ],
+     "expected": {
+      "a": 2
+     }
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def word_count(words: list[str]) -> dict - return a dict mapping each word to how many times it occurs. Example: word_count(['a','a']) == {'a': 2}.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef word_count(words):\n    out = {}\n    for w in words: out[w] = out.get(w, 0) + 1\n    return out\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "word_count~d4~1428c433",
+  "family": "word_count",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def word_count(words: list[str]) -> dict - return a dict mapping each word to how many times it occurs. Example: word_count(['a','a']) == {'a': 2}.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "word_count",
+   "tests": [
+    {
+     "args": [
+      [
+       "key",
+       "key",
+       "key",
+       "run",
+       "sun",
+       "key",
+       "sun",
+       "dog",
+       "key",
+       "red",
+       "sun",
+       "dog",
+       "cat",
+       "box",
+       "key"
+      ]
+     ],
+     "expected": {
+      "key": 6,
+      "run": 1,
+      "sun": 3,
+      "dog": 2,
+      "red": 1,
+      "cat": 1,
+      "box": 1
+     }
+    },
+    {
+     "args": [
+      [
+       "a",
+       "a"
+      ]
+     ],
+     "expected": {
+      "a": 2
+     }
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def word_count(words: list[str]) -> dict - return a dict mapping each word to how many times it occurs. Example: word_count(['a','a']) == {'a': 2}.\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef word_count(words):\n    out = {}\n    for w in words: out[w] = out.get(w, 0) + 1\n    return out\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "dataframe~d3~1858be85",
+  "family": "dataframe",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "def filter_by_age(rows, threshold=27) -> list[str]:\n    # rows is a list of dicts like [{'name': 'p1', 'age': 46, 'city': 'NYC'}, {'name': 'p2', 'age': 53, 'city': 'BOS'}]...\n    # return the names of people aged at least 27, in order.\n    # Example: filter_by_age([{'name': 'p1', 'age': 46, 'city': 'NYC'}], 27) == ['p1', 'p2']\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "filter_by_age",
+   "tests": [
+    {
+     "args": [
+      [
+       {
+        "name": "p1",
+        "age": 46,
+        "city": "NYC"
+       },
+       {
+        "name": "p2",
+        "age": 53,
+        "city": "BOS"
+       },
+       {
+        "name": "p3",
+        "age": 67,
+        "city": "SF"
+       },
+       {
+        "name": "p4",
+        "age": 47,
+        "city": "LA"
+       },
+       {
+        "name": "p5",
+        "age": 46,
+        "city": "NYC"
+       },
+       {
+        "name": "p6",
+        "age": 50,
+        "city": "CHI"
+       },
+       {
+        "name": "p7",
+        "age": 55,
+        "city": "NYC"
+       },
+       {
+        "name": "p8",
+        "age": 30,
+        "city": "CHI"
+       },
+       {
+        "name": "p9",
+        "age": 29,
+        "city": "BOS"
+       },
+       {
+        "name": "p10",
+        "age": 69,
+        "city": "BOS"
+       },
+       {
+        "name": "p11",
+        "age": 50,
+        "city": "CHI"
+       },
+       {
+        "name": "p12",
+        "age": 48,
+        "city": "LA"
+       },
+       {
+        "name": "p13",
+        "age": 58,
+        "city": "CHI"
+       },
+       {
+        "name": "p14",
+        "age": 57,
+        "city": "NYC"
+       },
+       {
+        "name": "p15",
+        "age": 68,
+        "city": "CHI"
+       },
+       {
+        "name": "p16",
+        "age": 29,
+        "city": "NYC"
+       }
+      ],
+      27
+     ],
+     "expected": [
+      "p1",
+      "p2",
+      "p3",
+      "p4",
+      "p5",
+      "p6",
+      "p7",
+      "p8",
+      "p9",
+      "p10",
+      "p11",
+      "p12",
+      "p13",
+      "p14",
+      "p15",
+      "p16"
+     ]
+    },
+    {
+     "args": [
+      [
+       {
+        "name": "a",
+        "age": 30,
+        "city": "NYC"
+       }
+      ],
+      25
+     ],
+     "expected": [
+      "a"
+     ]
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def filter_by_age(rows, threshold=27) -> list[str]:\n    # rows is a list of dicts like [{'name': 'p1', 'age': 46, 'city': 'NYC'}, {'name': 'p2', 'age': 53, 'city': 'BOS'}]...\n    # return the names of people aged at least 27, in order.\n    # Example: filter_by_age([{'name': 'p1', 'age': 46, 'city': 'NYC'}], 27) == ['p1', 'p2']\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef filter_by_age(rows, threshold):\n    return [r['name'] for r in rows if r['age'] >= threshold]\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "dataframe~d4~19004a75",
+  "family": "dataframe",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "def group_by_city(rows) -> dict:\n    # rows is a list of dicts like [{'name': 'p1', 'age': 46, 'city': 'NYC'}, {'name': 'p2', 'age': 53, 'city': 'CHI'}]...\n    # return a dict mapping each city to the list of names there, in order of first appearance.\n    # Example: group_by_city([{'name': 'p1', 'age': 46, 'city': 'NYC'}]) == {'NYC': ['p1']}\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>.",
+  "spec": {
+   "kind": "tests",
+   "function": "group_by_city",
+   "tests": [
+    {
+     "args": [
+      [
+       {
+        "name": "p1",
+        "age": 46,
+        "city": "NYC"
+       },
+       {
+        "name": "p2",
+        "age": 53,
+        "city": "CHI"
+       },
+       {
+        "name": "p3",
+        "age": 67,
+        "city": "NYC"
+       },
+       {
+        "name": "p4",
+        "age": 47,
+        "city": "CHI"
+       },
+       {
+        "name": "p5",
+        "age": 46,
+        "city": "BOS"
+       },
+       {
+        "name": "p6",
+        "age": 50,
+        "city": "BOS"
+       },
+       {
+        "name": "p7",
+        "age": 55,
+        "city": "CHI"
+       },
+       {
+        "name": "p8",
+        "age": 30,
+        "city": "LA"
+       },
+       {
+        "name": "p9",
+        "age": 29,
+        "city": "CHI"
+       },
+       {
+        "name": "p10",
+        "age": 69,
+        "city": "NYC"
+       },
+       {
+        "name": "p11",
+        "age": 50,
+        "city": "CHI"
+       },
+       {
+        "name": "p12",
+        "age": 48,
+        "city": "NYC"
+       },
+       {
+        "name": "p13",
+        "age": 58,
+        "city": "NYC"
+       },
+       {
+        "name": "p14",
+        "age": 57,
+        "city": "NYC"
+       },
+       {
+        "name": "p15",
+        "age": 68,
+        "city": "LA"
+       },
+       {
+        "name": "p16",
+        "age": 29,
+        "city": "LA"
+       },
+       {
+        "name": "p17",
+        "age": 24,
+        "city": "CHI"
+       },
+       {
+        "name": "p18",
+        "age": 46,
+        "city": "NYC"
+       },
+       {
+        "name": "p19",
+        "age": 37,
+        "city": "BOS"
+       },
+       {
+        "name": "p20",
+        "age": 27,
+        "city": "SF"
+       }
+      ]
+     ],
+     "expected": {
+      "NYC": [
+       "p1",
+       "p3",
+       "p10",
+       "p12",
+       "p13",
+       "p14",
+       "p18"
+      ],
+      "CHI": [
+       "p2",
+       "p4",
+       "p7",
+       "p9",
+       "p11",
+       "p17"
+      ],
+      "BOS": [
+       "p5",
+       "p6",
+       "p19"
+      ],
+      "LA": [
+       "p8",
+       "p15",
+       "p16"
+      ],
+      "SF": [
+       "p20"
+      ]
+     }
+    },
+    {
+     "args": [
+      [
+       {
+        "name": "a",
+        "age": 30,
+        "city": "NYC"
+       }
+      ]
+     ],
+     "expected": {
+      "NYC": [
+       "a"
+      ]
+     }
+    }
+   ]
+  },
+  "answer": "DONE",
+  "kind": "code",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "def group_by_city(rows) -> dict:\n    # rows is a list of dicts like [{'name': 'p1', 'age': 46, 'city': 'NYC'}, {'name': 'p2', 'age': 53, 'city': 'CHI'}]...\n    # return a dict mapping each city to the list of names there, in order of first appearance.\n    # Example: group_by_city([{'name': 'p1', 'age': 46, 'city': 'NYC'}]) == {'NYC': ['p1']}\n\nWrite ONE Python function per the signature below. Standard library only, no input()/print(). Reply with a single ```python code block, then the final word <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\ndef group_by_city(rows):\n    out = {}\n    for r in rows: out.setdefault(r['city'], []).append(r['name'])\n    return out\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "file_ops~d3~0011db41",
+  "family": "file_ops",
+  "domain": "code",
+  "difficulty": 3,
+  "prompt": "File input.txt contains 13 log lines like:\n10.0.231.222 - - [12/Nov/2026:10:59:00] \"POST /path HTTP/1.1\" 500\n\nWrite a python script that reads input.txt and prints the unique client IPs, one per line, sorted.\n\nReply with a single ```python code block, then <answer>DONE</answer>.",
+  "spec": {
+   "kind": "script",
+   "files": {
+    "input.txt": "10.0.231.222 - - [12/Nov/2026:10:59:00] \"POST /path HTTP/1.1\" 500\n10.0.231.131 - - [12/Nov/2026:10:22:00] \"GET /path HTTP/1.1\" 500\n10.0.243.162 - - [12/Nov/2026:10:21:00] \"GET /path HTTP/1.1\" 500\n10.0.228.78 - - [12/Nov/2026:10:15:00] \"GET /path HTTP/1.1\" 200\n10.0.202.247 - - [12/Nov/2026:10:51:00] \"GET /path HTTP/1.1\" 404\n10.0.7.213 - - [12/Nov/2026:10:14:00] \"GET /path HTTP/1.1\" 500\n10.0.18.49 - - [12/Nov/2026:10:48:00] \"GET /path HTTP/1.1\" 200\n10.0.237.84 - - [12/Nov/2026:10:47:00] \"GET /path HTTP/1.1\" 404\n10.0.119.164 - - [12/Nov/2026:10:41:00] \"GET /path HTTP/1.1\" 200\n10.0.43.118 - - [12/Nov/2026:10:36:00] \"GET /path HTTP/1.1\" 200\n10.0.130.81 - - [12/Nov/2026:10:42:00] \"POST /path HTTP/1.1\" 200\n10.0.15.18 - - [12/Nov/2026:10:59:00] \"GET /path HTTP/1.1\" 500\n10.0.205.28 - - [12/Nov/2026:10:34:00] \"GET /path HTTP/1.1\" 200\n"
+   },
+   "expected_stdout": "10.0.119.164\n10.0.130.81\n10.0.15.18\n10.0.18.49\n10.0.202.247\n10.0.205.28\n10.0.228.78\n10.0.231.131\n10.0.231.222\n10.0.237.84\n10.0.243.162\n10.0.43.118\n10.0.7.213"
+  },
+  "answer": "10.0.119.164\n10.0.130.81\n10.0.15.18\n10.0.18.49\n10.0.202.247\n10.0.205.28\n10.0.228.78\n10.0.231.131\n10.0.231.222\n10.0.237.84\n10.0.243.162\n10.0.43.118\n10.0.7.213",
+  "kind": "script",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "File input.txt contains 13 log lines like:\n10.0.231.222 - - [12/Nov/2026:10:59:00] \"POST /path HTTP/1.1\" 500\n\nWrite a python script that reads input.txt and prints the unique client IPs, one per line, sorted.\n\nReply with a single ```python code block, then <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\nips = sorted(set(line.split()[0] for line in open('input.txt')))\nprint('\\n'.join(ips))\n```\n<answer>DONE</answer>"
+   }
+  ]
+ },
+ {
+  "task_id": "file_ops~d4~2b1f4df6",
+  "family": "file_ops",
+  "domain": "code",
+  "difficulty": 4,
+  "prompt": "File input.txt contains 16 log lines like:\n10.0.231.222 - - [12/Nov/2026:10:59:00] \"POST /path HTTP/1.1\" 500\n\nWrite a python script that reads input.txt and prints the number of lines with status 500.\n\nReply with a single ```python code block, then <answer>DONE</answer>.",
+  "spec": {
+   "kind": "script",
+   "files": {
+    "input.txt": "10.0.231.222 - - [12/Nov/2026:10:59:00] \"POST /path HTTP/1.1\" 500\n10.0.231.131 - - [12/Nov/2026:10:22:00] \"GET /path HTTP/1.1\" 500\n10.0.243.162 - - [12/Nov/2026:10:21:00] \"GET /path HTTP/1.1\" 500\n10.0.228.78 - - [12/Nov/2026:10:15:00] \"GET /path HTTP/1.1\" 200\n10.0.202.247 - - [12/Nov/2026:10:51:00] \"GET /path HTTP/1.1\" 404\n10.0.7.213 - - [12/Nov/2026:10:14:00] \"GET /path HTTP/1.1\" 500\n10.0.18.49 - - [12/Nov/2026:10:48:00] \"GET /path HTTP/1.1\" 200\n10.0.237.84 - - [12/Nov/2026:10:47:00] \"GET /path HTTP/1.1\" 404\n10.0.119.164 - - [12/Nov/2026:10:41:00] \"GET /path HTTP/1.1\" 200\n10.0.43.118 - - [12/Nov/2026:10:36:00] \"GET /path HTTP/1.1\" 200\n10.0.130.81 - - [12/Nov/2026:10:42:00] \"POST /path HTTP/1.1\" 200\n10.0.15.18 - - [12/Nov/2026:10:59:00] \"GET /path HTTP/1.1\" 500\n10.0.205.28 - - [12/Nov/2026:10:34:00] \"GET /path HTTP/1.1\" 200\n10.0.8.217 - - [12/Nov/2026:10:23:00] \"GET /path HTTP/1.1\" 200\n10.0.26.121 - - [12/Nov/2026:10:55:00] \"POST /path HTTP/1.1\" 404\n10.0.214.19 - - [12/Nov/2026:10:50:00] \"GET /path HTTP/1.1\" 500\n"
+   },
+   "expected_stdout": "6"
+  },
+  "answer": "6",
+  "kind": "script",
+  "trace": [
+   {
+    "role": "system",
+    "content": "You are a precise reasoning assistant. Follow the task's output format exactly: code tasks want a single ```python block defining the required function; other tasks want <answer>...</answer>. No extra prose."
+   },
+   {
+    "role": "user",
+    "content": "File input.txt contains 16 log lines like:\n10.0.231.222 - - [12/Nov/2026:10:59:00] \"POST /path HTTP/1.1\" 500\n\nWrite a python script that reads input.txt and prints the number of lines with status 500.\n\nReply with a single ```python code block, then <answer>DONE</answer>."
+   },
+   {
+    "role": "assistant",
+    "content": "```python\nprint(sum(1 for line in open('input.txt') if line.strip().endswith(' 500')))\n```\n<answer>DONE</answer>"
+   }
+  ]
+ }
+]

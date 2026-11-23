@@ -1,0 +1,311 @@
+== [1/6] regression eval (before)
+[  1/100] reverse_string     PASS (eta   321s)
+[  2/100] reverse_string     PASS (eta   243s)
+[  3/100] reverse_string     PASS (eta   215s)
+[  4/100] reverse_string     PASS (eta   201s)
+[  5/100] is_palindrome      PASS (eta   215s)
+[  6/100] is_palindrome      PASS (eta   207s)
+[  7/100] is_palindrome      PASS (eta   201s)
+[  8/100] is_palindrome      PASS (eta   195s)
+[  9/100] sum_ints           PASS (eta   199s)
+[ 10/100] sum_ints           PASS (eta   192s)
+[ 11/100] sum_ints           PASS (eta   187s)
+[ 12/100] sum_ints           PASS (eta   182s)
+[ 13/100] count_occurrences  PASS (eta   189s)
+[ 14/100] count_occurrences  PASS (eta   187s)
+[ 15/100] count_occurrences  PASS (eta   185s)
+[ 16/100] count_occurrences  PASS (eta   183s)
+[ 17/100] dedupe             PASS (eta   196s)
+[ 18/100] dedupe             PASS (eta   200s)
+[ 19/100] dedupe             PASS (eta   203s)
+[ 20/100] dedupe             PASS (eta   206s)
+[ 21/100] second_largest     FAIL (eta   215s)
+[ 22/100] second_largest     FAIL (eta   218s)
+[ 23/100] second_largest     FAIL (eta   219s)
+[ 24/100] second_largest     FAIL (eta   220s)
+[ 25/100] max_subarray       PASS (eta   228s)
+[ 26/100] max_subarray       PASS (eta   229s)
+[ 27/100] max_subarray       PASS (eta   230s)
+[ 28/100] max_subarray       PASS (eta   231s)
+[ 29/100] gcd_lcm            PASS (eta   234s)
+[ 30/100] gcd_lcm            PASS (eta   232s)
+[ 31/100] gcd_lcm            PASS (eta   229s)
+[ 32/100] gcd_lcm            PASS (eta   226s)
+[ 33/100] popcount           PASS (eta   223s)
+[ 34/100] popcount           PASS (eta   217s)
+[ 35/100] popcount           PASS (eta   212s)
+[ 36/100] popcount           PASS (eta   206s)
+[ 37/100] matmul2            PASS (eta   210s)
+[ 38/100] matmul2            FAIL (eta   208s)
+[ 39/100] matmul2            PASS (eta   210s)
+[ 40/100] matmul2            FAIL (eta   207s)
+[ 41/100] balanced           FAIL (eta   209s)
+[ 42/100] balanced           PASS (eta   211s)
+[ 43/100] balanced           PASS (eta   213s)
+[ 44/100] balanced           PASS (eta   213s)
+[ 45/100] rle                PASS (eta   216s)
+[ 46/100] rle                PASS (eta   215s)
+[ 47/100] rle                PASS (eta   216s)
+[ 48/100] rle                PASS (eta   214s)
+[ 49/100] caesar             PASS (eta   213s)
+[ 50/100] caesar             PASS (eta   211s)
+[ 51/100] caesar             PASS (eta   209s)
+[ 52/100] caesar             PASS (eta   206s)
+[ 53/100] flatten            PASS (eta   203s)
+[ 54/100] flatten            PASS (eta   198s)
+[ 55/100] flatten            PASS (eta   193s)
+[ 56/100] flatten            PASS (eta   189s)
+[ 57/100] word_count         PASS (eta   185s)
+[ 58/100] word_count         PASS (eta   180s)
+[ 59/100] word_count         PASS (eta   175s)
+[ 60/100] word_count         PASS (eta   170s)
+[ 61/100] arith_chain        FAIL (eta   165s)
+[ 62/100] arith_chain        FAIL (eta   159s)
+[ 63/100] arith_chain        FAIL (eta   154s)
+[ 64/100] arith_chain        FAIL (eta   149s)
+[ 65/100] fraction_ops       FAIL (eta   147s)
+[ 66/100] fraction_ops       FAIL (eta   145s)
+[ 67/100] fraction_ops       FAIL (eta   141s)
+[ 68/100] fraction_ops       FAIL (eta   140s)
+[ 69/100] modular_pow        FAIL (eta   140s)
+[ 70/100] modular_pow        FAIL (eta   140s)
+[ 71/100] modular_pow        FAIL (eta   139s)
+[ 72/100] modular_pow        PASS (eta   137s)
+[ 73/100] linear_solve       PASS (eta   132s)
+[ 74/100] linear_solve       FAIL (eta   130s)
+[ 75/100] linear_solve       FAIL (eta   127s)
+[ 76/100] linear_solve       PASS (eta   123s)
+[ 77/100] base_convert       FAIL (eta   120s)
+[ 78/100] base_convert       FAIL (eta   116s)
+[ 79/100] base_convert       FAIL (eta   111s)
+[ 80/100] base_convert       FAIL (eta   107s)
+[ 81/100] seq_nth            FAIL (eta   101s)
+[ 82/100] seq_nth            PASS (eta    97s)
+[ 83/100] seq_nth            FAIL (eta    91s)
+[ 84/100] seq_nth            FAIL (eta    85s)
+[ 85/100] perm_order         FAIL (eta    83s)
+[ 86/100] perm_order         FAIL (eta    79s)
+[ 87/100] perm_order         FAIL (eta    75s)
+[ 88/100] perm_order         FAIL (eta    71s)
+[ 89/100] bool_expr          FAIL (eta    65s)
+[ 90/100] bool_expr          FAIL (eta    58s)
+[ 91/100] bool_expr          FAIL (eta    52s)
+[ 92/100] bool_expr          FAIL (eta    46s)
+[ 93/100] truth_table        FAIL (eta    41s)
+[ 94/100] truth_table        FAIL (eta    35s)
+[ 95/100] truth_table        FAIL (eta    29s)
+[ 96/100] truth_table        FAIL (eta    24s)
+[ 97/100] closure            PASS (eta    18s)
+[ 98/100] closure            PASS (eta    12s)
+[ 99/100] closure            PASS (eta     6s)
+[100/100] closure            PASS (eta     0s)
+
+== nightly-before-20261112-173549: pass@1 overall 61.0% (math 14.3%, code 88.3%, logic 33.3%)
+report: /home/santosh/Mi9/mi9-ai-model/reports/nightly-before-20261112-173549-20261112-174546.json
+== [2/6] self-play (20 min budget)
+[   1] gcd_lcm            d2 win   PASS   2.9s | keep-rate 0.62 | W1 H0 F0
+[   2] popcount           d2 win   PASS   1.7s | keep-rate 0.62 | W2 H0 F0
+[   3] bool_expr          d2 hint  FAIL   6.6s | keep-rate 0.38 | W2 H0 F1
+[   4] balanced           d2 win   PASS   6.2s | keep-rate 0.62 | W3 H0 F1
+[   5] seq_nth            d2 hint  FAIL   9.3s | keep-rate 0.38 | W3 H0 F2
+[   6] count_occurrences  d2 win   PASS   2.0s | keep-rate 0.62 | W4 H0 F2
+[   7] word_count         d2 win   PASS   3.1s | keep-rate 0.62 | W5 H0 F2
+[   8] second_largest     d2 hint  PASS   8.9s | keep-rate 0.62 | W5 H1 F2
+[   9] perm_order         d2 hint  FAIL  36.6s | keep-rate 0.38 | W5 H1 F3
+[  10] is_palindrome      d2 win   PASS   1.8s | keep-rate 0.62 | W6 H1 F3
+[  11] perm_order         d2 hint  PASS  37.1s | keep-rate 0.53 | W6 H2 F3
+[  12] is_palindrome      d3 win   PASS   1.8s | keep-rate 0.72 | W7 H2 F3
+[  13] arith_chain        d2 hint  FAIL   4.1s | keep-rate 0.38 | W7 H2 F4
+[  14] flatten            d2 win   PASS   3.9s | keep-rate 0.62 | W8 H2 F4
+[  15] arith_chain        d2 hint  FAIL   4.7s | keep-rate 0.28 | W8 H2 F5
+[  16] count_occurrences  d3 win   PASS   2.4s | keep-rate 0.72 | W9 H2 F5
+[  17] popcount           d3 win   PASS   2.2s | keep-rate 0.72 | W10 H2 F5
+[  18] bool_expr          d2 hint  FAIL   6.4s | keep-rate 0.28 | W10 H2 F6
+[  19] arith_chain        d1 hint  FAIL   4.3s | keep-rate 0.21 | W10 H2 F7
+[  20] matmul2            d2 hint  PASS  11.1s | keep-rate 0.62 | W10 H3 F7
+[  21] popcount           d4 win   PASS   2.6s | keep-rate 0.79 | W11 H3 F7
+[  22] closure            d2 win   PASS  11.5s | keep-rate 0.62 | W12 H3 F7
+[  23] is_palindrome      d4 win   PASS   1.8s | keep-rate 0.79 | W13 H3 F7
+[  24] matmul2            d3 win   PASS   4.6s | keep-rate 0.72 | W14 H3 F7
+[  25] count_occurrences  d4 win   PASS   1.8s | keep-rate 0.79 | W15 H3 F7
+[  26] base_convert       d2 hint  FAIL  16.3s | keep-rate 0.38 | W15 H3 F8
+[  27] truth_table        d2 hint  PASS  28.0s | keep-rate 0.62 | W15 H4 F8
+[  28] gcd_lcm            d3 win   PASS   3.0s | keep-rate 0.72 | W16 H4 F8
+[  29] matmul2            d4 win   PASS   4.6s | keep-rate 0.79 | W17 H4 F8
+[  30] bool_expr          d1 hint  FAIL   6.9s | keep-rate 0.21 | W17 H4 F9
+[  31] arith_chain        d1 hint  FAIL   3.1s | keep-rate 0.16 | W17 H4 F10
+[  32] modular_pow        d2 hint  FAIL  17.1s | keep-rate 0.38 | W17 H4 F11
+[  33] flatten            d3 win   PASS   3.2s | keep-rate 0.72 | W18 H4 F11
+[  34] balanced           d3 win   PASS   6.1s | keep-rate 0.72 | W19 H4 F11
+[  35] rle                d2 win   PASS   5.7s | keep-rate 0.62 | W20 H4 F11
+[  36] truth_table        d3 hint  PASS  43.2s | keep-rate 0.72 | W20 H5 F11
+[  37] seq_nth            d2 hint  FAIL   5.9s | keep-rate 0.28 | W20 H5 F12
+[  38] max_subarray       d2 win   PASS   3.8s | keep-rate 0.62 | W21 H5 F12
+[  39] max_subarray       d3 win   PASS   3.8s | keep-rate 0.72 | W22 H5 F12
+[  40] popcount           d5 win   PASS   1.7s | keep-rate 0.84 | W23 H5 F12
+[  41] arith_chain        d1 hint  FAIL   3.0s | keep-rate 0.12 | W23 H5 F13
+[  42] closure            d3 win   PASS   6.5s | keep-rate 0.72 | W24 H5 F13
+[  43] seq_nth            d1 hint  FAIL   6.3s | keep-rate 0.21 | W24 H5 F14
+[  44] perm_order         d2 hint  FAIL  45.9s | keep-rate 0.40 | W24 H5 F15
+[  45] is_palindrome      d5 win   PASS   1.9s | keep-rate 0.84 | W25 H5 F15
+[  46] second_largest     d3 hint  PASS   8.7s | keep-rate 0.72 | W25 H6 F15
+[  47] max_subarray       d4 win   PASS   3.8s | keep-rate 0.79 | W26 H6 F15
+[  48] dedupe             d2 win   PASS   3.2s | keep-rate 0.62 | W27 H6 F15
+[  49] closure            d4 win   PASS  10.8s | keep-rate 0.79 | W28 H6 F15
+[  50] word_count         d3 win   PASS   3.0s | keep-rate 0.72 | W29 H6 F15
+[  51] matmul2            d5 win   PASS   4.6s | keep-rate 0.84 | W30 H6 F15
+[  52] matmul2            d5 win   PASS   4.6s | keep-rate 0.88 | W31 H6 F15
+[  53] max_subarray       d5 win   PASS   4.0s | keep-rate 0.84 | W32 H6 F15
+[  54] is_palindrome      d5 win   PASS   1.7s | keep-rate 0.88 | W33 H6 F15
+[  55] arith_chain        d1 hint  FAIL   3.1s | keep-rate 0.09 | W33 H6 F16
+[  56] word_count         d4 win   PASS   2.9s | keep-rate 0.79 | W34 H6 F16
+[  57] modular_pow        d2 win   PASS   6.6s | keep-rate 0.53 | W35 H6 F16
+[  58] count_occurrences  d5 win   PASS   1.9s | keep-rate 0.84 | W36 H6 F16
+[  59] max_subarray       d5 win   PASS   3.8s | keep-rate 0.88 | W37 H6 F16
+[  60] modular_pow        d2 hint  FAIL  30.3s | keep-rate 0.40 | W37 H6 F17
+[  61] popcount           d5 win   PASS   1.9s | keep-rate 0.88 | W38 H6 F17
+[  62] truth_table        d4 hint  PASS  35.7s | keep-rate 0.79 | W38 H7 F17
+[  63] bool_expr          d1 hint  FAIL   7.0s | keep-rate 0.16 | W38 H7 F18
+[  64] arith_chain        d1 hint  FAIL   3.0s | keep-rate 0.07 | W38 H7 F19
+[  65] seq_nth            d1 hint  FAIL  13.5s | keep-rate 0.16 | W38 H7 F20
+[  66] bool_expr          d1 hint  FAIL   7.9s | keep-rate 0.12 | W38 H7 F21
+[  67] reverse_string     d2 win   PASS   1.9s | keep-rate 0.62 | W39 H7 F21
+[  68] linear_solve       d2 hint  FAIL  18.3s | keep-rate 0.38 | W39 H7 F22
+[  69] second_largest     d4 hint  FAIL   9.3s | keep-rate 0.54 | W39 H7 F23
+[  70] balanced           d4 win   PASS   6.0s | keep-rate 0.79 | W40 H7 F23
+[  71] truth_table        d5 hint  FAIL  24.6s | keep-rate 0.59 | W40 H7 F24
+[  72] seq_nth            d1 hint  FAIL  19.4s | keep-rate 0.12 | W40 H7 F25
+[  73] popcount           d5 win   PASS   2.4s | keep-rate 0.91 | W41 H7 F25
+[  74] closure            d5 hint  PASS  21.0s | keep-rate 0.84 | W41 H8 F25
+[  75] closure            d5 win   PASS  10.0s | keep-rate 0.88 | W42 H8 F25
+[  76] gcd_lcm            d4 win   PASS   3.2s | keep-rate 0.79 | W43 H8 F25
+[  77] caesar             d2 win   PASS   4.8s | keep-rate 0.62 | W44 H8 F25
+[  78] word_count         d5 win   PASS   3.1s | keep-rate 0.84 | W45 H8 F25
+[  79] balanced           d5 win   PASS   6.1s | keep-rate 0.84 | W46 H8 F25
+[  80] max_subarray       d5 win   PASS   3.8s | keep-rate 0.91 | W47 H8 F25
+[  81] gcd_lcm            d5 win   PASS   2.9s | keep-rate 0.84 | W48 H8 F25
+[  82] caesar             d3 win   PASS   4.7s | keep-rate 0.72 | W49 H8 F25
+[  83] fraction_ops       d2 hint  FAIL   7.2s | keep-rate 0.38 | W49 H8 F26
+[  84] seq_nth            d1 hint  FAIL  21.4s | keep-rate 0.09 | W49 H8 F27
+[  85] gcd_lcm            d5 win   PASS   3.0s | keep-rate 0.88 | W50 H8 F27
+[  86] arith_chain        d1 hint  FAIL   3.3s | keep-rate 0.05 | W50 H8 F28
+[  87] linear_solve       d2 hint  FAIL  12.2s | keep-rate 0.28 | W50 H8 F29
+[  88] word_count         d5 win   PASS   3.4s | keep-rate 0.88 | W51 H8 F29
+[  89] reverse_string     d3 win   PASS   1.6s | keep-rate 0.72 | W52 H8 F29
+[  90] truth_table        d5 hint  FAIL  24.5s | keep-rate 0.44 | W52 H8 F30
+[  91] linear_solve       d1 hint  FAIL   5.9s | keep-rate 0.21 | W52 H8 F31
+[  92] flatten            d4 win   PASS   3.1s | keep-rate 0.79 | W53 H8 F31
+[  93] closure            d5 win   PASS   9.6s | keep-rate 0.91 | W54 H8 F31
+[  94] linear_solve       d1 hint  FAIL  16.2s | keep-rate 0.16 | W54 H8 F32
+[  95] seq_nth            d1 hint  FAIL   6.7s | keep-rate 0.07 | W54 H8 F33
+[  96] rle                d3 win   PASS   6.1s | keep-rate 0.72 | W55 H8 F33
+[  97] popcount           d5 win   PASS   1.7s | keep-rate 0.93 | W56 H8 F33
+[  98] bool_expr          d1 hint  FAIL   6.6s | keep-rate 0.09 | W56 H8 F34
+[  99] flatten            d5 win   PASS   3.2s | keep-rate 0.84 | W57 H8 F34
+[ 100] word_count         d5 win   PASS   2.9s | keep-rate 0.91 | W58 H8 F34
+[ 101] balanced           d5 win   PASS   6.1s | keep-rate 0.88 | W59 H8 F34
+[ 102] closure            d5 win   PASS  10.3s | keep-rate 0.93 | W60 H8 F34
+[ 103] seq_nth            d1 hint  FAIL  15.7s | keep-rate 0.05 | W60 H8 F35
+[ 104] bool_expr          d1 hint  FAIL   7.1s | keep-rate 0.07 | W60 H8 F36
+[ 105] gcd_lcm            d5 win   PASS   2.9s | keep-rate 0.91 | W61 H8 F36
+[ 106] max_subarray       d5 win   PASS   3.8s | keep-rate 0.93 | W62 H8 F36
+[ 107] seq_nth            d1 hint  PASS  14.6s | keep-rate 0.29 | W62 H9 F36
+[ 108] is_palindrome      d5 win   PASS   3.0s | keep-rate 0.91 | W63 H9 F36
+[ 109] is_palindrome      d5 win   PASS   1.7s | keep-rate 0.93 | W64 H9 F36
+[ 110] seq_nth            d1 hint  FAIL  13.7s | keep-rate 0.22 | W64 H9 F37
+[ 111] seq_nth            d1 hint  FAIL  12.4s | keep-rate 0.16 | W64 H9 F38
+[ 112] balanced           d5 win   PASS   8.3s | keep-rate 0.91 | W65 H9 F38
+[ 113] flatten            d5 win   PASS   3.1s | keep-rate 0.88 | W66 H9 F38
+[ 114] arith_chain        d1 hint  FAIL   3.4s | keep-rate 0.04 | W66 H9 F39
+[ 115] gcd_lcm            d5 win   PASS   2.9s | keep-rate 0.93 | W67 H9 F39
+[ 116] popcount           d5 win   PASS   2.7s | keep-rate 0.95 | W68 H9 F39
+[ 117] flatten            d5 win   PASS   3.1s | keep-rate 0.91 | W69 H9 F39
+[ 118] reverse_string     d4 win   PASS   1.6s | keep-rate 0.79 | W70 H9 F39
+[ 119] popcount           d5 win   PASS   1.8s | keep-rate 0.96 | W71 H9 F39
+[ 120] base_convert       d2 hint  PASS  16.6s | keep-rate 0.53 | W71 H10 F39
+[ 121] bool_expr          d1 hint  FAIL   6.7s | keep-rate 0.05 | W71 H10 F40
+[ 122] dedupe             d3 win   PASS   3.2s | keep-rate 0.72 | W72 H10 F40
+[ 123] popcount           d5 win   PASS   1.7s | keep-rate 0.97 | W73 H10 F40
+[ 124] bool_expr          d1 hint  FAIL   6.0s | keep-rate 0.04 | W73 H10 F41
+[ 125] matmul2            d5 win   PASS   4.7s | keep-rate 0.91 | W74 H10 F41
+[ 126] word_count         d5 win   PASS   2.9s | keep-rate 0.93 | W75 H10 F41
+[ 127] second_largest     d4 hint  PASS   8.6s | keep-rate 0.65 | W75 H11 F41
+[ 128] bool_expr          d1 hint  FAIL   5.8s | keep-rate 0.03 | W75 H11 F42
+[ 129] is_palindrome      d5 win   PASS   1.7s | keep-rate 0.95 | W76 H11 F42
+[ 130] is_palindrome      d5 win   PASS   1.7s | keep-rate 0.96 | W77 H11 F42
+[ 131] matmul2            d5 win   PASS   4.6s | keep-rate 0.93 | W78 H11 F42
+[ 132] dedupe             d4 win   PASS   3.1s | keep-rate 0.79 | W79 H11 F42
+[ 133] base_convert       d2 hint  PASS  17.7s | keep-rate 0.65 | W79 H12 F42
+[ 134] word_count         d5 win   PASS   2.9s | keep-rate 0.95 | W80 H12 F42
+[ 135] balanced           d5 win   PASS   6.0s | keep-rate 0.93 | W81 H12 F42
+[ 136] word_count         d5 win   PASS   2.9s | keep-rate 0.96 | W82 H12 F42
+[ 137] max_subarray       d5 win   PASS   3.8s | keep-rate 0.95 | W83 H12 F42
+[ 138] reverse_string     d5 win   PASS   1.5s | keep-rate 0.84 | W84 H12 F42
+[ 139] word_count         d5 win   PASS   2.9s | keep-rate 0.97 | W85 H12 F42
+[ 140] count_occurrences  d5 win   PASS   1.8s | keep-rate 0.88 | W86 H12 F42
+[ 141] matmul2            d5 win   PASS   4.6s | keep-rate 0.95 | W87 H12 F42
+[ 142] matmul2            d5 win   PASS   4.6s | keep-rate 0.96 | W88 H12 F42
+[ 143] matmul2            d5 win   PASS   4.6s | keep-rate 0.97 | W89 H12 F42
+[ 144] gcd_lcm            d5 win   PASS   2.9s | keep-rate 0.95 | W90 H12 F42
+[ 145] bool_expr          d1 hint  FAIL   5.1s | keep-rate 0.02 | W90 H12 F43
+[ 146] linear_solve       d1 hint  PASS  23.2s | keep-rate 0.37 | W90 H13 F43
+[ 147] rle                d4 hint  PASS  13.7s | keep-rate 0.79 | W90 H14 F43
+[ 148] matmul2            d5 win   PASS   4.6s | keep-rate 0.98 | W91 H14 F43
+[ 149] rle                d5 win   PASS   5.8s | keep-rate 0.84 | W92 H14 F43
+[ 150] second_largest     d5 hint  PASS   8.7s | keep-rate 0.74 | W92 H15 F43
+[ 151] word_count         d5 win   PASS   2.9s | keep-rate 0.98 | W93 H15 F43
+[ 152] flatten            d5 win   PASS   3.2s | keep-rate 0.93 | W94 H15 F43
+[ 153] closure            d5 win   PASS  12.1s | keep-rate 0.95 | W95 H15 F43
+[ 154] rle                d5 win   PASS   6.0s | keep-rate 0.88 | W96 H15 F43
+[ 155] is_palindrome      d5 win   PASS   1.8s | keep-rate 0.97 | W97 H15 F43
+[ 156] popcount           d5 win   PASS   1.7s | keep-rate 0.98 | W98 H15 F43
+[ 157] sum_ints           d2 win   PASS   1.6s | keep-rate 0.62 | W99 H15 F43
+[ 158] matmul2            d5 win   PASS   4.6s | keep-rate 0.98 | W100 H15 F43
+[ 159] popcount           d5 win   PASS   1.7s | keep-rate 0.98 | W101 H15 F43
+[ 160] base_convert       d3 hint  FAIL  10.2s | keep-rate 0.49 | W101 H15 F44
+[ 161] matmul2            d5 win   PASS   4.6s | keep-rate 0.99 | W102 H15 F44
+[ 162] flatten            d5 win   PASS   3.1s | keep-rate 0.95 | W103 H15 F44
+[ 163] sum_ints           d3 win   PASS   1.6s | keep-rate 0.72 | W104 H15 F44
+[ 164] flatten            d5 win   PASS   3.1s | keep-rate 0.96 | W105 H15 F44
+[ 165] bool_expr          d1 hint  FAIL   5.2s | keep-rate 0.02 | W105 H15 F45
+done: 165 tasks, 105 clean wins, 15 hint wins, 45 fails
+== [3/6] LoRA distillation (server paused)
+Traceback (most recent call last):
+  File "/home/santosh/Mi9/mi9-ai-model/.venv/lib/python3.14/site-packages/transformers/utils/hub.py", line 537, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        tqdm_class=tqdm_class,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/santosh/Mi9/mi9-ai-model/.venv/lib/python3.14/site-packages/huggingface_hub/utils/_validators.py", line 85, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/santosh/Mi9/mi9-ai-model/.venv/lib/python3.14/site-packages/huggingface_hub/utils/_validators.py", line 133, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/home/santosh/Mi9/mi9-ai-model/models/Qwen3-1.7B-Q8_0.gguf'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/santosh/Mi9/mi9-ai-model/nexus/train.py", line 165, in <module>
+    main()
+    ~~~~^^
+  File "/home/santosh/Mi9/mi9-ai-model/nexus/train.py", line 88, in main
+    tokenizer = AutoTokenizer.from_pretrained(str(config.TRAIN_MODEL),
+                                              gguf_file=config.TRAIN_MODEL.name)
+  File "/home/santosh/Mi9/mi9-ai-model/.venv/lib/python3.14/site-packages/transformers/models/auto/tokenization_auto.py", line 789, in from_pretrained
+    gguf_path = cached_file(pretrained_model_name_or_path, gguf_file, **kwargs)
+  File "/home/santosh/Mi9/mi9-ai-model/.venv/lib/python3.14/site-packages/transformers/utils/hub.py", line 370, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/home/santosh/Mi9/mi9-ai-model/.venv/lib/python3.14/site-packages/transformers/utils/hub.py", line 595, in cached_files
+    raise OSError(f"{e}") from e
+OSError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/home/santosh/Mi9/mi9-ai-model/models/Qwen3-1.7B-Q8_0.gguf'. Use `repo_type` argument if needed.
+replay: 120 verified episodes

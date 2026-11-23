@@ -1,0 +1,33 @@
+replay: 100 verified episodes (since line 290)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  10%|█         | 32/310 [00:00<00:00, 301.85it/s]Loading weights:  32%|███▏      | 99/310 [00:00<00:00, 492.71it/s]Loading weights:  48%|████▊     | 149/310 [00:00<00:00, 395.24it/s]Loading weights:  62%|██████▏   | 191/310 [00:00<00:00, 398.24it/s]Loading weights:  75%|███████▍  | 232/310 [00:00<00:00, 367.96it/s]Loading weights:  89%|████████▊ | 275/310 [00:00<00:00, 362.29it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 407.70it/s]
+trainable params: 6,422,528 || all params: 1,726,997,504 || trainable%: 0.3719
+trainable sequences: 69
+step 5/138 loss 2.286 rss 4311MB (49.3s/step)
+step 10/138 loss 2.287 rss 3883MB (39.9s/step)
+step 15/138 loss 1.791 rss 4087MB (42.4s/step)
+step 20/138 loss 1.432 rss 4145MB (43.1s/step)
+step 25/138 loss 1.318 rss 4531MB (42.2s/step)
+step 30/138 loss 1.195 rss 4274MB (39.5s/step)
+step 35/138 loss 1.208 rss 3967MB (38.5s/step)
+step 40/138 loss 1.134 rss 4024MB (36.8s/step)
+step 45/138 loss 1.102 rss 4365MB (35.5s/step)
+step 50/138 loss 1.054 rss 4536MB (35.8s/step)
+step 55/138 loss 0.865 rss 4275MB (36.4s/step)
+step 60/138 loss 0.665 rss 4000MB (37.2s/step)
+step 65/138 loss 0.587 rss 4341MB (37.9s/step)
+step 70/138 loss 0.589 rss 4549MB (38.0s/step)
+step 75/138 loss 0.506 rss 4298MB (38.1s/step)
+step 80/138 loss 0.547 rss 4047MB (37.1s/step)
+step 85/138 loss 0.486 rss 4306MB (36.7s/step)
+step 90/138 loss 0.459 rss 4347MB (37.0s/step)
+step 95/138 loss 0.424 rss 4300MB (36.6s/step)
+step 100/138 loss 0.394 rss 4209MB (36.1s/step)
+step 105/138 loss 0.384 rss 4383MB (35.8s/step)
+step 110/138 loss 0.386 rss 4279MB (35.4s/step)
+step 115/138 loss 0.452 rss 4243MB (34.8s/step)
+step 120/138 loss 0.441 rss 4253MB (34.5s/step)
+step 125/138 loss 0.478 rss 4045MB (34.0s/step)
+step 130/138 loss 0.391 rss 4281MB (33.9s/step)
+step 135/138 loss 0.358 rss 4062MB (33.3s/step)
+saved peft adapter -> /home/santosh/Mi9/mi9-ai-model/adapters/peft-20261115-044432
+final loss 0.332

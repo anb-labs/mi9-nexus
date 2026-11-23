@@ -1,0 +1,8 @@
+replay: 100 verified episodes (since line 290)
+training base: /home/santosh/Mi9/mi9-ai-model/models/merged-20261113-050149
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  14%|█▎        | 42/310 [00:00<00:00, 412.57it/s]Loading weights:  27%|██▋       | 84/310 [00:00<00:00, 335.26it/s]Loading weights:  43%|████▎     | 134/310 [00:00<00:00, 380.02it/s]Loading weights:  63%|██████▎   | 196/310 [00:00<00:00, 455.86it/s]Loading weights:  78%|███████▊  | 243/310 [00:00<00:00, 428.19it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 502.94it/s]
+trainable params: 6,422,528 || all params: 1,726,997,504 || trainable%: 0.3719
+trainable sequences: 69
+step 5/69 loss 0.394 rss 4281MB (47.7s/step)
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-ms7q7y1e'}
+  warnings.warn(

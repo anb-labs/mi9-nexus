@@ -1,0 +1,8 @@
+[   1] is_palindrome      d5 win   PASS   4.3s | keep-rate 1.00 | W1 H0 F0
+[   2] dataframe          d5 win   PASS   3.7s | keep-rate 0.88 | W2 H0 F0
+[   3] closure            d5 win   PASS   8.3s | keep-rate 1.00 | W3 H0 F0
+[   4] base_convert       d5 hint  PASS 101.1s | keep-rate 0.48 | W3 H1 F0
+[   5] balanced           d5 hint  FAIL 106.8s | keep-rate 0.75 | W3 H1 F1
+[   6] seq_nth            d1 hint  FAIL 157.2s | keep-rate 0.22 | W3 H1 F2
+[   7] word_count         d5 win   PASS   6.0s | keep-rate 0.67 | W4 H1 F2
+[   8] fraction_ops       d4 win   PASS  17.1s | keep-rate 0.80 | W5 H1 F2

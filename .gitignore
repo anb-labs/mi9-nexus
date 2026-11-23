@@ -1,0 +1,50 @@
+# ─────────────────────────────────────────────────────────────
+#  Mi9-Nexus — .gitignore
+#  Source-only repo. Never commit secrets, models, or build output.
+# ─────────────────────────────────────────────────────────────
+
+# ── Secrets (NEVER commit) ────────────────────────────────────
+credentials/
+*.keystore
+*.jks
+keystore.properties
+local.properties
+*.env
+.env
+rclone.conf
+
+# ── Models & training artifacts (huge; distributed via Cloudflare R2) ──
+mi9-ai-model/models/
+mi9-ai-model/adapters/
+
+# ── Python ────────────────────────────────────────────────────
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# ── Node ──────────────────────────────────────────────────────
+node_modules/
+
+# ── Rust / Tauri ──────────────────────────────────────────────
+target/
+nexus-desktop/src-tauri/target/
+nexus-desktop/src-tauri/gen/schemas
+nexus-desktop/src-tauri/binaries/
+
+# ── Android / Gradle ──────────────────────────────────────────
+.gradle/
+build/
+nexus-android/build/
+nexus-android/app/build/
+nexus-android/third_party/
+nexus-android/dist/
+.idea/
+*.iml
+captures/
+
+# ── OS / editor ───────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp

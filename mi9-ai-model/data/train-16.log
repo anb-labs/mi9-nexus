@@ -1,0 +1,25 @@
+replay: 94 verified episodes (since line 240)
+training base: /home/santosh/Mi9/mi9-ai-model/models/merged-20261113-050149
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  15%|█▍        | 45/310 [00:00<00:00, 372.76it/s]Loading weights:  29%|██▊       | 89/310 [00:00<00:00, 375.73it/s]Loading weights:  41%|████      | 127/310 [00:00<00:00, 349.40it/s]Loading weights:  52%|█████▏    | 162/310 [00:00<00:00, 331.48it/s]Loading weights:  63%|██████▎   | 196/310 [00:00<00:00, 311.07it/s]Loading weights:  74%|███████▎  | 228/310 [00:00<00:00, 290.07it/s]Loading weights:  83%|████████▎ | 258/310 [00:00<00:00, 282.89it/s]Loading weights:  93%|█████████▎| 287/310 [00:00<00:00, 279.19it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 328.43it/s]
+trainable params: 6,422,528 || all params: 1,726,997,504 || trainable%: 0.3719
+trainable sequences: 94
+step 5/188 ce 1.359 kl 0.0000 loss 0.211 rss 3972MB (29.9s/step)
+step 10/188 ce 1.326 kl 0.0000 loss 0.962 rss 4176MB (27.6s/step)
+step 15/188 ce 1.092 kl 0.0002 loss 0.093 rss 4006MB (26.6s/step)
+step 20/188 ce 0.938 kl 0.0091 loss 0.006 rss 4102MB (25.9s/step)
+step 25/188 ce 0.828 kl 0.0186 loss 0.672 rss 3785MB (24.5s/step)
+step 30/188 ce 0.776 kl 0.0006 loss 0.597 rss 4191MB (24.6s/step)
+step 35/188 ce 0.721 kl 0.0008 loss 0.575 rss 4069MB (25.3s/step)
+step 40/188 ce 0.684 kl 0.0165 loss 0.101 rss 4009MB (25.2s/step)
+step 45/188 ce 0.688 kl 0.0016 loss 0.087 rss 4029MB (25.0s/step)
+step 50/188 ce 0.654 kl 0.0016 loss 0.340 rss 4197MB (25.2s/step)
+step 55/188 ce 0.536 kl 0.0015 loss 0.211 rss 4312MB (25.5s/step)
+step 60/188 ce 0.440 kl 0.0020 loss 0.146 rss 4212MB (25.8s/step)
+step 65/188 ce 0.403 kl 0.0282 loss 0.582 rss 4065MB (25.5s/step)
+step 70/188 ce 0.387 kl 0.0034 loss 0.006 rss 4152MB (25.4s/step)
+step 75/188 ce 0.358 kl 0.0026 loss 0.058 rss 4058MB (25.3s/step)
+step 80/188 ce 0.307 kl 0.0309 loss 0.016 rss 3949MB (25.6s/step)
+step 85/188 ce 0.294 kl 0.0031 loss 0.315 rss 4089MB (25.2s/step)
+early stop: rolling ce 0.294 < 0.3 at step 85/188
+saved peft adapter -> /home/santosh/Mi9/mi9-ai-model/adapters/peft-20261115-073020
+final ce 0.294 train_loss 0.296

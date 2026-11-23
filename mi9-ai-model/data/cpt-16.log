@@ -1,0 +1,15 @@
+CPT corpus: 100 sequences x 512 tokens (51k tokens)
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  21%|██        | 65/310 [00:00<00:00, 610.89it/s]Loading weights:  41%|████      | 127/310 [00:00<00:00, 516.78it/s]Loading weights:  58%|█████▊    | 180/310 [00:00<00:00, 440.64it/s]Loading weights:  73%|███████▎  | 226/310 [00:00<00:00, 442.66it/s]Loading weights:  87%|████████▋ | 271/310 [00:00<00:00, 388.72it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 487.32it/s]
+trainable params: 6,422,528 || all params: 1,726,997,504 || trainable%: 0.3719
+step 10/100 loss 1.775 rss 4080MB (62.2s/step)
+step 20/100 loss 1.837 rss 4543MB (62.4s/step)
+step 30/100 loss 1.904 rss 4530MB (59.8s/step)
+step 40/100 loss 1.802 rss 4433MB (58.2s/step)
+step 50/100 loss 1.774 rss 4505MB (57.2s/step)
+step 60/100 loss 1.826 rss 4503MB (56.7s/step)
+step 70/100 loss 1.809 rss 4530MB (56.7s/step)
+step 80/100 loss 1.860 rss 4284MB (54.1s/step)
+step 90/100 loss 1.749 rss 4293MB (51.9s/step)
+step 100/100 loss 1.732 rss 4244MB (50.2s/step)
+saved CPT adapter -> /home/santosh/Mi9/mi9-ai-model/adapters/cpt-20261115-173402
+final loss 1.732

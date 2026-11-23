@@ -1,0 +1,17 @@
+rehearsal: mixed 40 pre-merge episodes to prevent forgetting
+replay: 134 verified episodes (since line 240)
+training base: /home/santosh/Mi9/mi9-ai-model/models/merged-20261113-050149
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  19%|█▉        | 59/310 [00:00<00:00, 541.25it/s]Loading weights:  37%|███▋      | 114/310 [00:00<00:00, 471.53it/s]Loading weights:  52%|█████▏    | 162/310 [00:00<00:00, 245.06it/s]Loading weights:  63%|██████▎   | 195/310 [00:00<00:00, 211.62it/s]Loading weights:  71%|███████▏  | 221/310 [00:00<00:00, 220.85it/s]Loading weights:  80%|███████▉  | 247/310 [00:01<00:00, 196.40it/s]Loading weights:  87%|████████▋ | 270/310 [00:01<00:00, 177.08it/s]Loading weights:  94%|█████████▎| 290/310 [00:01<00:00, 152.11it/s]Loading weights: 100%|██████████| 310/310 [00:01<00:00, 219.54it/s]
+trainable params: 6,422,528 || all params: 1,726,997,504 || trainable%: 0.3719
+trainable sequences: 134
+step 5/134 ce 0.405 kl 0.0000 loss 0.005 rss 3867MB (25.5s/step)
+step 10/134 ce 0.900 kl 0.0001 loss 0.694 rss 3820MB (23.1s/step)
+step 15/134 ce 0.804 kl 0.0002 loss 1.057 rss 4138MB (24.7s/step)
+step 20/134 ce 0.833 kl 0.0003 loss 1.015 rss 4284MB (24.7s/step)
+step 25/134 ce 0.809 kl 0.0008 loss 1.082 rss 4076MB (25.9s/step)
+step 30/134 ce 0.842 kl 0.0051 loss 1.057 rss 3797MB (25.8s/step)
+step 35/134 ce 0.806 kl 0.0017 loss 0.993 rss 3852MB (26.8s/step)
+step 40/134 ce 0.781 kl 0.0146 loss 0.510 rss 3842MB (26.6s/step)
+early stop: rolling ce 0.781 < 0.8 at step 40/134
+saved peft adapter -> /home/santosh/Mi9/mi9-ai-model/adapters/peft-20261118-183639
+final ce 0.781 train_loss 0.782

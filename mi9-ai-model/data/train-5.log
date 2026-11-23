@@ -1,0 +1,54 @@
+replay: 240 verified episodes
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  16%|█▋        | 51/311 [00:00<00:00, 458.77it/s]Loading weights:  31%|███       | 97/311 [00:00<00:00, 346.88it/s]Loading weights:  43%|████▎     | 134/311 [00:00<00:00, 252.30it/s]Loading weights:  60%|██████    | 187/311 [00:00<00:00, 323.61it/s]Loading weights:  76%|███████▌  | 236/311 [00:00<00:00, 366.14it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 425.39it/s]
+trainable params: 6,422,528 || all params: 1,726,997,504 || trainable%: 0.3719
+trainable sequences: 240
+step 5/240 loss 0.359 rss 3906MB (16.3s/step)
+step 10/240 loss 0.289 rss 3945MB (18.0s/step)
+step 15/240 loss 0.207 rss 3779MB (17.7s/step)
+step 20/240 loss 0.188 rss 3812MB (18.1s/step)
+step 25/240 loss 0.156 rss 3786MB (18.4s/step)
+step 30/240 loss 0.132 rss 3724MB (18.1s/step)
+step 35/240 loss 0.119 rss 4058MB (18.2s/step)
+step 40/240 loss 0.112 rss 3831MB (18.0s/step)
+step 45/240 loss 0.106 rss 3936MB (17.6s/step)
+step 50/240 loss 0.109 rss 3973MB (17.4s/step)
+step 55/240 loss 0.078 rss 3811MB (17.1s/step)
+step 60/240 loss 0.068 rss 4047MB (17.2s/step)
+step 65/240 loss 0.065 rss 3919MB (17.1s/step)
+step 70/240 loss 0.068 rss 3887MB (17.4s/step)
+step 75/240 loss 0.070 rss 3899MB (17.2s/step)
+step 80/240 loss 0.071 rss 3917MB (17.1s/step)
+step 85/240 loss 0.071 rss 3920MB (17.0s/step)
+step 90/240 loss 0.066 rss 3827MB (16.8s/step)
+step 95/240 loss 0.064 rss 3903MB (16.7s/step)
+step 100/240 loss 0.078 rss 3908MB (16.7s/step)
+step 105/240 loss 0.080 rss 3968MB (16.6s/step)
+step 110/240 loss 0.075 rss 3858MB (16.5s/step)
+step 115/240 loss 0.075 rss 3835MB (16.5s/step)
+step 120/240 loss 0.064 rss 3899MB (16.6s/step)
+step 125/240 loss 0.068 rss 3887MB (16.5s/step)
+step 130/240 loss 0.088 rss 3860MB (16.5s/step)
+step 135/240 loss 0.087 rss 3855MB (16.4s/step)
+step 140/240 loss 0.088 rss 3972MB (16.4s/step)
+step 145/240 loss 0.093 rss 3930MB (16.5s/step)
+step 150/240 loss 0.067 rss 3854MB (16.4s/step)
+step 155/240 loss 0.064 rss 3925MB (16.4s/step)
+step 160/240 loss 0.061 rss 4003MB (16.5s/step)
+step 165/240 loss 0.066 rss 3934MB (16.5s/step)
+step 170/240 loss 0.064 rss 3965MB (16.4s/step)
+step 175/240 loss 0.065 rss 3954MB (16.5s/step)
+step 180/240 loss 0.046 rss 3888MB (16.4s/step)
+step 185/240 loss 0.050 rss 3956MB (16.5s/step)
+step 190/240 loss 0.051 rss 3821MB (16.6s/step)
+step 195/240 loss 0.053 rss 3779MB (16.8s/step)
+step 200/240 loss 0.055 rss 3817MB (16.9s/step)
+step 205/240 loss 0.052 rss 3809MB (16.9s/step)
+step 210/240 loss 0.055 rss 3906MB (16.9s/step)
+step 215/240 loss 0.063 rss 3809MB (16.9s/step)
+step 220/240 loss 0.067 rss 3939MB (17.0s/step)
+step 225/240 loss 0.060 rss 3844MB (17.0s/step)
+step 230/240 loss 0.061 rss 3844MB (17.0s/step)
+step 235/240 loss 0.063 rss 4053MB (17.2s/step)
+step 240/240 loss 0.064 rss 3800MB (17.2s/step)
+saved peft adapter -> /home/santosh/Mi9/mi9-ai-model/adapters/peft-20261113-012933
+final loss 0.064

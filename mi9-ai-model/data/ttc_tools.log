@@ -1,0 +1,11 @@
+[1/9] math_exec    pass@1=0 best@5=1 (tried 3) 18s
+[2/9] math_exec    pass@1=0 best@5=0 (tried 5) 55s
+[3/9] math_exec    pass@1=1 best@5=1 (tried 1) 67s
+[4/9] file_ops     pass@1=0 best@5=0 (tried 5) 104s
+[5/9] file_ops     pass@1=1 best@5=1 (tried 2) 126s
+[6/9] file_ops     pass@1=0 best@5=0 (tried 5) 163s
+[7/9] dataframe    pass@1=1 best@5=1 (tried 1) 170s
+[8/9] dataframe    pass@1=1 best@5=1 (tried 1) 179s
+[9/9] dataframe    pass@1=1 best@5=1 (tried 1) 190s
+
+== tool families: pass@1 5/9 = 56%  |  best@5 6/9 = 67%

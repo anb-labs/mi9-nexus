@@ -40,7 +40,12 @@ class Handler(BaseHTTPRequestHandler):
             if path == "/run_python":
                 chat_id = str(body.get("chat_id", "default"))[:64].replace("/", "_")
                 workdir = f"/tmp/mi9-sandbox/{chat_id}"
-                r = sandbox.run_script_dir(body.get("code", ""), workdir)
+                code = body.get("code", "")
+                if not code and body.get("expression") is not None:
+                    # the model often emits {"expression": "..."} for arithmetic;
+                    # evaluate it and print the result so the tool returns a value
+                    code = f"print({body['expression']})"
+                r = sandbox.run_script_dir(code, workdir)
                 return self._send({"stdout": r.get("stdout", ""),
                                    "error": r.get("error", "")})
             if path == "/retrieve":

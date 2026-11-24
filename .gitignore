@@ -48,3 +48,6 @@ captures/
 .DS_Store
 Thumbs.db
 *.swp
+
+# ── Demo video assets (kept local, not published) ─────────────
+demo-video/
